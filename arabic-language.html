@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>Quran Nazara Course: Master Recitation with Precision | Online Quran College</title>
-  <meta name="description" content="Embark on a profound spiritual journey and learn to read the Quran in its original Arabic with precision, confidence, and fluency. Perfect for beginners and advanced reciters. Get a 7-day free trial.">
-  <meta name="keywords" content="quran nazara course, learn quran recitation, learn tajweed rules, online quran reading arabic, online quran college">
+  <title>Arabic Language Course: Understanding the Holy Quran | Online Quran College</title>
+  <meta name="description" content="Embark on a transformative journey with our comprehensive Arabic language course. Master grammar, vocabulary, and pronunciation. Book a 7-day free trial.">
+  <meta name="keywords" content="arabic language course, learn arabic online, quranic arabic grammar, learn fusha, online quran college, arabic vocabulary">
   <meta name="author" content="Online Quran College">
   
   <!-- Preconnect Fonts -->
@@ -20,7 +20,7 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Premium Custom Styling for Quran Nazara Landing Page -->
+  <!-- Premium Custom Styling for Arabic Language Landing Page -->
   <style>
     :root {
       --emerald-gradient: linear-gradient(135deg, #004d34 0%, #006847 100%);
@@ -60,10 +60,10 @@
     }
     
     .hero-nazara-custom::before {
-      content: "وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا";
+      content: "عَرَبِيًّا غَيْرَ ذِي عِوَجٍ لَّعَلَّهُمْ يَتَّقُونَ";
       position: absolute;
       font-family: var(--font-arabic);
-      font-size: 16vw;
+      font-size: 10vw;
       color: rgba(0, 104, 71, 0.015);
       bottom: -40px;
       right: 5%;
@@ -196,14 +196,13 @@
 
     .spiritual-arabic-verse {
       font-family: var(--font-arabic);
-      font-size: 34px;
+      font-size: 30px;
       color: var(--primary);
       margin-bottom: 16px;
       direction: rtl;
       line-height: 1.8;
       text-shadow: 0 1px 2px rgba(0,0,0,0.05);
     }
-
 
     /* Core benefits cards refinement */
     .benefit-card-premium {
@@ -267,175 +266,60 @@
       margin-bottom: 0;
     }
 
-    /* Curriculum Step Tabs styles */
-    .curriculum-timeline-wrapper {
-      margin-top: 50px;
+    /* Why Learn Arabic Section Grid */
+    .why-learn-section {
+      background-color: var(--light);
     }
-    
-    .curriculum-nav-steps {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      margin-bottom: 40px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+    .why-learn-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 50px auto 0 auto;
     }
-    .curriculum-nav-steps::before {
-      content: '';
-      position: absolute;
-      top: 24px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gray-200);
-      z-index: 1;
-    }
-    .curriculum-nav-progress {
-      position: absolute;
-      top: 24px;
-      left: 0;
-      width: 0%;
-      height: 4px;
-      background: var(--secondary);
-      z-index: 2;
-      transition: width 0.4s ease;
-    }
-
-    .curriculum-step-node {
-      position: relative;
-      z-index: 3;
+    .why-learn-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 35px 30px;
+      transition: var(--transition);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      width: 80px;
+      gap: 18px;
     }
-
-    .curriculum-step-dot {
+    .why-learn-card:hover {
+      background: var(--light);
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+    .why-learn-card-icon {
       width: 50px;
       height: 50px;
-      border-radius: 50%;
-      background: var(--light);
-      border: 3.5px solid var(--gray-200);
+      background: var(--secondary-light);
+      border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-title);
-      font-weight: 800;
-      color: var(--gray-600);
-      font-size: 16px;
-      margin-bottom: 10px;
-      box-shadow: var(--shadow-sm);
+      color: var(--primary);
+      font-size: 20px;
       transition: var(--transition);
     }
-    
-    .curriculum-step-node:hover .curriculum-step-dot {
-      border-color: var(--primary);
-      color: var(--primary);
-    }
-
-    .curriculum-step-node.active .curriculum-step-dot {
-      border-color: var(--secondary);
-      background: var(--secondary);
+    .why-learn-card:hover .why-learn-card-icon {
+      background: var(--primary);
       color: var(--light);
-      box-shadow: var(--shadow-glow);
     }
-    
-    .curriculum-step-label {
-      font-family: var(--font-title);
-      font-size: 12px;
+    .why-learn-card h3 {
+      font-size: 18px;
       font-weight: 700;
-      color: var(--gray-600);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: var(--transition);
-    }
-    .curriculum-step-node.active .curriculum-step-label {
       color: var(--primary);
+      margin: 0;
     }
-
-    .curriculum-tab-panel {
-      background: var(--light);
-      border: 1px solid rgba(0, 104, 71, 0.08);
-      border-radius: var(--radius-md);
-      padding: 40px;
-      box-shadow: var(--shadow-md);
-      max-width: 900px;
-      margin: 0 auto;
-      display: none;
-      transform: translateY(15px);
-      opacity: 0;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-    }
-    
-    .curriculum-tab-panel.active {
-      display: block;
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .panel-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .panel-content h3 {
-      font-size: 24px;
-      color: var(--primary);
-      margin-bottom: 16px;
-      font-weight: 800;
-    }
-    
-    .panel-content p {
-      font-size: 15px;
-      line-height: 1.7;
+    .why-learn-card p {
+      font-size: 13.5px;
+      line-height: 1.6;
       color: var(--gray-600);
-      margin-bottom: 24px;
-    }
-
-    .panel-bullets {
-      list-style: none;
-    }
-    .panel-bullets li {
-      font-size: 14.5px;
-      color: var(--dark-slate);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .panel-bullets li i {
-      color: var(--secondary);
-      font-size: 16px;
-    }
-
-    .panel-visual {
-      background: var(--emerald-lightest);
-      border-radius: var(--radius-md);
-      padding: 30px;
-      text-align: center;
-      border: 1.5px dashed rgba(16, 185, 129, 0.2);
-    }
-    .panel-visual i {
-      font-size: 56px;
-      color: var(--primary);
-      margin-bottom: 15px;
-    }
-    .panel-visual h4 {
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--secondary);
-      margin-bottom: 6px;
-    }
-    .panel-visual p {
-      font-size: 12.5px;
-      color: var(--gray-600);
-      margin-bottom: 0;
+      margin: 0;
     }
 
     /* Premium Pricing Section styles */
@@ -724,20 +608,9 @@
       .floating-glass-badge {
         display: none; /* Hide floating absolute badges on mobile/tablet to clean layout */
       }
-      .curriculum-nav-steps {
-        overflow-x: auto;
-        padding-bottom: 10px;
-        justify-content: flex-start;
-        gap: 24px;
-      }
-      .curriculum-nav-steps::before, .curriculum-nav-progress {
-        display: none;
-      }
-      .curriculum-step-node {
-        flex-shrink: 0;
-      }
-      .panel-grid {
+      .why-learn-grid {
         grid-template-columns: 1fr;
+        max-width: 450px;
       }
       .pricing-grid-custom {
         grid-template-columns: 1fr;
@@ -811,55 +684,55 @@
 
   <main>
 
-    <!-- 2. Hero Section (Premium Landing Redesign) -->
+    <!-- 2. Hero Section (Arabic Language Custom Banner) -->
     <section class="hero-nazara-custom" id="course-hero">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
             <span class="badge" style="margin-bottom: 24px;">
-              <i class="fa-solid fa-sparkles"></i> Premium 1-on-1 Recitation
+              <i class="fa-solid fa-language"></i> Arabic Language Course
             </span>
-            <div class="hero-arabic arabic-text" lang="ar" style="font-size: 32px; margin-bottom: 12px;">
-              وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+            <div class="hero-arabic arabic-text" lang="ar" style="font-size: 28px; margin-bottom: 12px; letter-spacing: 0.5px;">
+              عَرَبِيًّا غَيْرَ ذِي عِوَجٍ لَّعَلَّهُمْ يَتَّقُونَ
             </div>
             <h1 class="hero-title" id="course-hero-title">
-              Quran Nazara Course: <span>Embark on Your Spiritual Journey</span>
+              Arabic Language Course: <span>Mastering Arabic Language</span>
             </h1>
             <p class="hero-desc">
-              Reciting the Quran Majeed is the foundation of faith and a source of profound tranquility for every Muslim. Our course is meticulously designed for students who wish to read with correct Makharij (articulation points), precise Tajweed (rules of recitation), and a deep understanding of the verses.
+              Embark on a transformative journey with our comprehensive Arabic language course, meticulously designed to equip you with the skills to understand and appreciate the lessons of the Holy Quran. Our program offers the most advanced and user-friendly approach to learning Arabic.
             </p>
             <div class="hero-ctas">
               <a href="#free-trial-booking" class="btn btn-secondary">Book Your 7-Day Free Trial Now <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="#syllabus" class="btn btn-outline">Explore Curriculum</a>
+              <a href="#features" class="btn btn-outline">Explore Course Features</a>
             </div>
           </div>
           
           <div class="hero-illustration-wrapper-custom">
-            <!-- Arched graphic container -->
+            <!-- Arched graphic container matching homepage style -->
             <div class="hero-arched-graphic">
-              <img src="nazara_hero.png" alt="Quran Nazara Course Hero" id="hero-main-img">
+              <img src="arabic_hero.png" alt="Arabic Language Open Calligraphy Book" id="hero-main-img">
               <div class="digital-quran-anim"></div>
             </div>
             <!-- Floating glassmorphism badges -->
             <div class="floating-glass-badge badge-pos-1 float-badge-1">
-              <i class="fa-solid fa-award"></i>
+              <i class="fa-solid fa-book"></i>
               <div>
-                <h5>Tajweed Certified</h5>
-                <p>Learn with proper rules</p>
+                <h5>Quranic Integration</h5>
+                <p>Learn directly from Quranic verses</p>
               </div>
             </div>
             <div class="floating-glass-badge badge-pos-2 float-badge-2">
-              <i class="fa-solid fa-venus-mars"></i>
+              <i class="fa-solid fa-chalkboard-user"></i>
               <div>
-                <h5>Male/Female Tutors</h5>
-                <p>1-on-1 personalized</p>
+                <h5>Certified Tutors</h5>
+                <p>Personalized 1-on-1 support</p>
               </div>
             </div>
             <div class="floating-glass-badge badge-pos-3 float-badge-1">
-              <i class="fa-solid fa-calendar-check"></i>
+              <i class="fa-solid fa-spell-check"></i>
               <div>
-                <h5>Flexible Hours</h5>
-                <p>Learn at your own pace</p>
+                <h5>Comprehensive Grammar</h5>
+                <p>Structured rules and vocabulary</p>
               </div>
             </div>
           </div>
@@ -867,219 +740,114 @@
       </div>
     </section>
 
-    <!-- 3. Spiritual Callout Section -->
-    <section class="section" id="spiritual-connection" style="padding-bottom: 20px;">
+    <!-- 3. Spiritual callout quotes -->
+    <section class="section" style="padding-bottom: 20px;">
       <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Quranic Recitation</span>
-          <h2 class="section-title" style="font-size: 34px;">More Than Just Words, It’s a Spiritual Connection</h2>
-        </div>
-        
-        <div class="spiritual-callout-box">
+        <div class="spiritual-callout-box" style="margin: 0 auto; max-width: 950px;">
           <div class="spiritual-arabic-verse" lang="ar">
-            الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ أُولَٰئِكَ يُؤْمِنُونَ بِهِ
+            "اللَّغَةُ الْعَرَبِيَّةُ كَالْمَاسِ الثَّمِينِ الَّذِي لَا يَنْضَبُ"
           </div>
-          <p style="font-size: 15px; color: var(--gray-600); font-style: italic; margin-bottom: 20px;">
-            "Those to whom We have given the Book recite it with its true recitation. They [in fact] believe in it." — Surah Al-Baqarah (121)
+          <p style="font-size: 16px; color: var(--gray-600); font-style: italic; margin-bottom: 20px; font-weight: 600;">
+            "The Arabic language is like a precious diamond that never runs dry. Dive into it, and you will emerge with pearls of wisdom and treasures of knowledge." — Imam al-Shafi
           </p>
           <p style="max-width: 800px; margin: 0 auto; line-height: 1.7; font-size: 15.5px;">
-            This course is not merely about learning to read; it is a dedicated, sacred path to building an enduring connection with the Divine. We help you transform your relationship with the Quran, allowing its words to flow beautifully, touching both your heart and the hearts of those who hear you.
+            By understanding the linguistic depth and rich structures of the Arabic language, you open the gateway to the divine messages, uncovering the eternal treasures of Quranic wisdom directly from the source.
           </p>
         </div>
       </div>
     </section>
 
-
-    <!-- 5. Why Choose Our Course? Section -->
-    <section class="section" id="why-choose">
+    <!-- 4. Key Features Section -->
+    <section class="section section-tint" id="features">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Core Benefits</span>
-          <h2 class="section-title">Why Choose Our Course?</h2>
-          <p>We combine authentic Islamic teachings with a modern learning environment to nurture your spiritual and recitation growth.</p>
+          <span class="section-subtitle">Course Overview</span>
+          <h2 class="section-title">Key Features of Our Course</h2>
+          <p>Our Arabic language course is tailored to cater to learners of all levels, from beginner to advanced speakers, ensuring a smooth and structured journey.</p>
         </div>
         
-        <div class="why-grid-3x2">
-          <!-- Benefit 1 -->
+        <div class="why-grid-3x2" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+          <!-- Feature 1 -->
           <div class="benefit-card-premium">
-            <div class="benefit-icon-circle"><i class="fa-solid fa-volume-high"></i></div>
-            <h3>Precision in Makharij</h3>
-            <p>We prioritize the correct pronunciation of every letter from its proper articulation points, ensuring your recitation is accurate and free from errors.</p>
+            <div class="benefit-icon-circle"><i class="fa-solid fa-book"></i></div>
+            <h3>Comprehensive Curriculum</h3>
+            <p>Our course covers every aspect of the Arabic language, including grammar (Nahw & Sarf), vocabulary, pronunciation, and conversational skills, providing a solid foundation for language acquisition.</p>
           </div>
           
-          <!-- Benefit 2 -->
+          <!-- Feature 2 -->
           <div class="benefit-card-premium">
             <div class="benefit-icon-circle"><i class="fa-solid fa-book-quran"></i></div>
-            <h3>Mastery of Tajweed Rules</h3>
-            <p>From Mad and Ghunnah to Waqf (pausing), we guide you through the essential rules that bring grace, melody, and beauty to your recitation.</p>
+            <h3>Quranic Focus</h3>
+            <p>We integrate Quranic teachings and verses into our lessons, enabling students to understand and interpret the Holy Quran in its original Arabic text with ease and confidence.</p>
           </div>
           
-          <!-- Benefit 3 -->
+          <!-- Feature 3 -->
           <div class="benefit-card-premium">
-            <div class="benefit-icon-circle"><i class="fa-solid fa-brain"></i></div>
-            <h3>Deepening Understanding (Riyaat)</h3>
-            <p>Beyond just the mechanical act of reading, we help you grasp the meaning and spiritual significance of the verses you recite for a deeper connection.</p>
+            <div class="benefit-icon-circle"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Easy Learning Approach</h3>
+            <p>Our innovative teaching methods make learning Arabic enjoyable and accessible. Through interactive exercises, multimedia resources, and real-life scenarios, students progress quickly and efficiently.</p>
           </div>
           
-          <!-- Benefit 4 -->
+          <!-- Feature 4 -->
           <div class="benefit-card-premium">
-            <div class="benefit-icon-circle"><i class="fa-solid fa-user-tie"></i></div>
-            <h3>Expert Instructors</h3>
-            <p>Learn from certified, authorized male and female tutors who provide personalized 1-on-1 attention with utmost patience and care.</p>
-          </div>
-          
-          <!-- Benefit 5 -->
-          <div class="benefit-card-premium" style="grid-column: span 2;">
-            <div class="benefit-icon-circle"><i class="fa-solid fa-laptop-house"></i></div>
-            <h3>Flexible Learning From Home</h3>
-            <p>Study from the safety and comfort of your home. With class scheduling options available 24/7, we fit perfectly into your busy life. Sibling discounts and custom pacing allow kids and adults to learn at their own comfortable speed.</p>
+            <div class="benefit-icon-circle"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h3>Experienced Instructors</h3>
+            <p>Our team of experienced Arabic language instructors are passionate about teaching and dedicated to providing personalized guidance and support to every student, ensuring optimal learning outcomes.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. Course Curriculum Highlights (Timeline Tabs Redesign) -->
-    <section class="section section-tint" id="syllabus">
+    <!-- 5. Why Learn Arabic / Importance Section -->
+    <section class="section why-learn-section" id="why-learn">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Syllabus breakdown</span>
-          <h2 class="section-title">Course Curriculum Highlights</h2>
-          <p>Our program is divided into logical modules, ensuring comfortable progression for kids and adult students.</p>
+          <span class="section-subtitle">Gateway to Wisdom</span>
+          <h2 class="section-title">Importance of Learning Arabic Language</h2>
+          <p>Understanding the Arabic language is essential for every Muslim who seeks to deepen their relationship with the Quran. By learning Arabic, you gain direct access to the words of Allah.</p>
         </div>
         
-        <div class="curriculum-timeline-wrapper">
-          <!-- Navigation Steps -->
-          <div class="curriculum-nav-steps" id="curriculum-tabs">
-            <div class="curriculum-nav-progress" id="curriculum-progress-line"></div>
-            
-            <div class="curriculum-step-node active" data-step="1">
-              <div class="curriculum-step-dot">01</div>
-              <div class="curriculum-step-label">Foundations</div>
-            </div>
-            <div class="curriculum-step-node" data-step="2">
-              <div class="curriculum-step-dot">02</div>
-              <div class="curriculum-step-label">Tajweed Rules</div>
-            </div>
-            <div class="curriculum-step-node" data-step="3">
-              <div class="curriculum-step-dot">03</div>
-              <div class="curriculum-step-label">Surahs</div>
-            </div>
-            <div class="curriculum-step-node" data-step="4">
-              <div class="curriculum-step-dot">04</div>
-              <div class="curriculum-step-label">Comprehension</div>
-            </div>
-            <div class="curriculum-step-node" data-step="5">
-              <div class="curriculum-step-dot">05</div>
-              <div class="curriculum-step-label">Supplications</div>
-            </div>
+        <div class="why-learn-grid">
+          <!-- Card 1 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Spiritual Fulfillment</h3>
+            <p>Comprehending the holy text during prayers and recitations creates a profound sense of inner peace and deepens your spiritual connection.</p>
           </div>
           
-          <!-- Tab Panels -->
-          <div class="curriculum-tab-panel active" id="panel-step-1">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>Foundational Qaida & Letter Mastery</h3>
-                <p>Mastering Arabic alphabets, letter shapes, vowel movements (Harkat), and the core basics of reading Arabic words fluently. This sets the foundation for flawless reading.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Mastering Arabic alphabets & pronunciation</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Connecting letters in words</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Sound movements: Fathah, Kasrah, and Dammah (Harkat)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Basic spelling and reading fluency exercises</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-spell-check"></i>
-                <h4>Module 1 Objective</h4>
-                <p>Correctly identify and pronounce single and joined Arabic letters with correct vowel movements.</p>
-              </div>
-            </div>
+          <!-- Card 2 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-compass"></i></div>
+            <h3>Guiding Moral Compass</h3>
+            <p>Direct understanding of the moral and ethical lessons embedded in the verses helps navigate daily lifestyle choices correctly.</p>
           </div>
-
-          <div class="curriculum-tab-panel" id="panel-step-2">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>Essential Tajweed Rules</h3>
-                <p>Introduction to the fundamental rules of recitation that bring rhythm and correct structure to reading. You will learn to hold, merge, and echo sounds as they were traditionally revealed.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Rules of Sakoon and Tashdeed (letter doubling)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Madd rules (Prolongation marks: 2, 4, or 6 counts)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Ghunnah (Nasal sound prolongation) and Waqf rules</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Tanween rules (Izhar, Idgham, Iqlab, and Ikhfa)</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-circle-nodes"></i>
-                <h4>Module 2 Objective</h4>
-                <p>Recite verses applying doubling, joining, nasalization, and extension rules automatically.</p>
-              </div>
-            </div>
+          
+          <!-- Card 3 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-gem"></i></div>
+            <h3>Source of Wisdom & Knowledge</h3>
+            <p>Dive straight into classical Islamic literature, tafseer works, and historical narratives, gaining authentic scholarship without translation loss.</p>
           </div>
-
-          <div class="curriculum-tab-panel" id="panel-step-3">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>Surah Recitation Proficiency</h3>
-                <p>Progressive reading practice of the Quran, starting from the shorter Surahs of the last Juz (Juz 30 / Juz Amma) and systematically moving toward longer and more complex passages.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Fluid reading of Juz 30 Surahs (e.g., Al-Fatihah, Al-Ikhlas)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Connecting rules directly during active recitation</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Correct pausing patterns and Waqf rules implementation</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Reciting with appropriate rhythm and steady pace</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-book-open-reader"></i>
-                <h4>Module 3 Objective</h4>
-                <p>Fluently recite short Surahs from memory or reading with correct rhythm and stopping points.</p>
-              </div>
-            </div>
+          
+          <!-- Card 4 -->
+          <div class="why-learn-card" style="grid-column: span 1.5;">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Spiritual Protection & Healing</h3>
+            <p>Understand the precise meanings of the defensive and healing supplications (Duas & Adhkar) to recite them with focus and belief.</p>
           </div>
-
-          <div class="curriculum-tab-panel" id="panel-step-4">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>Verses (Riyaat) Comprehension</h3>
-                <p>Developing mastery over proper breathing, rhythm, and intonation, while beginning to grasp the underlying meanings and spiritual messages of the verses recited.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Breath control and breath distribution for long verses</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Proper vocal intonation matching the theme of verses</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Basic word-by-word meaning and context introduction</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Developing emotional and spiritual presence during reading</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-heart"></i>
-                <h4>Module 4 Objective</h4>
-                <p>Acquire proper breath management while reciting, reading with reverence and understanding.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="curriculum-tab-panel" id="panel-step-5">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>Daily Supplications & Masnoon Duas</h3>
-                <p>Learning essential daily prayers and supplications (Duas) from the Sunnah to integrate blessings and Islamic manners into your daily routines.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Duas for sleeping, waking up, eating, and entering the home</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Practical steps of Wudu (ablution) and Salah (prayer)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Short Azkar (remembrances) for morning and evening</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Memorizing essential Masnoon Duas with translation</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-hands-holding"></i>
-                <h4>Module 5 Objective</h4>
-                <p>Incorporate essential Islamic etiquettes, prayers, and Duas into daily family life.</p>
-              </div>
-            </div>
+          
+          <!-- Card 5 -->
+          <div class="why-learn-card" style="grid-column: span 1.5;">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-star"></i></div>
+            <h3>Fulfillment of Religious Duty</h3>
+            <p>Striving to learn the language chosen by Allah for the final revelation is a highly rewarded effort and a step towards fulfilling our religious duty.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7. Premium Pricing & Packages Section -->
-    <section class="section" id="pricing-packages">
+    <!-- 6. Tuition & Packages Section -->
+    <section class="section section-tint" id="pricing-packages">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Affordable Tuition</span>
@@ -1112,7 +880,7 @@
             <ul class="price-features-list">
               <li><i class="fa-solid fa-circle-check"></i> 2 Classes per Week</li>
               <li><i class="fa-solid fa-circle-check"></i> 30-Minute 1-on-1 Sessions</li>
-              <li><i class="fa-solid fa-circle-check"></i> Tajweed & Makharij Focus</li>
+              <li><i class="fa-solid fa-circle-check"></i> Foundational Vocabulary</li>
               <li><i class="fa-solid fa-circle-check"></i> Sibling Discount Eligible</li>
               <li class="muted-feat"><i class="fa-solid fa-circle-xmark"></i> Custom Makeup Classes</li>
               <li class="muted-feat"><i class="fa-solid fa-circle-xmark"></i> Dedicated Portal Access</li>
@@ -1134,7 +902,7 @@
             <ul class="price-features-list">
               <li><i class="fa-solid fa-circle-check"></i> 3 Classes per Week</li>
               <li><i class="fa-solid fa-circle-check"></i> 30-Minute 1-on-1 Sessions</li>
-              <li><i class="fa-solid fa-circle-check"></i> Tajweed, QA & Duas Included</li>
+              <li><i class="fa-solid fa-circle-check"></i> Grammar (Nahw & Sarf) Included</li>
               <li><i class="fa-solid fa-circle-check"></i> Custom Makeup Classes</li>
               <li><i class="fa-solid fa-circle-check"></i> Dedicated LMS Portal Access</li>
               <li><i class="fa-solid fa-circle-check"></i> Progress Reports (Monthly)</li>
@@ -1156,7 +924,7 @@
             <ul class="price-features-list">
               <li><i class="fa-solid fa-circle-check"></i> 5 Classes per Week</li>
               <li><i class="fa-solid fa-circle-check"></i> 30-Minute 1-on-1 Sessions</li>
-              <li><i class="fa-solid fa-circle-check"></i> Fast Progress & Memory Hifz</li>
+              <li><i class="fa-solid fa-circle-check"></i> Conversational & Quranic Focus</li>
               <li><i class="fa-solid fa-circle-check"></i> 24/7 Reschedule Coordination</li>
               <li><i class="fa-solid fa-circle-check"></i> Weekly Progress Review Reports</li>
               <li><i class="fa-solid fa-circle-check"></i> Academy Certification Included</li>
@@ -1172,25 +940,25 @@
       </div>
     </section>
 
-    <!-- 8. Interactive FAQs Section -->
-    <section class="section section-tint" id="faq">
+    <!-- 7. Interactive FAQs Section -->
+    <section class="section" id="faq">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Got Questions?</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
-          <p>Find answers to common questions about our online Quran Nazara classes, tutors, and packages.</p>
+          <p>Find answers to common questions about our online Arabic language classes, syllabus, and learning methods.</p>
         </div>
 
         <div class="faq-accordion-container">
           <!-- FAQ 1 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> Are the tutors qualified?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> Do I need to know the Arabic alphabet to join this course?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                Yes, absolutely. Our tutors are highly qualified scholars holding formal degrees in Islamic Studies and recitation licenses (Ijazah) from prestigious institutions. They have years of experience teaching online classes to kids and adult learners.
+                No, this course is designed for all levels. For absolute beginners, we cover the basic alphabet and pronunciation rules first. For intermediate learners, we jump straight into grammar and syntax.
               </div>
             </div>
           </div>
@@ -1198,12 +966,12 @@
           <!-- FAQ 2 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> Can I choose a female tutor?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> How long will it take to understand Quranic verses?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                Yes. We offer dedicated female scholars for sisters and young children. You can specify your tutor preference (Male Scholar / Female Scholar / No Preference) on the registration form, and we will match you accordingly.
+                With 3 sessions a week, most students start understanding simple Quranic vocabulary and basic sentence structures within 3 to 6 months. Fluency in reading and translating complex structures takes longer.
               </div>
             </div>
           </div>
@@ -1211,12 +979,12 @@
           <!-- FAQ 3 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> How do the online 1-on-1 classes work?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> What dialect or style is taught?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                Classes are held 1-on-1 in a virtual classroom. The student and tutor log in on their chosen schedule using video calls, screen-sharing, and interactive whiteboards to write and review the lesson slides. This ensures 100% focused attention.
+                We focus on Classical Arabic (Fusha) and Quranic Arabic vocabulary/grammar, which is the key to understanding the Holy Quran and classical Islamic texts.
               </div>
             </div>
           </div>
@@ -1224,12 +992,12 @@
           <!-- FAQ 4 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> What if I miss a scheduled class?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> Are female tutors available for female students?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                If you need to cancel or reschedule, please notify us at least 6 hours in advance. We will arrange a makeup class at a time that fits your convenience, so you never miss out on your study hours.
+                Yes, absolutely. We have highly experienced and certified female Arabic instructors for female students and kids.
               </div>
             </div>
           </div>
@@ -1237,12 +1005,12 @@
           <!-- FAQ 5 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> Is the 7-day free trial completely free?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> Do you provide study materials?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                Yes, the trial is 100% free with no credit card required. Experience 7 days of complimentary classes to interact with our tutors, experience our virtual classroom system, and evaluate our recitation guidance before making a decision.
+                Yes, we provide all the digital worksheets, vocabulary lists, and grammar guides in PDF format for free. Tutors display them during classes, and they are shared for home review.
               </div>
             </div>
           </div>
@@ -1250,8 +1018,8 @@
       </div>
     </section>
 
-    <!-- 9. Experience Excellence – 7 Days Free Booking Redesign -->
-    <section class="section" id="free-trial-booking">
+    <!-- 8. Registration Booking Section -->
+    <section class="section section-tint" id="free-trial-booking">
       <div class="container">
         <div class="contact-form-container" style="max-width: 950px; margin: 0 auto; box-shadow: var(--shadow-lg); border-radius: var(--radius-md); overflow: hidden;">
           <div class="form-grid" style="grid-template-columns: 1fr 1.1fr; gap: 0; background-color: var(--light);">
@@ -1261,9 +1029,9 @@
               <span class="badge" style="align-self: flex-start; margin-bottom: 20px; background-color: rgba(255,255,255,0.15); color: var(--light);">
                 <i class="fa-solid fa-gift" style="color: var(--secondary);"></i> 7 Days Free Trial
               </span>
-              <h3 style="color: var(--light); font-size: 28px; margin-bottom: 20px; line-height: 1.25;">Are You Ready to Begin?</h3>
+              <h3 style="color: var(--light); font-size: 28px; margin-bottom: 20px; line-height: 1.25;">Begin Your Quran Journey</h3>
               <p style="color: rgba(255,255,255,0.85); font-size: 14.5px; line-height: 1.6; margin-bottom: 30px;">
-                Allah (SWT) commands us to recite the Quran with Tartil (measured recitation). This course is designed to connect you with that tradition of excellence and devotion. Start your journey today and let the light of the Quran illuminate your heart and mind.
+                We are currently offering 7 days of free classes to help you experience our teaching excellence firsthand. Begin your journey toward deeper understanding and spiritual growth.
               </p>
               
               <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -1284,7 +1052,7 @@
             
             <!-- Right Form Panel -->
             <div style="padding: 50px 40px; display: flex; flex-direction: column; justify-content: center;">
-              <h3 style="margin-bottom: 8px; font-size: 22px;">Claim Your Free Classes</h3>
+              <h3 style="margin-bottom: 8px; font-size: 22px;">Book Your Free Classes</h3>
               <p style="font-size: 13.5px; color: var(--gray-600); margin-bottom: 24px;">Fill out the short form and we'll setup your trial class within 24 hours.</p>
               
               <form id="nazara-trial-form">
@@ -1297,7 +1065,7 @@
                   <label for="trial-email" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--dark-slate);">Email Address *</label>
                   <input type="email" id="trial-email" class="form-control" style="width: 100%; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 12px 14px; outline: none; font-family: var(--font-body); font-size: 14px; transition: var(--transition);" placeholder="e.g. name@example.com" required>
                 </div>
- 
+  
                 <div class="form-group" style="margin-bottom: 24px;">
                   <label for="trial-tutor" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--dark-slate);">Tutor Preference *</label>
                   <select id="trial-tutor" class="form-control" style="width: 100%; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 12px 14px; outline: none; font-family: var(--font-body); font-size: 14px; background-color: var(--light); cursor: pointer;" required>
@@ -1309,7 +1077,7 @@
                 </div>
                 
                 <button type="submit" id="btn-submit-trial" class="btn btn-secondary" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 8px; padding: 14px;">
-                  Claim 7-Day Trial <i class="fa-solid fa-paper-plane"></i>
+                  Book Now <i class="fa-solid fa-calendar-check"></i>
                 </button>
               </form>
             </div>
@@ -1319,7 +1087,7 @@
     </section>
   </main>
 
-  <!-- 13. Footer -->
+  <!-- 9. Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -1378,55 +1146,12 @@
   <!-- Custom JavaScript File -->
   <script src="script.js"></script>
 
-  <!-- In-page specific scripts for premium interactivity -->
+  <!-- In-page specific scripts for interactivity -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      
-
 
       // ==========================================
-      // 2. Interactive Curriculum Highlights Timeline Tabs
-      // ==========================================
-      const stepNodes = document.querySelectorAll('.curriculum-step-node');
-      const tabPanels = document.querySelectorAll('.curriculum-tab-panel');
-      const progressLine = document.getElementById('curriculum-progress-line');
-
-      function updateTimelineProgress(stepIndex) {
-        const total = stepNodes.length;
-        const percent = ((stepIndex - 1) / (total - 1)) * 100;
-        if (progressLine) {
-          progressLine.style.width = `${percent}%`;
-        }
-      }
-
-      stepNodes.forEach(node => {
-        node.addEventListener('click', () => {
-          const stepVal = parseInt(node.getAttribute('data-step'));
-          
-          // Set active step node
-          stepNodes.forEach(n => n.classList.remove('active'));
-          node.classList.add('active');
-          
-          // Update timeline progress line
-          updateTimelineProgress(stepVal);
-          
-          // Switch Tab Panels with fade animation
-          tabPanels.forEach(panel => {
-            panel.classList.remove('active');
-          });
-          
-          const targetPanel = document.getElementById(`panel-step-${stepVal}`);
-          if (targetPanel) {
-            targetPanel.classList.add('active');
-          }
-        });
-      });
-
-      // Initial progress calculation
-      updateTimelineProgress(1);
-
-      // ==========================================
-      // 3. Pricing Toggle Switcher
+      // 1. Pricing Toggle Switcher
       // ==========================================
       const billingCheckbox = document.getElementById('billing-period-checkbox');
       const monthlyLabel = document.getElementById('monthly-label');
@@ -1437,8 +1162,8 @@
       const priceIntensive = document.getElementById('price-intensive');
 
       const prices = {
-        monthly: { basic: 45, standard: 60, intensive: 95, suffix: '/ mo' },
-        quarterly: { basic: 40, standard: 54, intensive: 85, suffix: '/ mo' }
+        monthly: { basic: 45, standard: 60, intensive: 95 },
+        quarterly: { basic: 40, standard: 54, intensive: 85 }
       };
 
       if (billingCheckbox) {
@@ -1492,7 +1217,7 @@
       }
 
       // ==========================================
-      // 4. Interactive FAQs Accordion
+      // 2. Interactive FAQs Accordion
       // ==========================================
       const faqCards = document.querySelectorAll('.faq-item-card');
 
@@ -1524,7 +1249,7 @@
       }
 
       // ==========================================
-      // 5. Booking Form Submission & Feedback
+      // 3. Booking Form Submission & Feedback
       // ==========================================
       const trialForm = document.getElementById('nazara-trial-form');
       if (trialForm) {
