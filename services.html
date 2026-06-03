@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Our Courses & Services | Online Quran College</title>
+  <meta name="description" content="Explore our online Quran reading, Tajweed rules, Quran memorization, Arabic language, and Islamic studies courses. 1-on-1 certified male and female tutors.">
+  <meta name="keywords" content="quran reading, learn tajweed, quran hifz online, learn arabic language, islamic history for kids">
+  <meta name="author" content="Online Quran College">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Header & Navigation Bar -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo" id="nav-logo">
+          <img src="logo_.png" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="services.html" class="dropdown-trigger active">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+              <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+              <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+              <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+              <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blogs.html">Our Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Career Opportunities</a></li>
+          <li class="dropdown">
+            <a href="lms.html" class="dropdown-trigger">LMS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="lms.html#student-login">Student Portal</a></li>
+              <li><a href="lms.html#teacher-login">Teacher Portal</a></li>
+              <li><a href="lms.html#features">LMS Features</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="quiz.html" class="dropdown-trigger">Quiz <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quiz.html?type=tajweed">Tajweed Quiz</a></li>
+              <li><a href="quiz.html?type=islamic">Islamic Studies Quiz</a></li>
+              <li><a href="quiz.html?type=arabic">Arabic Vocabulary Quiz</a></li>
+            </ul>
+          </li>
+          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Register Now</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Page Header / Banner -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title">Our Courses & Services</h1>
+        <p class="page-subtitle">Carefully designed curricula to guide learners from basic alphabet pronunciation to complex Arabic and Quranic Tafseer.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span class="current">Courses & Services</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        
+        <!-- Category Filter buttons -->
+        <div class="filter-btn-group">
+          <button class="filter-btn active" onclick="filterCategory('all')">All Courses</button>
+          <button class="filter-btn" onclick="filterCategory('quran')">Quranic Studies</button>
+          <button class="filter-btn" onclick="filterCategory('arabic')">Arabic Language</button>
+          <button class="filter-btn" onclick="filterCategory('islamic')">Islamic Core</button>
+        </div>
+
+        <div id="courses-detailed-container">
+          
+          <!-- Course 1: Online Quran Reading -->
+          <div class="course-detailed-info filter-item quran" id="course-reading">
+            <div class="course-icon-box">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <div class="course-info-text">
+              <div class="course-meta-tags">
+                <span><i class="fa-solid fa-graduation-cap"></i> Beginner</span>
+                <span><i class="fa-solid fa-clock"></i> 30-45 mins</span>
+                <span><i class="fa-solid fa-user"></i> Kids & Adults</span>
+              </div>
+              <h3>1. Noorani Qaida Course</h3>
+              <p>
+                Learn Arabic alphabets, Makharij (letter origins), vowel symbols, and pronunciation rules from scratch.
+              </p>
+              <ul class="course-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Basic Arabic alphabet recognition and phonetic rules.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Understanding connecting letters, vowels, and stop signs.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Gradual progression from word-by-word reading to full verses.</li>
+              </ul>
+              
+              <!-- Detailed Overview Accordion -->
+              <details class="syllabus-accordion" style="margin-top: 20px; border: 1.5px solid rgba(0, 104, 71, 0.15); border-radius: var(--radius-sm); padding: 16px 20px; background-color: var(--secondary-tint); transition: var(--transition);">
+                <summary style="font-weight: 700; color: var(--primary); font-family: var(--font-title); font-size: 14px; outline: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; user-select: none; list-style: none;">
+                  <span style="display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-book-open"></i> View Noorani Qaida Syllabus & Details</span>
+                  <i class="fa-solid fa-chevron-down accordion-arrow" style="font-size: 12px; color: var(--secondary); transition: transform 0.3s ease;"></i>
+                </summary>
+                
+                <div style="margin-top: 18px; border-top: 1px solid rgba(0, 104, 71, 0.1); padding-top: 18px; font-size: 13.5px; color: var(--dark-slate); line-height: 1.6; cursor: default;" onclick="event.stopPropagation();">
+                  <p style="margin-bottom: 12px; font-style: italic;">
+                    This foundational course is designed to take a student from zero knowledge of the Arabic alphabet to reciting the Quran with fluency and accurate Tajweed rules.
+                  </p>
+                  
+                  <h4 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-route"></i> Syllabus Highlights</h4>
+                  <ul style="padding-left: 18px; margin-bottom: 12px; list-style-type: square;">
+                    <li style="margin-bottom: 6px;"><strong>Mufradat (Alphabets):</strong> Letter recognition and correct articulation points (Makharij).</li>
+                    <li style="margin-bottom: 6px;"><strong>Harakat & Tanween:</strong> Combining letters using vowel and double-vowel marks.</li>
+                    <li style="margin-bottom: 6px;"><strong>Tajweed Rules:</strong> Introduction to rules like Iqlab, Idgham, and Izhar.</li>
+                    <li style="margin-bottom: 6px;"><strong>Practical Reading:</strong> Practice reciting short verses of the Holy Quran.</li>
+                  </ul>
+                  
+                  <h4 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-laptop-code"></i> Course Features</h4>
+                  <ul style="padding-left: 18px; list-style-type: square;">
+                    <li style="margin-bottom: 6px;">1-on-1 personalized attention with certified scholars.</li>
+                    <li style="margin-bottom: 6px;">Flexible schedule that fits your daily routine.</li>
+                    <li style="margin-bottom: 6px;">Includes a 7-day free trial assessment period.</li>
+                  </ul>
+                </div>
+              </details>
+              
+              <div style="margin-top: 20px;">
+                <a href="contact.html" class="btn btn-secondary">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2: Tajweed Rules -->
+          <div class="course-detailed-info filter-item quran" id="course-tajweed">
+            <div class="course-icon-box">
+              <i class="fa-solid fa-book-quran"></i>
+            </div>
+            <div class="course-info-text">
+              <div class="course-meta-tags">
+                <span><i class="fa-solid fa-graduation-cap"></i> Intermediate</span>
+                <span><i class="fa-solid fa-clock"></i> 30-45 mins</span>
+                <span><i class="fa-solid fa-user"></i> Ages 6+</span>
+              </div>
+              <h3>2. Quran Nazara Course</h3>
+              <p>
+                Recite the Quran with correct pronunciation, Makharij rules, and melodic flow under certified scholars.
+              </p>
+              <ul class="course-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Makharij (origin points) of all Arabic letters.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Rules of Nun Sakinah, Meem Sakinah, and Ghunnah.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Rules of Madd, stopping points, and heavy vs. light letters.</li>
+              </ul>
+              
+              <!-- Detailed Overview Accordion -->
+              <details class="syllabus-accordion" style="margin-top: 20px; border: 1.5px solid rgba(0, 104, 71, 0.15); border-radius: var(--radius-sm); padding: 16px 20px; background-color: var(--secondary-tint); transition: var(--transition);">
+                <summary style="font-weight: 700; color: var(--primary); font-family: var(--font-title); font-size: 14px; outline: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; user-select: none; list-style: none;">
+                  <span style="display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-book-open"></i> View Quran Nazara Syllabus & Details</span>
+                  <i class="fa-solid fa-chevron-down accordion-arrow" style="font-size: 12px; color: var(--secondary); transition: transform 0.3s ease;"></i>
+                </summary>
+                
+                <div style="margin-top: 18px; border-top: 1px solid rgba(0, 104, 71, 0.1); padding-top: 18px; font-size: 13.5px; color: var(--dark-slate); line-height: 1.6; cursor: default;" onclick="event.stopPropagation();">
+                  <p style="margin-bottom: 12px; font-style: italic;">
+                    Embark on a profound spiritual journey by learning to read the Quran in its original Arabic. Whether you are a beginner or looking to perfect your recitation, our Quran Nazara Course provides the comprehensive guidance you need to read with confidence, fluency, and reverence.
+                  </p>
+                  
+                  <h4 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-star"></i> Why Choose Our Course?</h4>
+                  <ul style="padding-left: 18px; margin-bottom: 12px; list-style-type: square;">
+                    <li style="margin-bottom: 6px;"><strong>Preservation of Divine Revelation:</strong> Learn to recite the Quran in its authentic form, maintaining the sanctity and purity of the original text.</li>
+                    <li style="margin-bottom: 6px;"><strong>Deepen Your Spiritual Connection:</strong> Reading the Quran in Arabic fosters a direct link between you and the Divine, offering peace and spiritual fulfillment in your daily life.</li>
+                    <li style="margin-bottom: 6px;"><strong>Master Tajweed Rules:</strong> Our expert instructors break down the intricate rules of Tajweed, ensuring that every word you recite is articulated with perfect clarity and correct intonation.</li>
+                    <li style="margin-bottom: 6px;"><strong>Understand Riyaat:</strong> Gain deeper insights into the verses as you progress, allowing you to appreciate the wisdom and beauty embedded within the Quranic text.</li>
+                    <li style="margin-bottom: 6px;"><strong>Holistic Educational Growth:</strong> Sharpen your critical thinking and linguistic skills through a structured curriculum designed for learners of all ages.</li>
+                    <li style="margin-bottom: 6px;"><strong>Join a Community of Believers:</strong> Become part of a supportive environment that encourages unity, growth, and shared spiritual development.</li>
+                  </ul>
+                  
+                  <h4 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-circle-check"></i> What You Will Gain</h4>
+                  <ul style="padding-left: 18px; margin-bottom: 12px; list-style-type: square;">
+                    <li style="margin-bottom: 6px;"><strong>Foundations of Pronunciation:</strong> Master the articulation points (Makharij) of Arabic letters.</li>
+                    <li style="margin-bottom: 6px;"><strong>Essential Tajweed Principles:</strong> Comprehensive training on the rules governing Quranic flow.</li>
+                    <li style="margin-bottom: 6px;"><strong>Verse Recitation:</strong> Step-by-step practice to help you read smoothly and with proper pacing.</li>
+                    <li style="margin-bottom: 6px;"><strong>Vocabulary Recognition:</strong> Develop your ability to recognize and pronounce diverse Arabic words with ease.</li>
+                  </ul>
+                  
+                  <h4 style="color: var(--primary); font-size: 14px; margin-bottom: 8px; font-weight: 700; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-gift"></i> Experience Excellence – 7 Days Free</h4>
+                  <p style="margin-bottom: 6px;">
+                    We believe that the best way to choose your path is to experience it. We are currently offering 7 days of free classes so you can interact with our expert tutors and see the quality of our teaching firsthand. There is no better time to begin your journey toward spiritual enlightenment.
+                  </p>
+                </div>
+              </details>
+              
+              <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-secondary">Enroll Now</a>
+                <a href="quran-nazara.html" class="btn btn-outline">Explore Course Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: Hifz Memorization -->
+          <div class="course-detailed-info filter-item quran" id="course-hifz">
+            <div class="course-icon-box">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="course-info-text">
+              <div class="course-meta-tags">
+                <span><i class="fa-solid fa-graduation-cap"></i> All Levels</span>
+                <span><i class="fa-solid fa-clock"></i> 45-60 mins</span>
+                <span><i class="fa-solid fa-user"></i> Dedicated Students</span>
+              </div>
+              <h3>3. Hifz ul Quran Course</h3>
+              <p>
+                Structured program to memorize chapters or the entire Quran with revision patterns to ensure long-term retention.
+              </p>
+              <ul class="course-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Custom plans (memorizing specific Juz or the entire Quran).</li>
+                <li><i class="fa-solid fa-circle-check"></i> Systematic daily recitation and cumulative revision loops.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Regular oral quizzes and final Hifz assessment tests.</li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary">Enroll Now</a>
+            </div>
+          </div>
+
+          <!-- Course 4: Islamic Studies for Kids -->
+          <div class="course-detailed-info filter-item islamic" id="course-studies">
+            <div class="course-icon-box">
+              <i class="fa-solid fa-scroll"></i>
+            </div>
+            <div class="course-info-text">
+              <div class="course-meta-tags">
+                <span><i class="fa-solid fa-graduation-cap"></i> Beginner</span>
+                <span><i class="fa-solid fa-clock"></i> 30 mins</span>
+                <span><i class="fa-solid fa-user"></i> Kids (5-15)</span>
+              </div>
+              <h3>4. Hadith Translation Course</h3>
+              <p>
+                Learn the pillars of Islam, moral values, Hadith, and daily practices like Wudu, Salah, and Supplications.
+              </p>
+              <ul class="course-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Interactive tutorials on Wudu and Salah steps.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Daily Duas, Hadith morals, and Islamic etiquettes.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Inspiring stories of the Prophets and Islamic history.</li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary">Enroll Now</a>
+            </div>
+          </div>
+
+          <!-- Course 5: Arabic Language Course -->
+          <div class="course-detailed-info filter-item arabic" id="course-arabic">
+            <div class="course-icon-box">
+              <i class="fa-solid fa-language"></i>
+            </div>
+            <div class="course-info-text">
+              <div class="course-meta-tags">
+                <span><i class="fa-solid fa-graduation-cap"></i> Intermediate</span>
+                <span><i class="fa-solid fa-clock"></i> 45 mins</span>
+                <span><i class="fa-solid fa-user"></i> Adults & Kids</span>
+              </div>
+              <h3>5. Arabic Language Course</h3>
+              <p>
+                Master Quranic vocabulary and essential grammar to understand verses and build conversational confidence.
+              </p>
+              <ul class="course-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Basic grammar (verbs, nouns, prepositions, sentence structure).</li>
+                <li><i class="fa-solid fa-circle-check"></i> Extensive vocabulary drills based on Quranic words.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Interactive speaking exercises for conversational confidence.</li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary">Enroll Now</a>
+            </div>
+          </div>
+
+          <!-- Course 6: Tafseer-ul-Quran -->
+          <div class="course-detailed-info filter-item quran" id="course-tafseer">
+            <div class="course-icon-box">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="course-info-text">
+              <div class="course-meta-tags">
+                <span><i class="fa-solid fa-graduation-cap"></i> Advanced</span>
+                <span><i class="fa-solid fa-clock"></i> 45-60 mins</span>
+                <span><i class="fa-solid fa-user"></i> Adults & Youth</span>
+              </div>
+              <h3>6. Quran Translation</h3>
+              <p>
+                Understand historical contexts, word-by-word translation, and practical application of Quranic guidelines.
+              </p>
+              <ul class="course-details-list">
+                <li><i class="fa-solid fa-circle-check"></i> Asbab an-Nuzul (the context of revelations for each chapter).</li>
+                <li><i class="fa-solid fa-circle-check"></i> Word analysis and translation of Quranic syntax.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Explanations based on classical Tafseer texts.</li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary">Enroll Now</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column footer-about">
+          <a href="index.html" class="logo">
+            <img src="logo_.png" alt="Online Quran College Logo" class="logo-img footer-logo-img">
+          </a>
+          <p>Providing highly professional, customized online 1-on-1 Quran and Islamic lessons under the guidance of certified scholars worldwide.</p>
+          <div class="footer-social-panel">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Courses</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blogs.html">Our Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+            <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+            <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+            <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+            <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+            <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+  
+  <!-- In-page category filter handling -->
+  <script>
+    function filterCategory(category) {
+      // Toggle active class on buttons
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('onclick').includes(category)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Filter list items
+      const items = document.querySelectorAll('.filter-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

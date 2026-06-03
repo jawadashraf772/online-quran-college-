@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Quran Nazara Course: Master Recitation with Precision | Online Quran College</title>
+  <meta name="description" content="Embark on a profound spiritual journey and learn to read the Quran in its original Arabic with precision, confidence, and fluency. Perfect for beginners and advanced reciters. Get a 7-day free trial.">
+  <meta name="keywords" content="quran nazara course, learn quran recitation, learn tajweed rules, online quran reading arabic, online quran college">
+  <meta name="author" content="Online Quran College">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Premium Custom Styling for Quran Nazara Landing Page -->
+  <style>
+    :root {
+      --emerald-gradient: linear-gradient(135deg, #004d34 0%, #006847 100%);
+      --emerald-darker: #003725;
+      --emerald-lightest: #f0fdf4;
+      --blur-glass: blur(12px);
+    }
+
+    /* Animations */
+    @keyframes float-badge {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes float-badge-alt {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(12px) rotate(-1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    .float-badge-1 {
+      animation: float-badge 6s ease-in-out infinite;
+    }
+    .float-badge-2 {
+      animation: float-badge-alt 7s ease-in-out infinite;
+    }
+
+    /* Custom Hero Section */
+    .hero-nazara-custom {
+      padding: 190px 0 120px 0;
+      background: radial-gradient(circle at 80% 20%, var(--secondary-light) 0%, var(--light) 70%), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><path d="M40 0l40 40-40 40L0 40z" fill="rgba(0,104,71,0.005)" stroke="rgba(0,104,71,0.01)" stroke-width="1"/></svg>');
+      color: var(--dark-slate);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(0, 104, 71, 0.08);
+    }
+    
+    .hero-nazara-custom::before {
+      content: "وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا";
+      position: absolute;
+      font-family: var(--font-arabic);
+      font-size: 16vw;
+      color: rgba(0, 104, 71, 0.015);
+      bottom: -40px;
+      right: 5%;
+      pointer-events: none;
+      line-height: 1;
+      direction: rtl;
+    }
+
+    .hero-nazara-custom .hero-title {
+      color: var(--primary);
+      font-size: 52px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      text-shadow: none;
+    }
+    .hero-nazara-custom .hero-title span {
+      color: var(--secondary);
+      font-weight: 800;
+    }
+    
+    .hero-nazara-custom .hero-desc {
+      color: var(--gray-600);
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 620px;
+      line-height: 1.7;
+    }
+
+    /* Floating Badge Layouts */
+    .hero-illustration-wrapper-custom {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-arched-graphic {
+      width: 100%;
+      max-width: 420px;
+      height: 480px;
+      border-radius: 220px 220px 30px 30px;
+      border: 8px solid var(--light);
+      box-shadow: 0 30px 60px -15px rgba(0, 104, 71, 0.08), var(--shadow-lg);
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--secondary-light) 0%, var(--light) 100%);
+      position: relative;
+    }
+
+    .hero-arched-graphic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .hero-arched-graphic:hover img {
+      transform: scale(1.05);
+    }
+
+    .floating-glass-badge {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 104, 71, 0.1);
+      backdrop-filter: var(--blur-glass);
+      -webkit-backdrop-filter: var(--blur-glass);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 15px 35px rgba(0, 104, 71, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--dark-slate);
+      z-index: 10;
+      max-width: 250px;
+    }
+
+    .floating-glass-badge i {
+      font-size: 20px;
+      color: var(--secondary);
+      flex-shrink: 0;
+    }
+
+    .floating-glass-badge h5 {
+      color: var(--primary);
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      font-family: var(--font-title);
+    }
+
+    .floating-glass-badge p {
+      color: var(--gray-600);
+      font-size: 11px;
+      margin-bottom: 0;
+    }
+
+    .badge-pos-1 {
+      top: 40px;
+      left: -40px;
+    }
+    .badge-pos-2 {
+      bottom: 60px;
+      right: -30px;
+    }
+    .badge-pos-3 {
+      top: 220px;
+      right: -50px;
+    }
+
+    /* Spiritual callout quotes */
+    .spiritual-callout-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.04) 0%, rgba(0, 104, 71, 0.02) 100%);
+      border: 1px solid rgba(0, 104, 71, 0.08);
+      border-radius: var(--radius-md);
+      padding: 50px 40px;
+      text-align: center;
+      margin: 20px 0 60px 0;
+      position: relative;
+    }
+    
+    .spiritual-callout-box::before {
+      content: '“';
+      font-family: var(--font-title);
+      font-size: 120px;
+      color: rgba(16, 185, 129, 0.08);
+      position: absolute;
+      top: -20px;
+      left: 40px;
+      line-height: 1;
+    }
+
+    .spiritual-arabic-verse {
+      font-family: var(--font-arabic);
+      font-size: 34px;
+      color: var(--primary);
+      margin-bottom: 16px;
+      direction: rtl;
+      line-height: 1.8;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+
+    /* Core benefits cards refinement */
+    .benefit-card-premium {
+      background: var(--light);
+      border: 1px solid rgba(0, 104, 71, 0.06);
+      border-radius: var(--radius-md);
+      padding: 40px 32px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .benefit-card-premium::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary);
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .benefit-card-premium:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+    .benefit-card-premium:hover::before {
+      opacity: 1;
+      background: var(--secondary);
+    }
+    .benefit-icon-circle {
+      width: 60px;
+      height: 60px;
+      background: var(--secondary-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+    .benefit-card-premium:hover .benefit-icon-circle {
+      background: var(--primary);
+      color: var(--light);
+      transform: rotate(10deg) scale(1.05);
+    }
+    .benefit-card-premium h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .benefit-card-premium p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    /* Curriculum Step Tabs styles */
+    .curriculum-timeline-wrapper {
+      margin-top: 50px;
+    }
+    
+    .curriculum-nav-steps {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .curriculum-nav-steps::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gray-200);
+      z-index: 1;
+    }
+    .curriculum-nav-progress {
+      position: absolute;
+      top: 24px;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: var(--secondary);
+      z-index: 2;
+      transition: width 0.4s ease;
+    }
+
+    .curriculum-step-node {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      width: 80px;
+    }
+
+    .curriculum-step-dot {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--light);
+      border: 3.5px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-title);
+      font-weight: 800;
+      color: var(--gray-600);
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    
+    .curriculum-step-node:hover .curriculum-step-dot {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .curriculum-step-node.active .curriculum-step-dot {
+      border-color: var(--secondary);
+      background: var(--secondary);
+      color: var(--light);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    .curriculum-step-label {
+      font-family: var(--font-title);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gray-600);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: var(--transition);
+    }
+    .curriculum-step-node.active .curriculum-step-label {
+      color: var(--primary);
+    }
+
+    .curriculum-tab-panel {
+      background: var(--light);
+      border: 1px solid rgba(0, 104, 71, 0.08);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+      max-width: 900px;
+      margin: 0 auto;
+      display: none;
+      transform: translateY(15px);
+      opacity: 0;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    
+    .curriculum-tab-panel.active {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .panel-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .panel-content h3 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    
+    .panel-content p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+
+    .panel-bullets {
+      list-style: none;
+    }
+    .panel-bullets li {
+      font-size: 14.5px;
+      color: var(--dark-slate);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .panel-bullets li i {
+      color: var(--secondary);
+      font-size: 16px;
+    }
+
+    .panel-visual {
+      background: var(--emerald-lightest);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      text-align: center;
+      border: 1.5px dashed rgba(16, 185, 129, 0.2);
+    }
+    .panel-visual i {
+      font-size: 56px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .panel-visual h4 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--secondary);
+      margin-bottom: 6px;
+    }
+    .panel-visual p {
+      font-size: 12.5px;
+      color: var(--gray-600);
+      margin-bottom: 0;
+    }
+
+    /* Premium Pricing Section styles */
+    .pricing-toggle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+    .pricing-toggle-label {
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gray-700);
+    }
+    .pricing-toggle-label.active {
+      color: var(--primary);
+    }
+    .switch-toggle-btn {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 32px;
+    }
+    .switch-toggle-btn input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider-toggle-round {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--gray-300);
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider-toggle-round:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider-toggle-round {
+      background-color: var(--secondary);
+    }
+    input:checked + .slider-toggle-round:before {
+      transform: translateX(28px);
+    }
+
+    .pricing-grid-custom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    .pricing-card-premium {
+      background: var(--light);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 45px 35px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+    .pricing-card-premium.popular-card {
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.03);
+    }
+    .pricing-card-premium.popular-card::after {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: var(--light);
+      font-family: var(--font-title);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 6px 18px;
+      border-radius: 30px;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0, 104, 71, 0.1);
+    }
+    
+    .pricing-card-premium:hover {
+      border-color: var(--secondary);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .pricing-card-premium.popular-card:hover {
+      transform: scale(1.04) translateY(-8px);
+    }
+
+    .price-card-header {
+      text-align: center;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--gray-100);
+      padding-bottom: 25px;
+    }
+    .price-card-header h3 {
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .price-card-header p {
+      font-size: 13.5px;
+      color: var(--gray-600);
+      margin-bottom: 15px;
+    }
+
+    .price-figures {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 4px;
+    }
+    .price-currency {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .price-amount {
+      font-size: 54px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      font-family: var(--font-title);
+    }
+    .price-period {
+      font-size: 14px;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+
+    .price-features-list {
+      list-style: none;
+      margin-bottom: 35px;
+      flex-grow: 1;
+    }
+    .price-features-list li {
+      font-size: 14px;
+      color: var(--dark-slate);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .price-features-list li i {
+      color: var(--secondary);
+      font-size: 15px;
+    }
+    .price-features-list li.muted-feat {
+      color: var(--gray-600);
+      opacity: 0.6;
+    }
+    .price-features-list li.muted-feat i {
+      color: var(--gray-600);
+    }
+
+    .btn-pricing-cta {
+      width: 100%;
+      text-align: center;
+    }
+
+    .sibling-discount-banner {
+      background: var(--emerald-lightest);
+      border: 1.5px dashed rgba(16, 185, 129, 0.3);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+    }
+    .sibling-discount-banner p {
+      font-size: 14.5px;
+      color: var(--primary);
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    /* Accordion FAQs styles */
+    .faq-accordion-container {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .faq-item-card {
+      background: var(--light);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-item-card:hover {
+      border-color: rgba(0, 104, 71, 0.15);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-item-card.open {
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-trigger-header {
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+    .faq-trigger-header h3 {
+      font-size: 16px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0;
+      font-family: var(--font-title);
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-trigger-header h3 i {
+      color: var(--secondary);
+      font-size: 14px;
+    }
+    .faq-arrow-icon {
+      font-size: 14px;
+      color: var(--gray-600);
+      transition: transform 0.3s ease;
+    }
+    .faq-item-card.open .faq-arrow-icon {
+      transform: rotate(180deg);
+      color: var(--secondary);
+    }
+
+    .faq-body-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      background: var(--gray-50);
+      border-top: 1px solid transparent;
+    }
+    .faq-item-card.open .faq-body-content {
+      border-color: var(--gray-200);
+    }
+    .faq-inner-text {
+      padding: 24px 28px;
+      font-size: 14.5px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Media responsiveness overrides */
+    @media (max-width: 992px) {
+      .hero-nazara-custom {
+        padding: 150px 0 80px 0;
+        text-align: center;
+      }
+      .hero-nazara-custom .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-illustration-wrapper-custom {
+        margin-top: 50px;
+      }
+      .floating-glass-badge {
+        display: none; /* Hide floating absolute badges on mobile/tablet to clean layout */
+      }
+      .curriculum-nav-steps {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+        gap: 24px;
+      }
+      .curriculum-nav-steps::before, .curriculum-nav-progress {
+        display: none;
+      }
+      .curriculum-step-node {
+        flex-shrink: 0;
+      }
+      .panel-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid-custom {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+      }
+      .pricing-card-premium.popular-card {
+        transform: none;
+      }
+      .pricing-card-premium.popular-card:hover {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header & Navigation Bar -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo" id="nav-logo">
+          <img src="logo_.png" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="services.html" class="dropdown-trigger active">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+              <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+              <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+              <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+              <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blogs.html">Our Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Career Opportunities</a></li>
+          <li class="dropdown">
+            <a href="lms.html" class="dropdown-trigger">LMS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="lms.html#student-login">Student Portal</a></li>
+              <li><a href="lms.html#teacher-login">Teacher Portal</a></li>
+              <li><a href="lms.html#features">LMS Features</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="quiz.html" class="dropdown-trigger">Quiz <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quiz.html?type=tajweed">Tajweed Quiz</a></li>
+              <li><a href="quiz.html?type=islamic">Islamic Studies Quiz</a></li>
+              <li><a href="quiz.html?type=arabic">Arabic Vocabulary Quiz</a></li>
+            </ul>
+          </li>
+          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Register Now</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 2. Hero Section (Premium Landing Redesign) -->
+    <section class="hero-nazara-custom" id="course-hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="badge" style="margin-bottom: 24px;">
+              <i class="fa-solid fa-sparkles"></i> Premium 1-on-1 Recitation
+            </span>
+            <div class="hero-arabic arabic-text" lang="ar" style="font-size: 32px; margin-bottom: 12px;">
+              وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+            </div>
+            <h1 class="hero-title" id="course-hero-title">
+              Quran Nazara Course: <span>Embark on Your Spiritual Journey</span>
+            </h1>
+            <p class="hero-desc">
+              Reciting the Quran Majeed is the foundation of faith and a source of profound tranquility for every Muslim. Our course is meticulously designed for students who wish to read with correct Makharij (articulation points), precise Tajweed (rules of recitation), and a deep understanding of the verses.
+            </p>
+            <div class="hero-ctas">
+              <a href="#free-trial-booking" class="btn btn-secondary">Book Your 7-Day Free Trial Now <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#syllabus" class="btn btn-outline">Explore Curriculum</a>
+            </div>
+          </div>
+          
+          <div class="hero-illustration-wrapper-custom">
+            <!-- Arched graphic container -->
+            <div class="hero-arched-graphic">
+              <img src="nazara_hero.png" alt="Quran Nazara Course Hero" id="hero-main-img">
+              <div class="digital-quran-anim"></div>
+            </div>
+            <!-- Floating glassmorphism badges -->
+            <div class="floating-glass-badge badge-pos-1 float-badge-1">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <h5>Tajweed Certified</h5>
+                <p>Learn with proper rules</p>
+              </div>
+            </div>
+            <div class="floating-glass-badge badge-pos-2 float-badge-2">
+              <i class="fa-solid fa-venus-mars"></i>
+              <div>
+                <h5>Male/Female Tutors</h5>
+                <p>1-on-1 personalized</p>
+              </div>
+            </div>
+            <div class="floating-glass-badge badge-pos-3 float-badge-1">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div>
+                <h5>Flexible Hours</h5>
+                <p>Learn at your own pace</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Spiritual Callout Section -->
+    <section class="section" id="spiritual-connection" style="padding-bottom: 20px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Quranic Recitation</span>
+          <h2 class="section-title" style="font-size: 34px;">More Than Just Words, It’s a Spiritual Connection</h2>
+        </div>
+        
+        <div class="spiritual-callout-box">
+          <div class="spiritual-arabic-verse" lang="ar">
+            الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ يَتْلُونَهُ حَقَّ تِلَاوَتِهِ أُولَٰئِكَ يُؤْمِنُونَ بِهِ
+          </div>
+          <p style="font-size: 15px; color: var(--gray-600); font-style: italic; margin-bottom: 20px;">
+            "Those to whom We have given the Book recite it with its true recitation. They [in fact] believe in it." — Surah Al-Baqarah (121)
+          </p>
+          <p style="max-width: 800px; margin: 0 auto; line-height: 1.7; font-size: 15.5px;">
+            This course is not merely about learning to read; it is a dedicated, sacred path to building an enduring connection with the Divine. We help you transform your relationship with the Quran, allowing its words to flow beautifully, touching both your heart and the hearts of those who hear you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 5. Why Choose Our Course? Section -->
+    <section class="section" id="why-choose">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Core Benefits</span>
+          <h2 class="section-title">Why Choose Our Course?</h2>
+          <p>We combine authentic Islamic teachings with a modern learning environment to nurture your spiritual and recitation growth.</p>
+        </div>
+        
+        <div class="why-grid-3x2">
+          <!-- Benefit 1 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-volume-high"></i></div>
+            <h3>Precision in Makharij</h3>
+            <p>We prioritize the correct pronunciation of every letter from its proper articulation points, ensuring your recitation is accurate and free from errors.</p>
+          </div>
+          
+          <!-- Benefit 2 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-book-quran"></i></div>
+            <h3>Mastery of Tajweed Rules</h3>
+            <p>From Mad and Ghunnah to Waqf (pausing), we guide you through the essential rules that bring grace, melody, and beauty to your recitation.</p>
+          </div>
+          
+          <!-- Benefit 3 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-brain"></i></div>
+            <h3>Deepening Understanding (Riyaat)</h3>
+            <p>Beyond just the mechanical act of reading, we help you grasp the meaning and spiritual significance of the verses you recite for a deeper connection.</p>
+          </div>
+          
+          <!-- Benefit 4 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>Expert Instructors</h3>
+            <p>Learn from certified, authorized male and female tutors who provide personalized 1-on-1 attention with utmost patience and care.</p>
+          </div>
+          
+          <!-- Benefit 5 -->
+          <div class="benefit-card-premium" style="grid-column: span 2;">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-laptop-house"></i></div>
+            <h3>Flexible Learning From Home</h3>
+            <p>Study from the safety and comfort of your home. With class scheduling options available 24/7, we fit perfectly into your busy life. Sibling discounts and custom pacing allow kids and adults to learn at their own comfortable speed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Course Curriculum Highlights (Timeline Tabs Redesign) -->
+    <section class="section section-tint" id="syllabus">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Syllabus breakdown</span>
+          <h2 class="section-title">Course Curriculum Highlights</h2>
+          <p>Our program is divided into logical modules, ensuring comfortable progression for kids and adult students.</p>
+        </div>
+        
+        <div class="curriculum-timeline-wrapper">
+          <!-- Navigation Steps -->
+          <div class="curriculum-nav-steps" id="curriculum-tabs">
+            <div class="curriculum-nav-progress" id="curriculum-progress-line"></div>
+            
+            <div class="curriculum-step-node active" data-step="1">
+              <div class="curriculum-step-dot">01</div>
+              <div class="curriculum-step-label">Foundations</div>
+            </div>
+            <div class="curriculum-step-node" data-step="2">
+              <div class="curriculum-step-dot">02</div>
+              <div class="curriculum-step-label">Tajweed Rules</div>
+            </div>
+            <div class="curriculum-step-node" data-step="3">
+              <div class="curriculum-step-dot">03</div>
+              <div class="curriculum-step-label">Surahs</div>
+            </div>
+            <div class="curriculum-step-node" data-step="4">
+              <div class="curriculum-step-dot">04</div>
+              <div class="curriculum-step-label">Comprehension</div>
+            </div>
+            <div class="curriculum-step-node" data-step="5">
+              <div class="curriculum-step-dot">05</div>
+              <div class="curriculum-step-label">Supplications</div>
+            </div>
+          </div>
+          
+          <!-- Tab Panels -->
+          <div class="curriculum-tab-panel active" id="panel-step-1">
+            <div class="panel-grid">
+              <div class="panel-content">
+                <h3>Foundational Qaida & Letter Mastery</h3>
+                <p>Mastering Arabic alphabets, letter shapes, vowel movements (Harkat), and the core basics of reading Arabic words fluently. This sets the foundation for flawless reading.</p>
+                <ul class="panel-bullets">
+                  <li><i class="fa-solid fa-circle-check"></i> Mastering Arabic alphabets & pronunciation</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Connecting letters in words</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Sound movements: Fathah, Kasrah, and Dammah (Harkat)</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Basic spelling and reading fluency exercises</li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <i class="fa-solid fa-spell-check"></i>
+                <h4>Module 1 Objective</h4>
+                <p>Correctly identify and pronounce single and joined Arabic letters with correct vowel movements.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="curriculum-tab-panel" id="panel-step-2">
+            <div class="panel-grid">
+              <div class="panel-content">
+                <h3>Essential Tajweed Rules</h3>
+                <p>Introduction to the fundamental rules of recitation that bring rhythm and correct structure to reading. You will learn to hold, merge, and echo sounds as they were traditionally revealed.</p>
+                <ul class="panel-bullets">
+                  <li><i class="fa-solid fa-circle-check"></i> Rules of Sakoon and Tashdeed (letter doubling)</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Madd rules (Prolongation marks: 2, 4, or 6 counts)</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Ghunnah (Nasal sound prolongation) and Waqf rules</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Tanween rules (Izhar, Idgham, Iqlab, and Ikhfa)</li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <i class="fa-solid fa-circle-nodes"></i>
+                <h4>Module 2 Objective</h4>
+                <p>Recite verses applying doubling, joining, nasalization, and extension rules automatically.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="curriculum-tab-panel" id="panel-step-3">
+            <div class="panel-grid">
+              <div class="panel-content">
+                <h3>Surah Recitation Proficiency</h3>
+                <p>Progressive reading practice of the Quran, starting from the shorter Surahs of the last Juz (Juz 30 / Juz Amma) and systematically moving toward longer and more complex passages.</p>
+                <ul class="panel-bullets">
+                  <li><i class="fa-solid fa-circle-check"></i> Fluid reading of Juz 30 Surahs (e.g., Al-Fatihah, Al-Ikhlas)</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Connecting rules directly during active recitation</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Correct pausing patterns and Waqf rules implementation</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Reciting with appropriate rhythm and steady pace</li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h4>Module 3 Objective</h4>
+                <p>Fluently recite short Surahs from memory or reading with correct rhythm and stopping points.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="curriculum-tab-panel" id="panel-step-4">
+            <div class="panel-grid">
+              <div class="panel-content">
+                <h3>Verses (Riyaat) Comprehension</h3>
+                <p>Developing mastery over proper breathing, rhythm, and intonation, while beginning to grasp the underlying meanings and spiritual messages of the verses recited.</p>
+                <ul class="panel-bullets">
+                  <li><i class="fa-solid fa-circle-check"></i> Breath control and breath distribution for long verses</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Proper vocal intonation matching the theme of verses</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Basic word-by-word meaning and context introduction</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Developing emotional and spiritual presence during reading</li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <i class="fa-solid fa-heart"></i>
+                <h4>Module 4 Objective</h4>
+                <p>Acquire proper breath management while reciting, reading with reverence and understanding.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="curriculum-tab-panel" id="panel-step-5">
+            <div class="panel-grid">
+              <div class="panel-content">
+                <h3>Daily Supplications & Masnoon Duas</h3>
+                <p>Learning essential daily prayers and supplications (Duas) from the Sunnah to integrate blessings and Islamic manners into your daily routines.</p>
+                <ul class="panel-bullets">
+                  <li><i class="fa-solid fa-circle-check"></i> Duas for sleeping, waking up, eating, and entering the home</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Practical steps of Wudu (ablution) and Salah (prayer)</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Short Azkar (remembrances) for morning and evening</li>
+                  <li><i class="fa-solid fa-circle-check"></i> Memorizing essential Masnoon Duas with translation</li>
+                </ul>
+              </div>
+              <div class="panel-visual">
+                <i class="fa-solid fa-hands-holding"></i>
+                <h4>Module 5 Objective</h4>
+                <p>Incorporate essential Islamic etiquettes, prayers, and Duas into daily family life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Premium Pricing & Packages Section -->
+    <section class="section" id="pricing-packages">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Affordable Tuition</span>
+          <h2 class="section-title">Choose Your Study Plan</h2>
+          <p>Choose a plan that fits your family's schedule and goals. All options include a 7-day free trial.</p>
+        </div>
+
+        <!-- Billing Toggle -->
+        <div class="pricing-toggle-container">
+          <span class="pricing-toggle-label active" id="monthly-label">Monthly</span>
+          <label class="switch-toggle-btn">
+            <input type="checkbox" id="billing-period-checkbox">
+            <span class="slider-toggle-round"></span>
+          </label>
+          <span class="pricing-toggle-label" id="quarterly-label">Quarterly <span style="color: var(--secondary); font-size: 12px; font-weight: 800;">(Save 10%)</span></span>
+        </div>
+
+        <div class="pricing-grid-custom">
+          <!-- Card 1 -->
+          <div class="pricing-card-premium">
+            <div class="price-card-header">
+              <h3>Basic Plan</h3>
+              <p>Ideal for slow-paced beginners</p>
+              <div class="price-figures">
+                <span class="price-currency">$</span>
+                <span class="price-amount" id="price-basic">45</span>
+                <span class="price-period">/ mo</span>
+              </div>
+            </div>
+            <ul class="price-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> 2 Classes per Week</li>
+              <li><i class="fa-solid fa-circle-check"></i> 30-Minute 1-on-1 Sessions</li>
+              <li><i class="fa-solid fa-circle-check"></i> Tajweed & Makharij Focus</li>
+              <li><i class="fa-solid fa-circle-check"></i> Sibling Discount Eligible</li>
+              <li class="muted-feat"><i class="fa-solid fa-circle-xmark"></i> Custom Makeup Classes</li>
+              <li class="muted-feat"><i class="fa-solid fa-circle-xmark"></i> Dedicated Portal Access</li>
+            </ul>
+            <a href="#free-trial-booking" class="btn btn-outline btn-pricing-cta">Start Free Trial</a>
+          </div>
+
+          <!-- Card 2 (Popular) -->
+          <div class="pricing-card-premium popular-card">
+            <div class="price-card-header">
+              <h3>Standard Plan</h3>
+              <p>Perfect balance for steady progress</p>
+              <div class="price-figures">
+                <span class="price-currency">$</span>
+                <span class="price-amount" id="price-standard">60</span>
+                <span class="price-period">/ mo</span>
+              </div>
+            </div>
+            <ul class="price-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> 3 Classes per Week</li>
+              <li><i class="fa-solid fa-circle-check"></i> 30-Minute 1-on-1 Sessions</li>
+              <li><i class="fa-solid fa-circle-check"></i> Tajweed, QA & Duas Included</li>
+              <li><i class="fa-solid fa-circle-check"></i> Custom Makeup Classes</li>
+              <li><i class="fa-solid fa-circle-check"></i> Dedicated LMS Portal Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> Progress Reports (Monthly)</li>
+            </ul>
+            <a href="#free-trial-booking" class="btn btn-secondary btn-pricing-cta">Start Free Trial</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pricing-card-premium">
+            <div class="price-card-header">
+              <h3>Intensive Plan</h3>
+              <p>Fast-track learning and Hifz</p>
+              <div class="price-figures">
+                <span class="price-currency">$</span>
+                <span class="price-amount" id="price-intensive">95</span>
+                <span class="price-period">/ mo</span>
+              </div>
+            </div>
+            <ul class="price-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> 5 Classes per Week</li>
+              <li><i class="fa-solid fa-circle-check"></i> 30-Minute 1-on-1 Sessions</li>
+              <li><i class="fa-solid fa-circle-check"></i> Fast Progress & Memory Hifz</li>
+              <li><i class="fa-solid fa-circle-check"></i> 24/7 Reschedule Coordination</li>
+              <li><i class="fa-solid fa-circle-check"></i> Weekly Progress Review Reports</li>
+              <li><i class="fa-solid fa-circle-check"></i> Academy Certification Included</li>
+            </ul>
+            <a href="#free-trial-booking" class="btn btn-outline btn-pricing-cta">Start Free Trial</a>
+          </div>
+        </div>
+
+        <!-- Sibling discount banner -->
+        <div class="sibling-discount-banner">
+          <p><i class="fa-solid fa-tags"></i> Sibling Discount: Enroll a second family member and receive an additional 10% discount on their package!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Interactive FAQs Section -->
+    <section class="section section-tint" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p>Find answers to common questions about our online Quran Nazara classes, tutors, and packages.</p>
+        </div>
+
+        <div class="faq-accordion-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item-card">
+            <div class="faq-trigger-header">
+              <h3><i class="fa-solid fa-circle-question"></i> Are the tutors qualified?</h3>
+              <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
+            </div>
+            <div class="faq-body-content">
+              <div class="faq-inner-text">
+                Yes, absolutely. Our tutors are highly qualified scholars holding formal degrees in Islamic Studies and recitation licenses (Ijazah) from prestigious institutions. They have years of experience teaching online classes to kids and adult learners.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item-card">
+            <div class="faq-trigger-header">
+              <h3><i class="fa-solid fa-circle-question"></i> Can I choose a female tutor?</h3>
+              <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
+            </div>
+            <div class="faq-body-content">
+              <div class="faq-inner-text">
+                Yes. We offer dedicated female scholars for sisters and young children. You can specify your tutor preference (Male Scholar / Female Scholar / No Preference) on the registration form, and we will match you accordingly.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item-card">
+            <div class="faq-trigger-header">
+              <h3><i class="fa-solid fa-circle-question"></i> How do the online 1-on-1 classes work?</h3>
+              <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
+            </div>
+            <div class="faq-body-content">
+              <div class="faq-inner-text">
+                Classes are held 1-on-1 in a virtual classroom. The student and tutor log in on their chosen schedule using video calls, screen-sharing, and interactive whiteboards to write and review the lesson slides. This ensures 100% focused attention.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item-card">
+            <div class="faq-trigger-header">
+              <h3><i class="fa-solid fa-circle-question"></i> What if I miss a scheduled class?</h3>
+              <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
+            </div>
+            <div class="faq-body-content">
+              <div class="faq-inner-text">
+                If you need to cancel or reschedule, please notify us at least 6 hours in advance. We will arrange a makeup class at a time that fits your convenience, so you never miss out on your study hours.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item-card">
+            <div class="faq-trigger-header">
+              <h3><i class="fa-solid fa-circle-question"></i> Is the 7-day free trial completely free?</h3>
+              <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
+            </div>
+            <div class="faq-body-content">
+              <div class="faq-inner-text">
+                Yes, the trial is 100% free with no credit card required. Experience 7 days of complimentary classes to interact with our tutors, experience our virtual classroom system, and evaluate our recitation guidance before making a decision.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Experience Excellence – 7 Days Free Booking Redesign -->
+    <section class="section" id="free-trial-booking">
+      <div class="container">
+        <div class="contact-form-container" style="max-width: 950px; margin: 0 auto; box-shadow: var(--shadow-lg); border-radius: var(--radius-md); overflow: hidden;">
+          <div class="form-grid" style="grid-template-columns: 1fr 1.1fr; gap: 0; background-color: var(--light);">
+            
+            <!-- Left Info Panel with Premium Gradient -->
+            <div style="background: linear-gradient(135deg, var(--emerald-darker) 0%, var(--primary) 100%); color: var(--light); padding: 50px 40px; display: flex; flex-direction: column; justify-content: center; position: relative;">
+              <span class="badge" style="align-self: flex-start; margin-bottom: 20px; background-color: rgba(255,255,255,0.15); color: var(--light);">
+                <i class="fa-solid fa-gift" style="color: var(--secondary);"></i> 7 Days Free Trial
+              </span>
+              <h3 style="color: var(--light); font-size: 28px; margin-bottom: 20px; line-height: 1.25;">Are You Ready to Begin?</h3>
+              <p style="color: rgba(255,255,255,0.85); font-size: 14.5px; line-height: 1.6; margin-bottom: 30px;">
+                Allah (SWT) commands us to recite the Quran with Tartil (measured recitation). This course is designed to connect you with that tradition of excellence and devotion. Start your journey today and let the light of the Quran illuminate your heart and mind.
+              </p>
+              
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                  <i class="fa-solid fa-circle-check" style="color: var(--secondary); font-size: 16px;"></i>
+                  <span>No credit card required to start trial</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                  <i class="fa-solid fa-circle-check" style="color: var(--secondary); font-size: 16px;"></i>
+                  <span>Select certified male or female tutors</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                  <i class="fa-solid fa-circle-check" style="color: var(--secondary); font-size: 16px;"></i>
+                  <span>Flexible timings matched to your routine</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Form Panel -->
+            <div style="padding: 50px 40px; display: flex; flex-direction: column; justify-content: center;">
+              <h3 style="margin-bottom: 8px; font-size: 22px;">Claim Your Free Classes</h3>
+              <p style="font-size: 13.5px; color: var(--gray-600); margin-bottom: 24px;">Fill out the short form and we'll setup your trial class within 24 hours.</p>
+              
+              <form id="nazara-trial-form">
+                <div class="form-group" style="margin-bottom: 16px;">
+                  <label for="trial-name" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--dark-slate);">Full Name *</label>
+                  <input type="text" id="trial-name" class="form-control" style="width: 100%; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 12px 14px; outline: none; font-family: var(--font-body); font-size: 14px; transition: var(--transition);" placeholder="e.g. Maryam Khan" required>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 16px;">
+                  <label for="trial-email" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--dark-slate);">Email Address *</label>
+                  <input type="email" id="trial-email" class="form-control" style="width: 100%; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 12px 14px; outline: none; font-family: var(--font-body); font-size: 14px; transition: var(--transition);" placeholder="e.g. name@example.com" required>
+                </div>
+ 
+                <div class="form-group" style="margin-bottom: 24px;">
+                  <label for="trial-tutor" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--dark-slate);">Tutor Preference *</label>
+                  <select id="trial-tutor" class="form-control" style="width: 100%; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 12px 14px; outline: none; font-family: var(--font-body); font-size: 14px; background-color: var(--light); cursor: pointer;" required>
+                    <option value="">-- Choose Preference --</option>
+                    <option value="female">Female Scholar</option>
+                    <option value="male">Male Scholar</option>
+                    <option value="any">No Preference</option>
+                  </select>
+                </div>
+                
+                <button type="submit" id="btn-submit-trial" class="btn btn-secondary" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 8px; padding: 14px;">
+                  Claim 7-Day Trial <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column footer-about">
+          <a href="index.html" class="logo">
+            <img src="logo_.png" alt="Online Quran College Logo" class="logo-img footer-logo-img">
+          </a>
+          <p>Providing highly professional, customized online 1-on-1 Quran and Islamic lessons under the guidance of certified scholars worldwide.</p>
+          <div class="footer-social-panel">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Courses</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blogs.html">Our Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+            <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+            <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+            <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+            <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+            <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+
+  <!-- In-page specific scripts for premium interactivity -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+
+
+      // ==========================================
+      // 2. Interactive Curriculum Highlights Timeline Tabs
+      // ==========================================
+      const stepNodes = document.querySelectorAll('.curriculum-step-node');
+      const tabPanels = document.querySelectorAll('.curriculum-tab-panel');
+      const progressLine = document.getElementById('curriculum-progress-line');
+
+      function updateTimelineProgress(stepIndex) {
+        const total = stepNodes.length;
+        const percent = ((stepIndex - 1) / (total - 1)) * 100;
+        if (progressLine) {
+          progressLine.style.width = `${percent}%`;
+        }
+      }
+
+      stepNodes.forEach(node => {
+        node.addEventListener('click', () => {
+          const stepVal = parseInt(node.getAttribute('data-step'));
+          
+          // Set active step node
+          stepNodes.forEach(n => n.classList.remove('active'));
+          node.classList.add('active');
+          
+          // Update timeline progress line
+          updateTimelineProgress(stepVal);
+          
+          // Switch Tab Panels with fade animation
+          tabPanels.forEach(panel => {
+            panel.classList.remove('active');
+          });
+          
+          const targetPanel = document.getElementById(`panel-step-${stepVal}`);
+          if (targetPanel) {
+            targetPanel.classList.add('active');
+          }
+        });
+      });
+
+      // Initial progress calculation
+      updateTimelineProgress(1);
+
+      // ==========================================
+      // 3. Pricing Toggle Switcher
+      // ==========================================
+      const billingCheckbox = document.getElementById('billing-period-checkbox');
+      const monthlyLabel = document.getElementById('monthly-label');
+      const quarterlyLabel = document.getElementById('quarterly-label');
+      
+      const priceBasic = document.getElementById('price-basic');
+      const priceStandard = document.getElementById('price-standard');
+      const priceIntensive = document.getElementById('price-intensive');
+
+      const prices = {
+        monthly: { basic: 45, standard: 60, intensive: 95, suffix: '/ mo' },
+        quarterly: { basic: 40, standard: 54, intensive: 85, suffix: '/ mo' }
+      };
+
+      if (billingCheckbox) {
+        billingCheckbox.addEventListener('change', () => {
+          const isQuarterly = billingCheckbox.checked;
+          
+          if (isQuarterly) {
+            monthlyLabel.classList.remove('active');
+            quarterlyLabel.classList.add('active');
+            
+            // Set quarterly price amounts with fade
+            animatePriceChange(priceBasic, prices.quarterly.basic);
+            animatePriceChange(priceStandard, prices.quarterly.standard);
+            animatePriceChange(priceIntensive, prices.quarterly.intensive);
+            
+            updatePeriods('/ mo');
+          } else {
+            quarterlyLabel.classList.remove('active');
+            monthlyLabel.classList.add('active');
+            
+            // Set monthly price amounts
+            animatePriceChange(priceBasic, prices.monthly.basic);
+            animatePriceChange(priceStandard, prices.monthly.standard);
+            animatePriceChange(priceIntensive, prices.monthly.intensive);
+            
+            updatePeriods('/ mo');
+          }
+        });
+      }
+
+      function animatePriceChange(element, targetValue) {
+        if (!element) return;
+        element.style.transform = 'scale(0.8)';
+        element.style.opacity = '0';
+        setTimeout(() => {
+          element.textContent = targetValue;
+          element.style.transform = 'scale(1)';
+          element.style.opacity = '1';
+        }, 150);
+      }
+
+      function updatePeriods(suffixText) {
+        const periods = document.querySelectorAll('.price-period');
+        periods.forEach(p => {
+          if (billingCheckbox.checked) {
+            p.innerHTML = `${suffixText} <span style="font-size:11px; display:block; color:var(--secondary); font-weight:700;">(billed quarterly)</span>`;
+          } else {
+            p.textContent = suffixText;
+          }
+        });
+      }
+
+      // ==========================================
+      // 4. Interactive FAQs Accordion
+      // ==========================================
+      const faqCards = document.querySelectorAll('.faq-item-card');
+
+      faqCards.forEach(card => {
+        const header = card.querySelector('.faq-trigger-header');
+        const body = card.querySelector('.faq-body-content');
+        
+        header.addEventListener('click', () => {
+          const isOpen = card.classList.contains('open');
+          
+          // Close all FAQs first
+          faqCards.forEach(c => {
+            c.classList.remove('open');
+            c.querySelector('.faq-body-content').style.maxHeight = '0px';
+          });
+          
+          // Toggle current
+          if (!isOpen) {
+            card.classList.add('open');
+            body.style.maxHeight = `${body.scrollHeight}px`;
+          }
+        });
+      });
+
+      // Open the first FAQ by default
+      if (faqCards.length > 0) {
+        faqCards[0].classList.add('open');
+        faqCards[0].querySelector('.faq-body-content').style.maxHeight = `${faqCards[0].querySelector('.faq-body-content').scrollHeight}px`;
+      }
+
+      // ==========================================
+      // 5. Booking Form Submission & Feedback
+      // ==========================================
+      const trialForm = document.getElementById('nazara-trial-form');
+      if (trialForm) {
+        trialForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          const submitBtn = document.getElementById('btn-submit-trial');
+          const originalContent = submitBtn.innerHTML;
+          
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+          
+          setTimeout(() => {
+            submitBtn.style.background = '#10b981';
+            submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Trial Booked Successfully!';
+            trialForm.reset();
+            
+            setTimeout(() => {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalContent;
+              submitBtn.style.background = '';
+            }, 4000);
+            
+          }, 1500);
+        });
+      }
+
+    });
+  </script>
+</body>
+</html>

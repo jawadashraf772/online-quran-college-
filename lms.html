@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>LMS Portal | Online Quran College</title>
+  <meta name="description" content="Access the Online Quran College LMS portal. Login to student or teacher dashboards to track classes, schedule makeup lessons, monitor Hifz progress, and access resources.">
+  <meta name="keywords" content="quran portal, online quran lms, student login quran academy, teacher portal, hifz tracker">
+  <meta name="author" content="Online Quran College">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Header & Navigation Bar -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo" id="nav-logo">
+          <img src="logo_.png" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="services.html" class="dropdown-trigger">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+              <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+              <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+              <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+              <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blogs.html">Our Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Career Opportunities</a></li>
+          <li class="dropdown">
+            <a href="lms.html" class="dropdown-trigger active">LMS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="lms.html#student-login">Student Portal</a></li>
+              <li><a href="lms.html#teacher-login">Teacher Portal</a></li>
+              <li><a href="lms.html#features">LMS Features</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="quiz.html" class="dropdown-trigger">Quiz <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quiz.html?type=tajweed">Tajweed Quiz</a></li>
+              <li><a href="quiz.html?type=islamic">Islamic Studies Quiz</a></li>
+              <li><a href="quiz.html?type=arabic">Arabic Vocabulary Quiz</a></li>
+            </ul>
+          </li>
+          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Register Now</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Page Header / Banner -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title">LMS Portal</h1>
+        <p class="page-subtitle">Access your virtual classroom, progress cards, lecture schedules, and online reports.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span class="current">LMS Portal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- LMS Login Split Cards -->
+    <section class="section" id="portals">
+      <div class="container">
+        <div class="lms-split-container">
+          
+          <!-- Student Login Card -->
+          <div class="lms-login-box student" id="student-login">
+            <div class="lms-login-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Student Portal</h3>
+            <p>Access your personalized Quran lessons, homework files, and tutor feedback.</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Student Login Mockup - In production environment, this connects to the core database.');">
+              <div class="form-group">
+                <label for="student-id">Student ID or Email</label>
+                <input type="text" id="student-id" class="form-control" placeholder="e.g. OQC-2026-1049" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="student-pass">Password</label>
+                <input type="password" id="student-pass" class="form-control" placeholder="••••••••" required>
+              </div>
+              
+              <a href="#" class="forgot-pwd-link">Forgot Password?</a>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+                Login to Student Portal <i class="fa-solid fa-right-to-bracket" style="margin-left: 6px;"></i>
+              </button>
+            </form>
+          </div>
+          
+          <!-- Teacher Login Card -->
+          <div class="lms-login-box teacher" id="teacher-login">
+            <div class="lms-login-icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h3>Teacher Portal</h3>
+            <p>Manage your students' schedule rosters, mark attendance, and submit monthly grades.</p>
+            
+            <form onsubmit="event.preventDefault(); alert('Teacher Login Mockup - In production environment, this connects to the staff database.');">
+              <div class="form-group">
+                <label for="teacher-id">Faculty Email / ID</label>
+                <input type="text" id="teacher-id" class="form-control" placeholder="e.g. ahmed.faculty@qurancollege.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="teacher-pass">Password</label>
+                <input type="password" id="teacher-pass" class="form-control" placeholder="••••••••" required>
+              </div>
+              
+              <a href="#" class="forgot-pwd-link">Forgot Password?</a>
+              
+              <button type="submit" class="btn btn-secondary" style="width: 100%; padding: 14px;">
+                Login to Teacher Portal <i class="fa-solid fa-right-to-bracket" style="margin-left: 6px;"></i>
+              </button>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Dashboard Mockup Showcase -->
+    <section class="section section-tint">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portal Preview</span>
+          <h2 class="section-title">Take a Look Inside Our LMS Dashboard</h2>
+          <p>What a student sees upon logging in—combining simple tracking with visual accountability indicators.</p>
+        </div>
+        
+        <!-- Mock Dashboard Container -->
+        <div style="background-color: var(--light); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid rgba(0, 104, 71, 0.05); max-width: 1000px; margin: 0 auto;">
+          
+          <!-- Mock Header Info -->
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--gray-100); padding-bottom: 24px; margin-bottom: 30px; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--secondary-light); display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; color: var(--primary);">ZS</div>
+              <div>
+                <h3 style="font-size: 20px; color: var(--primary);">Zainab Siddiqui</h3>
+                <span style="font-size: 13px; color: var(--gray-600);"><i class="fa-solid fa-id-card"></i> Student ID: OQC-2026-9844 | Course: Tajweed & Hifz</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <span style="background-color: rgba(16, 185, 129, 0.1); color: var(--primary); font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 30px;"><i class="fa-solid fa-circle"></i> Connection: Stable</span>
+              <span style="background-color: var(--secondary-tint); color: var(--primary); font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 30px;"><i class="fa-solid fa-award"></i> Level: Intermediate</span>
+            </div>
+          </div>
+          
+          <!-- Dashboard Grid -->
+          <div class="services-grid-3x2" style="grid-template-columns: 1.2fr 0.8fr; gap: 30px; margin-bottom: 30px;">
+            
+            <!-- Column A: Upcoming Classes & Calendar -->
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+              <div style="border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 24px; background-color: var(--gray-50);">
+                <h4 style="font-size: 16px; margin-bottom: 16px; color: var(--primary); display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-calendar-days"></i> Upcoming Classes Schedule
+                </h4>
+                
+                <!-- Class 1 -->
+                <div style="display: flex; justify-content: space-between; align-items: center; background-color: var(--light); padding: 14px; border-radius: var(--radius-sm); border-left: 4px solid var(--secondary); margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+                  <div>
+                    <h5 style="font-size: 14.5px; color: var(--dark-slate);">Session 28: Tajweed Rules - Ikhfa Rules</h5>
+                    <p style="font-size: 12.5px; color: var(--gray-600); margin-top: 4px;"><i class="fa-solid fa-circle-user"></i> Tutor: Ustadh Mahmoud Al-Hasan | Time: 45 Mins</p>
+                  </div>
+                  <div style="text-align: right;">
+                    <span style="display:block; font-size: 13px; font-weight: 700; color: var(--primary);">Today at 19:30</span>
+                    <a href="#" class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px; margin-top: 6px; border-radius: 4px;" onclick="event.preventDefault(); alert('Launching virtual whiteboard classroom...');">Join Class</a>
+                  </div>
+                </div>
+
+                <!-- Class 2 -->
+                <div style="display: flex; justify-content: space-between; align-items: center; background-color: var(--light); padding: 14px; border-radius: var(--radius-sm); border-left: 4px solid var(--primary); flex-wrap: wrap; gap: 10px;">
+                  <div>
+                    <h5 style="font-size: 14.5px; color: var(--dark-slate);">Session 29: Memorization (Juz 30 revision)</h5>
+                    <p style="font-size: 12.5px; color: var(--gray-600); margin-top: 4px;"><i class="fa-solid fa-circle-user"></i> Tutor: Ustadh Mahmoud Al-Hasan | Time: 45 Mins</p>
+                  </div>
+                  <div style="text-align: right;">
+                    <span style="display:block; font-size: 13px; font-weight: 700; color: var(--gray-600);">May 24, 19:30</span>
+                    <span style="display:inline-block; font-size: 11px; padding: 4px 10px; margin-top: 6px; border-radius: 4px; background-color: var(--gray-200); color: var(--gray-700);">Scheduled</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Digital Whiteboard Preview -->
+              <div style="border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 24px; background-color: var(--gray-50);">
+                <h4 style="font-size: 16px; margin-bottom: 16px; color: var(--primary); display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-pen-ruler"></i> Shared Digital Board Notes
+                </h4>
+                <div style="background-color: var(--primary); color: var(--light); border-radius: var(--radius-sm); padding: 20px; font-family: 'Courier New', Courier, monospace; text-align: center; border: 4px solid var(--secondary-light);">
+                  <div class="arabic-text" style="font-size: 40px; margin-bottom: 12px; color: var(--accent);">مَ مِ مُ - بَ بِ بُ</div>
+                  <p style="font-size: 13px; color: #f3f4f6;">Lesson: Makhraj of Lips (Letter Meem and Ba). Recite with light lips contact.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Column B: Hifz Tracker & Grades -->
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+              <!-- Hifz Progress -->
+              <div style="border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 24px; background-color: var(--gray-50);">
+                <h4 style="font-size: 16px; margin-bottom: 16px; color: var(--primary); display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-book-open-reader"></i> Hifz Memorization Tracker
+                </h4>
+                
+                <div style="margin-bottom: 16px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 12.5px; margin-bottom: 6px;">
+                    <span>Juz Amma (30) Completion</span>
+                    <strong style="color: var(--primary);">84%</strong>
+                  </div>
+                  <div style="height: 8px; background-color: var(--gray-200); border-radius: 10px; overflow: hidden;">
+                    <div style="height: 100%; width: 84%; background-color: var(--primary); border-radius: 10px;"></div>
+                  </div>
+                </div>
+                
+                <ul class="perks-list" style="font-size: 12.5px;">
+                  <li style="margin-bottom: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--secondary); font-size: 12px;"></i> Last Memorized: Surah Al-Alaq (v. 1-10)</li>
+                  <li style="margin-bottom: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--secondary); font-size: 12px;"></i> Next Target: Surah Al-Alaq (v. 11-19)</li>
+                  <li><i class="fa-solid fa-rotate-left" style="color: var(--primary); font-size: 12px;"></i> Revision: Surah Al-Qadr</li>
+                </ul>
+              </div>
+
+              <!-- Monthly Tajweed Report Card -->
+              <div style="border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 24px; background-color: var(--gray-50);">
+                <h4 style="font-size: 16px; margin-bottom: 16px; color: var(--primary); display: flex; align-items: center; gap: 8px;">
+                  <i class="fa-solid fa-chart-bar"></i> Monthly Skill Report
+                </h4>
+                
+                <!-- Pronunciation -->
+                <div style="margin-bottom: 12px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
+                    <span>Makharij (Pronunciation)</span>
+                    <strong>9.2/10</strong>
+                  </div>
+                  <div style="height: 6px; background-color: var(--gray-200); border-radius: 10px; overflow: hidden;">
+                    <div style="height: 100%; width: 92%; background-color: var(--secondary); border-radius: 10px;"></div>
+                  </div>
+                </div>
+                
+                <!-- Ghunnah -->
+                <div style="margin-bottom: 12px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
+                    <span>Ghunnah (Nasalization)</span>
+                    <strong>8.5/10</strong>
+                  </div>
+                  <div style="height: 6px; background-color: var(--gray-200); border-radius: 10px; overflow: hidden;">
+                    <div style="height: 100%; width: 85%; background-color: var(--secondary); border-radius: 10px;"></div>
+                  </div>
+                </div>
+
+                <!-- Madd Rules -->
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
+                    <span>Madd rules (Prolongation)</span>
+                    <strong>8.0/10</strong>
+                  </div>
+                  <div style="height: 6px; background-color: var(--gray-200); border-radius: 10px; overflow: hidden;">
+                    <div style="height: 100%; width: 80%; background-color: var(--secondary); border-radius: 10px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Portal Core Features Grid -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Features & Security</span>
+          <h2 class="section-title">Powerful Features at Your Fingertips</h2>
+          <p>Online Quran College integrates advanced management systems to bridge traditional education with technology.</p>
+        </div>
+        
+        <div class="lms-features-grid">
+          <!-- Feature 1 -->
+          <div class="lms-feature-card">
+            <i class="fa-solid fa-headset"></i>
+            <h4>Integrated Video Panel</h4>
+            <p>1-click classroom launch without needing third-party Zoom or Skype accounts.</p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="lms-feature-card">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <h4>Billing & Receipts</h4>
+            <p>Manage subscription renewals, download invoices, or change pricing plans securely.</p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="lms-feature-card">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <h4>Parental Supervision</h4>
+            <p>Weekly attendance registers and academic feedback logs sent directly to parent emails.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column footer-about">
+          <a href="index.html" class="logo">
+            <img src="logo_.png" alt="Online Quran College Logo" class="logo-img footer-logo-img">
+          </a>
+          <p>Providing highly professional, customized online 1-on-1 Quran and Islamic lessons under the guidance of certified scholars worldwide.</p>
+          <div class="footer-social-panel">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Courses</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blogs.html">Our Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+            <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+            <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+            <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+            <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+            <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

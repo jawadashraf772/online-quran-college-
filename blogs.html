@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Our Blogs & News | Online Quran College</title>
+  <meta name="description" content="Browse educational articles and guides on Tajweed, Quran memorization, and Islamic values written by verified scholars. Subscribe to our newsletter.">
+  <meta name="keywords" content="islamic blog, quran tips, hifz guidance for parents, read arabic guides">
+  <meta name="author" content="Online Quran College">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Header & Navigation Bar -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo" id="nav-logo">
+          <img src="logo_.png" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="services.html" class="dropdown-trigger">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+              <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+              <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+              <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+              <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blogs.html" class="active">Our Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Career Opportunities</a></li>
+          <li class="dropdown">
+            <a href="lms.html" class="dropdown-trigger">LMS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="lms.html#student-login">Student Portal</a></li>
+              <li><a href="lms.html#teacher-login">Teacher Portal</a></li>
+              <li><a href="lms.html#features">LMS Features</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="quiz.html" class="dropdown-trigger">Quiz <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quiz.html?type=tajweed">Tajweed Quiz</a></li>
+              <li><a href="quiz.html?type=islamic">Islamic Studies Quiz</a></li>
+              <li><a href="quiz.html?type=arabic">Arabic Vocabulary Quiz</a></li>
+            </ul>
+          </li>
+          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Register Now</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Page Header / Banner -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title">Blogs & Insights</h1>
+        <p class="page-subtitle">Nurturing your daily spiritual routines with tips, research, and guidelines from our scholarly faculty.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span class="current">Our Blogs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        
+        <!-- Category selector -->
+        <div class="filter-btn-group">
+          <button class="filter-btn active" id="filter-all" onclick="filterBlogs('all')">All Articles</button>
+          <button class="filter-btn" id="filter-hifz" onclick="filterBlogs('hifz')">Hifz (Memorization)</button>
+          <button class="filter-btn" id="filter-tajweed" onclick="filterBlogs('tajweed')">Tajweed Basics</button>
+          <button class="filter-btn" id="filter-parent" onclick="filterBlogs('parent')">Parent Guides</button>
+        </div>
+
+        <div class="services-grid-3x2" style="grid-template-columns: repeat(3, 1fr); gap: 30px;" id="blogs-grid">
+          <!-- Blog 1 -->
+          <div class="blog-card blog-item hifz">
+            <div class="blog-img-holder">
+              <i class="fa-solid fa-brain"></i>
+              <span class="blog-meta-date">May 15, 2026</span>
+            </div>
+            <div class="blog-body">
+              <h3>Spiritual Rewards of Hifz</h3>
+              <p>Discover the spiritual and personal rewards of daily Quranic memorization in modern busy schedules.</p>
+              <a href="contact.html" class="blog-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Blog 2 -->
+          <div class="blog-card blog-item tajweed">
+            <div class="blog-img-holder">
+              <i class="fa-solid fa-microphone"></i>
+              <span class="blog-meta-date">May 10, 2026</span>
+            </div>
+            <div class="blog-body">
+              <h3>Common Tajweed Mistakes</h3>
+              <p>Simple articulation corrections that help you avoid common recitation mispronunciations instantly.</p>
+              <a href="contact.html" class="blog-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Blog 3 -->
+          <div class="blog-card blog-item parent">
+            <div class="blog-img-holder">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span class="blog-meta-date">May 05, 2026</span>
+            </div>
+            <div class="blog-body">
+              <h3>Home Arabic Tutoring Tips</h3>
+              <p>Useful strategies for parents wishing to establish basic Arabic conversation habits with kids at home.</p>
+              <a href="contact.html" class="blog-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Blog 4 -->
+          <div class="blog-card blog-item hifz">
+            <div class="blog-img-holder">
+              <i class="fa-solid fa-book-open"></i>
+              <span class="blog-meta-date">April 28, 2026</span>
+            </div>
+            <div class="blog-body">
+              <h3>Hifz Revision Methodologies</h3>
+              <p>Pioneering memory retention methods that help students revise Juz parts systematically.</p>
+              <a href="contact.html" class="blog-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Blog 5 -->
+          <div class="blog-card blog-item parent">
+            <div class="blog-img-holder">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span class="blog-meta-date">April 22, 2026</span>
+            </div>
+            <div class="blog-body">
+              <h3>First Virtual Class Prep</h3>
+              <p>Prepare your child mentally and set up their study desk tools to ensure a successful trial session.</p>
+              <a href="contact.html" class="blog-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Blog 6 -->
+          <div class="blog-card blog-item tajweed">
+            <div class="blog-img-holder">
+              <i class="fa-solid fa-music"></i>
+              <span class="blog-meta-date">April 15, 2026</span>
+            </div>
+            <div class="blog-body">
+              <h3>Science of Makharij</h3>
+              <p>Delve deep into throat and tongue articulation regions to pronounce heavy letters beautifully.</p>
+              <a href="contact.html" class="blog-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter container -->
+        <div class="contact-form-container" style="margin-top: 100px; max-width: 650px;">
+          <div class="contact-card-white" style="padding: 40px; text-align: center;">
+            <i class="fa-solid fa-envelope-open-text" style="font-size: 40px; color: var(--secondary); margin-bottom: 16px;"></i>
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get weekly updates, Tajweed worksheets, and parenting tips straight to your inbox.</p>
+            <form id="newsletter-form" style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap;">
+              <input type="email" class="form-control" placeholder="Your Email Address" style="flex: 1; min-width: 250px;" required>
+              <button type="submit" class="btn btn-secondary" style="white-space: nowrap;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column footer-about">
+          <a href="index.html" class="logo">
+            <img src="logo_.png" alt="Online Quran College Logo" class="logo-img footer-logo-img">
+          </a>
+          <p>Providing highly professional, customized online 1-on-1 Quran and Islamic lessons under the guidance of certified scholars worldwide.</p>
+          <div class="footer-social-panel">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Courses</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blogs.html">Our Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+            <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+            <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+            <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+            <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+            <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+  
+  <script>
+    function filterBlogs(category) {
+      // Toggle button active classes
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if(btn.id.includes(category)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Toggle visibility
+      document.querySelectorAll('.blog-item').forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    const newsForm = document.getElementById('newsletter-form');
+    if (newsForm) {
+      newsForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailInput = newsForm.querySelector('input');
+        const submitBtn = newsForm.querySelector('button');
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Subscribing...';
+        
+        setTimeout(() => {
+          submitBtn.style.backgroundColor = '#10b981';
+          submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Subscribed!';
+          emailInput.value = '';
+          
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Subscribe';
+            submitBtn.style.backgroundColor = '';
+          }, 3000);
+        }, 1000);
+      });
+    }
+  </script>
+</body>
+</html>

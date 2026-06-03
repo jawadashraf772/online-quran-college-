@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Pricing Plans & Packages | Online Quran College</title>
+  <meta name="description" content="View transparent pricing plans for online Quran learning. 2, 3, and 5 classes per week packages. Available in USD, GBP, and CAD. Get 3 days free trial.">
+  <meta name="keywords" content="quran tuition fee, online quran rates, quran tutor fees, family discount quran">
+  <meta name="author" content="Online Quran College">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Header & Navigation Bar -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo" id="nav-logo">
+          <img src="logo_.png" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="services.html" class="dropdown-trigger">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+              <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+              <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+              <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+              <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html" class="active">Pricing</a></li>
+          <li><a href="blogs.html">Our Blogs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Career Opportunities</a></li>
+          <li class="dropdown">
+            <a href="lms.html" class="dropdown-trigger">LMS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="lms.html#student-login">Student Portal</a></li>
+              <li><a href="lms.html#teacher-login">Teacher Portal</a></li>
+              <li><a href="lms.html#features">LMS Features</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="quiz.html" class="dropdown-trigger">Quiz <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="quiz.html?type=tajweed">Tajweed Quiz</a></li>
+              <li><a href="quiz.html?type=islamic">Islamic Studies Quiz</a></li>
+              <li><a href="quiz.html?type=arabic">Arabic Vocabulary Quiz</a></li>
+            </ul>
+          </li>
+          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Register Now</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Page Header / Banner -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title">Tuition Plans & Pricing</h1>
+        <p class="page-subtitle">Simple, transparent, and affordable monthly plans tailored for children and families worldwide.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span class="current">Pricing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Flexible Packages</span>
+          <h2 class="section-title">Select Your Custom Study Plan</h2>
+          <p>We charge monthly on subscription basis. All courses are available in 1-on-1 private classroom formats.</p>
+        </div>
+
+        <!-- Currency select filter -->
+        <div class="currency-select-wrapper">
+          <button class="currency-btn active" id="btn-curr-usd" onclick="setCurrency('usd')">USD ($)</button>
+          <button class="currency-btn" id="btn-curr-gbp" onclick="setCurrency('gbp')">GBP (£)</button>
+          <button class="currency-btn" id="btn-curr-cad" onclick="setCurrency('cad')">CAD ($)</button>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="pricing-cards-grid">
+          <!-- Card 1: Basic -->
+          <div class="pricing-card">
+            <h3>Basic Plan</h3>
+            <p class="pricing-card-desc">Perfect for busy school routines and steady long-term learning.</p>
+            <div class="pricing-price-wrapper">
+              <span class="pricing-price" id="price-basic">$35</span>
+              <span class="pricing-period">/ month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> **2 Classes** per week (8 / month)</li>
+              <li><i class="fa-solid fa-circle-check"></i> 30-minute private lessons</li>
+              <li><i class="fa-solid fa-circle-check"></i> 1-on-1 certified teacher</li>
+              <li><i class="fa-solid fa-circle-check"></i> Flexible scheduling & makeup options</li>
+              <li><i class="fa-solid fa-circle-check"></i> Noorani Qaida & Basic Tajweed</li>
+              <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Advanced Hifz Memorization</li>
+              <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Monthly progress report cards</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%;">Get Started</a>
+          </div>
+
+          <!-- Card 2: Standard (Popular) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">Recommended</div>
+            <h3>Standard Plan</h3>
+            <p class="pricing-card-desc">Our most popular plan. Ideal for kids' Tajweed improvement.</p>
+            <div class="pricing-price-wrapper">
+              <span class="pricing-price" id="price-standard">$50</span>
+              <span class="pricing-period">/ month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> **3 Classes** per week (12 / month)</li>
+              <li><i class="fa-solid fa-circle-check"></i> 30-minute private lessons</li>
+              <li><i class="fa-solid fa-circle-check"></i> 1-on-1 certified teacher</li>
+              <li><i class="fa-solid fa-circle-check"></i> Flexible scheduling & makeup options</li>
+              <li><i class="fa-solid fa-circle-check"></i> All Quranic & Islamic Study modules</li>
+              <li><i class="fa-solid fa-circle-check"></i> Monthly progress report cards</li>
+              <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Dedicated WhatsApp support group</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Get Started</a>
+          </div>
+
+          <!-- Card 3: Premium (Hifz) -->
+          <div class="pricing-card">
+            <h3>Intensive Plan</h3>
+            <p class="pricing-card-desc">Tailored for fast-paced Hifz memorization and adults.</p>
+            <div class="pricing-price-wrapper">
+              <span class="pricing-price" id="price-intensive">$80</span>
+              <span class="pricing-period">/ month</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li><i class="fa-solid fa-circle-check"></i> **5 Classes** per week (20 / month)</li>
+              <li><i class="fa-solid fa-circle-check"></i> 45-minute private lessons</li>
+              <li><i class="fa-solid fa-circle-check"></i> 1-on-1 certified expert scholar</li>
+              <li><i class="fa-solid fa-circle-check"></i> High-priority reschedule queue</li>
+              <li><i class="fa-solid fa-circle-check"></i> Intensive Hifz revision & Tafseer</li>
+              <li><i class="fa-solid fa-circle-check"></i> Monthly progress report cards</li>
+              <li><i class="fa-solid fa-circle-check"></i> Dedicated WhatsApp support group</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%;">Get Started</a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 80px;">
+          <p style="font-size: 15px;"><i class="fa-solid fa-gift" style="color: var(--accent); margin-right: 8px;"></i> **Family Discount**: Enrolling multiple children? Get **15% off** tuition fees for additional siblings!</p>
+        </div>
+
+        <!-- FAQs Accordion -->
+        <div class="faq-section">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              Is there a free trial class?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes, we offer a 3-day free trial period (no credit card required) for every new student. This helps you evaluate the tutor, the virtual classroom tools, and select the best scheduling timings before subscription activation.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can I choose a female tutor?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Absolutely. We have a large faculty of certified female scholars who specialize in kids' foundational learning and adult female students to ensure complete comfort and privacy.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I pay my monthly fees?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              We support secure international payment gateways. You can pay via credit/debit card, PayPal, Bank Transfer, or secure recurring billing systems. Receipts are generated automatically.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can I reschedule a missed class?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! If you notify us at least 4 hours before the scheduled class time, we will coordinate with your tutor to schedule a makeup class at a mutually convenient time. Makeup classes do not expire for 30 days.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What is your cancellation and refund policy?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              You can cancel your subscription at any time. If you choose to cancel within the first week of your regular billing period, you are eligible for a full refund of that month's tuition.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column footer-about">
+          <a href="index.html" class="logo">
+            <img src="logo_.png" alt="Online Quran College Logo" class="logo-img footer-logo-img">
+          </a>
+          <p>Providing highly professional, customized online 1-on-1 Quran and Islamic lessons under the guidance of certified scholars worldwide.</p>
+          <div class="footer-social-panel">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Courses</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blogs.html">Our Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#course-reading">Noorani Qaida Course</a></li>
+            <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+            <li><a href="services.html#course-hifz">Hifz ul Quran Course</a></li>
+            <li><a href="services.html#course-arabic">Arabic Language Course</a></li>
+            <li><a href="services.html#course-tafseer">Quran Translation</a></li>
+            <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+  
+  <!-- In-page pricing interactive logic -->
+  <script>
+    // Currency Switcher
+    const prices = {
+      usd: { basic: "$35", standard: "$50", intensive: "$80" },
+      gbp: { basic: "£28", standard: "£40", intensive: "£64" },
+      cad: { basic: "$48", standard: "$68", intensive: "$110" }
+    };
+    
+    function setCurrency(currency) {
+      // Toggle button active classes
+      document.querySelectorAll('.currency-btn').forEach(btn => {
+        if(btn.id.includes(currency)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Update price text values
+      document.getElementById('price-basic').textContent = prices[currency].basic;
+      document.getElementById('price-standard').textContent = prices[currency].standard;
+      document.getElementById('price-intensive').textContent = prices[currency].intensive;
+    }
+    
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isOpen = item.classList.contains('open');
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          otherItem.classList.remove('open');
+        });
+        
+        // Toggle current item
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
