@@ -260,6 +260,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Dynamically add reveal-on-scroll class to key layout sections across all pages
+  const elementsToAnimate = [
+    'section.section',
+    '.hero-content',
+    '.hero-illustration-wrapper',
+    '.services-grid-3x2',
+    '.why-grid-3x2',
+    '.steps-layout-cols',
+    '.testimonials-grid-3',
+    '.careers-grid',
+    '.packages-container',
+    '.faq-section',
+    '.contact-form-container',
+    '.benefits-box',
+    '.career-apply-card'
+  ];
+  
+  elementsToAnimate.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+      if (!el.classList.contains('reveal-on-scroll')) {
+        el.classList.add('reveal-on-scroll');
+      }
+    });
+  });
+
   // Scroll Reveal Animation
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
   if (revealElements.length > 0) {

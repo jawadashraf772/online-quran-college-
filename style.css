@@ -2659,3 +2659,28 @@ header {
   background-color: #0d9488 !important;
   box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25) !important;
 }
+
+/* Stagger delays for grid items site-wide */
+.services-grid-3x2 > div:nth-child(1),
+.why-grid-3x2 > div:nth-child(1),
+.steps-layout-cols > div:nth-child(1),
+.testimonials-grid-3 > div:nth-child(1) { transition-delay: 0.1s; }
+
+.services-grid-3x2 > div:nth-child(2),
+.why-grid-3x2 > div:nth-child(2),
+.steps-layout-cols > div:nth-child(2),
+.testimonials-grid-3 > div:nth-child(2) { transition-delay: 0.2s; }
+
+.services-grid-3x2 > div:nth-child(3),
+.why-grid-3x2 > div:nth-child(3),
+.steps-layout-cols > div:nth-child(3),
+.testimonials-grid-3 > div:nth-child(3) { transition-delay: 0.3s; }
+
+.services-grid-3x2 > div:nth-child(4),
+.why-grid-3x2 > div:nth-child(4) { transition-delay: 0.1s; }
+
+.services-grid-3x2 > div:nth-child(5),
+.why-grid-3x2 > div:nth-child(5) { transition-delay: 0.2s; }
+
+.services-grid-3x2 > div:nth-child(6),
+.why-grid-3x2 > div:nth-child(6) { transition-delay: 0.3s; }
