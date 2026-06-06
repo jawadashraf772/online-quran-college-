@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>Hifz ul Quran Course: Mastering Quran Memorization | Online Quran College</title>
-  <meta name="description" content="Memorize the Holy Quran online with professional 1-on-1 guidance. Learn methods like Tajweed, Tarteel, and Murattal with proven memorization techniques. Book a 7-day free trial.">
-  <meta name="keywords" content="hifz ul quran course, memorize quran online, quran memorization techniques, learn tarteel, online quran college, hifz lessons">
+  <title>Hadith Translation Course: Unlock Prophetic Wisdom | Online Quran College</title>
+  <meta name="description" content="Embark on a profound journey into the teachings of Prophet Muhammad (peace be upon him) with our advanced Hadith Translation Course. Study authentic translations.">
+  <meta name="keywords" content="hadith translation course, learn hadith online, prophetic traditions, study sunnah online, authentic hadith translation">
   <meta name="author" content="Online Quran College">
   
   <!-- Preconnect Fonts -->
@@ -20,7 +20,7 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Premium Custom Styling for Hifz ul Quran Landing Page -->
+  <!-- Premium Custom Styling for Hadith Translation Landing Page -->
   <style>
     :root {
       --emerald-gradient: linear-gradient(135deg, #004d34 0%, #006847 100%);
@@ -60,7 +60,7 @@
     }
     
     .hero-nazara-custom::before {
-      content: "إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ";
+      content: "مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ";
       position: absolute;
       font-family: var(--font-arabic);
       font-size: 10vw;
@@ -196,7 +196,7 @@
 
     .spiritual-arabic-verse {
       font-family: var(--font-arabic);
-      font-size: 34px;
+      font-size: 28px;
       color: var(--primary);
       margin-bottom: 16px;
       direction: rtl;
@@ -266,238 +266,60 @@
       margin-bottom: 0;
     }
 
-    /* Techniques Step Tabs styles */
-    .curriculum-timeline-wrapper {
-      margin-top: 50px;
-    }
-    
-    .curriculum-nav-steps {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      margin-bottom: 40px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .curriculum-nav-steps::before {
-      content: '';
-      position: absolute;
-      top: 24px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gray-200);
-      z-index: 1;
-    }
-    .curriculum-nav-progress {
-      position: absolute;
-      top: 24px;
-      left: 0;
-      width: 0%;
-      height: 4px;
-      background: var(--secondary);
-      z-index: 2;
-      transition: width 0.4s ease;
-    }
-
-    .curriculum-step-node {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      width: 80px;
-    }
-
-    .curriculum-step-dot {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--light);
-      border: 3.5px solid var(--gray-200);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-title);
-      font-weight: 800;
-      color: var(--gray-600);
-      font-size: 16px;
-      margin-bottom: 10px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition);
-    }
-    
-    .curriculum-step-node:hover .curriculum-step-dot {
-      border-color: var(--primary);
-      color: var(--primary);
-    }
-
-    .curriculum-step-node.active .curriculum-step-dot {
-      border-color: var(--secondary);
-      background: var(--secondary);
-      color: var(--light);
-      box-shadow: var(--shadow-glow);
-    }
-    
-    .curriculum-step-label {
-      font-family: var(--font-title);
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--gray-600);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: var(--transition);
-    }
-    .curriculum-step-node.active .curriculum-step-label {
-      color: var(--primary);
-    }
-
-    .curriculum-tab-panel {
-      background: var(--light);
-      border: 1px solid rgba(0, 104, 71, 0.08);
-      border-radius: var(--radius-md);
-      padding: 40px;
-      box-shadow: var(--shadow-md);
-      max-width: 850px;
-      margin: 0 auto;
-      display: none;
-      transform: translateY(15px);
-      opacity: 0;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-    }
-    
-    .curriculum-tab-panel.active {
-      display: block;
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .panel-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .panel-content h3 {
-      font-size: 24px;
-      color: var(--primary);
-      margin-bottom: 16px;
-      font-weight: 800;
-    }
-    
-    .panel-content p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--gray-600);
-      margin-bottom: 24px;
-    }
-
-    .panel-bullets {
-      list-style: none;
-    }
-    .panel-bullets li {
-      font-size: 14.5px;
-      color: var(--dark-slate);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .panel-bullets li i {
-      color: var(--secondary);
-      font-size: 16px;
-    }
-
-    .panel-visual {
-      background: var(--emerald-lightest);
-      border-radius: var(--radius-md);
-      padding: 30px;
-      text-align: center;
-      border: 1.5px dashed rgba(16, 185, 129, 0.2);
-    }
-    .panel-visual i {
-      font-size: 56px;
-      color: var(--primary);
-      margin-bottom: 15px;
-    }
-    .panel-visual h4 {
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--secondary);
-      margin-bottom: 6px;
-    }
-    .panel-visual p {
-      font-size: 12.5px;
-      color: var(--gray-600);
-      margin-bottom: 0;
-    }
-
-    /* Dual Column Tips and Prep Grid */
-    .tips-prep-section {
+    /* Islamic Ability Grid */
+    .why-learn-section {
       background-color: var(--light);
     }
-    .tips-prep-grid {
+    .why-learn-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 50px auto 0 auto;
     }
-    .column-box {
+    .why-learn-card {
       background: var(--gray-50);
       border: 1px solid var(--gray-200);
       border-radius: var(--radius-md);
-      padding: 40px;
-    }
-    .column-box h3 {
-      font-size: 22px;
-      color: var(--primary);
-      margin-bottom: 30px;
-      font-weight: 800;
-      border-bottom: 2px solid var(--secondary-light);
-      padding-bottom: 15px;
+      padding: 35px 30px;
+      transition: var(--transition);
       display: flex;
-      align-items: center;
-      gap: 10px;
+      flex-direction: column;
+      gap: 18px;
     }
-    .info-list-item {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .info-list-item:last-child {
-      margin-bottom: 0;
-    }
-    .info-icon-wrapper {
-      width: 44px;
-      height: 44px;
+    .why-learn-card:hover {
       background: var(--light);
-      border: 1px solid rgba(0, 104, 71, 0.08);
-      border-radius: 50%;
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+    .why-learn-card-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--secondary-light);
+      border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--secondary);
-      font-size: 18px;
-      flex-shrink: 0;
-      box-shadow: var(--shadow-sm);
+      color: var(--primary);
+      font-size: 20px;
+      transition: var(--transition);
     }
-    .info-text-wrapper h4 {
-      font-size: 16px;
+    .why-learn-card:hover .why-learn-card-icon {
+      background: var(--primary);
+      color: var(--light);
+    }
+    .why-learn-card h3 {
+      font-size: 18px;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 6px;
+      margin: 0;
     }
-    .info-text-wrapper p {
+    .why-learn-card p {
       font-size: 13.5px;
       line-height: 1.6;
       color: var(--gray-600);
-      margin-bottom: 0;
+      margin: 0;
     }
 
     /* Premium Pricing Section styles */
@@ -786,23 +608,9 @@
       .floating-glass-badge {
         display: none; /* Hide floating absolute badges on mobile/tablet to clean layout */
       }
-      .curriculum-nav-steps {
-        overflow-x: auto;
-        padding-bottom: 10px;
-        justify-content: flex-start;
-        gap: 24px;
-      }
-      .curriculum-nav-steps::before, .curriculum-nav-progress {
-        display: none;
-      }
-      .curriculum-step-node {
-        flex-shrink: 0;
-      }
-      .panel-grid {
+      .why-learn-grid {
         grid-template-columns: 1fr;
-      }
-      .tips-prep-grid {
-        grid-template-columns: 1fr;
+        max-width: 450px;
       }
       .pricing-grid-custom {
         grid-template-columns: 1fr;
@@ -880,64 +688,64 @@
     <section class="page-header">
       <div class="container">
         <div class="page-header-content">
-          <h1 class="page-title">Hifz ul Quran Course</h1>
-          <p class="page-subtitle">Structured Program for Quran Memorization and Retention</p>
+          <h1 class="page-title">Hadith Translation Course</h1>
+          <p class="page-subtitle">Unlock Prophetic Wisdom and Study Authenticated Traditions</p>
           <div class="breadcrumbs">
-            <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span class="current">Hifz ul Quran Course</span>
+            <a href="index.html">Home</a> <span>/</span> <a href="services.html">Services</a> <span>/</span> <span class="current">Hadith Translation Course</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. Hero Section (Hifz ul Quran Custom Banner) -->
+    <!-- 2. Hero Section (Hadith Translation Custom Banner) -->
     <section class="hero-nazara-custom" id="course-hero">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
             <span class="badge" style="margin-bottom: 24px;">
-              <i class="fa-solid fa-star"></i> Sacred Memorization Program
+              <i class="fa-solid fa-book-open"></i> Hadith Translation Course
             </span>
             <div class="hero-arabic arabic-text" lang="ar" style="font-size: 28px; margin-bottom: 12px; letter-spacing: 0.5px;">
-              إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ
+              مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ
             </div>
             <h1 class="hero-title" id="course-hero-title">
-              Hifz ul Quran Course: <span>Mastering Quran Memorization</span>
+              Hadith Translation Course: <span>Unlock Prophetic Wisdom</span>
             </h1>
             <p class="hero-desc">
-              Memorizing the Quran is a noble endeavor. To make your journey efficient and rewarding, we have curated a structured approach based on proven methods and techniques. Enroll in our Hifz ul Quran Course today and begin your sacred journey!
+              Embark on a profound journey into the teachings of Prophet Muhammad (peace be upon him) with our advanced Hadith Translation Course. Our expert instructors will guide you through the intricacies, meanings, and authentic translations of Hadith literature.
             </p>
             <div class="hero-ctas">
               <a href="#free-trial-booking" class="btn btn-secondary">Book Your 7-Day Free Trial Now <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="#techniques" class="btn btn-outline">Explore Memorization Techniques</a>
+              <a href="#features" class="btn btn-outline">Explore Course Features</a>
             </div>
           </div>
           
           <div class="hero-illustration-wrapper-custom">
             <!-- Arched graphic container matching homepage style -->
             <div class="hero-arched-graphic">
-              <img src="hifz_hero.png" alt="Quran Memorization Student" id="hero-main-img">
+              <img src="hadith_hero.png" alt="Prophetic traditions and authentic Hadith teachings" id="hero-main-img">
               <div class="digital-quran-anim"></div>
             </div>
             <!-- Floating glassmorphism badges -->
             <div class="floating-glass-badge badge-pos-1 float-badge-1">
-              <i class="fa-solid fa-person-running"></i>
+              <i class="fa-solid fa-graduation-cap"></i>
               <div>
-                <h5>Personalized Pace</h5>
-                <p>Tailored to individual memory capacity</p>
+                <h5>Prophetic Legacy</h5>
+                <p>Authentic Sunnah insights</p>
               </div>
             </div>
             <div class="floating-glass-badge badge-pos-2 float-badge-2">
-              <i class="fa-solid fa-award"></i>
+              <i class="fa-solid fa-language"></i>
               <div>
-                <h5>Certified Hifz Tutors</h5>
-                <p>Learn under Huffaz Scholars</p>
+                <h5>Clear Translation</h5>
+                <p>Accurate English meanings</p>
               </div>
             </div>
             <div class="floating-glass-badge badge-pos-3 float-badge-1">
-              <i class="fa-solid fa-rotate-left"></i>
+              <i class="fa-solid fa-circle-check"></i>
               <div>
-                <h5>Daily Revision Loops</h5>
-                <p>Ensuring lifetime retention</p>
+                <h5>Interactive Learning</h5>
+                <p>1-on-1 expert sessions</p>
               </div>
             </div>
           </div>
@@ -945,213 +753,137 @@
       </div>
     </section>
 
-    <!-- 3. Section 1: Methods of Quran Recitation -->
-    <section class="section" id="recitation-methods" style="padding-bottom: 20px;">
+    <!-- 3. Spiritual Callout Section (Scholar Quote) -->
+    <section class="section" style="padding-bottom: 20px;">
       <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Recitation Core</span>
-          <h2 class="section-title">Methods of Quran Recitation</h2>
-          <p>The foundation of memorization relies heavily on the method of recitation. We teach three primary styles to ensure proper pronunciation, rhythm, and mental retention.</p>
-        </div>
-        
-        <div class="why-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
-          <!-- Method 1: Tajweed -->
-          <div class="benefit-card-premium">
-            <div class="benefit-icon-circle"><i class="fa-solid fa-check-double"></i></div>
-            <h3>1. Tajweed Rules</h3>
-            <p>Mastering proper pronunciation and the rules of recitation is essential for accurate memorization. We ensure every letter is read from its correct articulation point (Makhraj).</p>
-          </div>
-          
-          <!-- Method 2: Tarteel -->
-          <div class="benefit-card-premium">
-            <div class="benefit-icon-circle"><i class="fa-solid fa-microphone-lines"></i></div>
-            <h3>2. Melodic Recitation (Tarteel)</h3>
-            <p>Reciting with rhythm and melody helps internalize the verses and enhances focus. Tarteel aids in calming the mind and allowing the beauty of the verses to aid memory retention.</p>
-          </div>
-          
-          <!-- Method 3: Murattal -->
-          <div class="benefit-card-premium">
-            <div class="benefit-icon-circle"><i class="fa-solid fa-rotate"></i></div>
-            <h3>3. Repetitive Recitation (Murattal)</h3>
-            <p>Consistent repetition of verses is a powerful technique to lock them into your memory. Reciting in a measured, even-paced tone allows for steady memorization loops.</p>
-          </div>
-        </div>
-        
-        <!-- Hadith Callout Box -->
-        <div class="spiritual-callout-box" style="margin-top: 60px;">
+        <div class="spiritual-callout-box" style="margin: 0 auto; max-width: 950px;">
           <div class="spiritual-arabic-verse" lang="ar">
-            وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+            "مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ"
           </div>
-          <p style="font-size: 15px; color: var(--gray-600); font-style: italic; margin-bottom: 20px;">
-            "And recite the Quran with measured recitation." — Surah Al-Muzzammil [73:4]
+          <p style="font-size: 16px; color: var(--gray-600); font-style: italic; margin-bottom: 20px; font-weight: 600;">
+            "Whoever follows a path in the pursuit of knowledge, Allah will make a path to Paradise easy for him."
           </p>
-          <p style="max-width: 800px; margin: 0 auto; line-height: 1.7; font-size: 15.5px;">
-            Memorizing the Holy Quran is a path that bridges physical discipline and spiritual elevation. By following traditional recitation methods, we ensure that students do not just memorize words, but also internalize the divine guidance.
-          </p>
+          <span class="badge" style="background-color: var(--secondary-light); color: var(--primary); font-weight: 700;">— Prophet Muhammad (peace be upon him)</span>
         </div>
       </div>
     </section>
 
-    <!-- 4. Section 2: Techniques for Memorization (Interactive Step Tabs) -->
-    <section class="section section-tint" id="techniques">
+    <!-- 4. Course Overview Section -->
+    <section class="section" id="features" style="padding-top: 60px;">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Cognitive Strategies</span>
-          <h2 class="section-title">Techniques for Memorization</h2>
-          <p>We combine modern cognitive science with classical Hifz techniques to make memorization structured, manageable, and highly successful.</p>
+          <span class="section-subtitle">Overview</span>
+          <h2 class="section-title">Unlock the Wisdom of Hadith</h2>
+          <p>Embark on a profound journey into the teachings of Prophet Muhammad (peace be upon him) with our advanced Hadith Translation Course. Our expert instructors will guide you through the intricacies, meanings, and authentic translations of Hadith literature.</p>
         </div>
         
-        <div class="curriculum-timeline-wrapper">
-          <!-- Timeline step node navigations -->
-          <div class="curriculum-nav-steps">
-            <div class="curriculum-nav-progress" id="curriculum-progress-line"></div>
-            
-            <div class="curriculum-step-node active" data-step="1">
-              <div class="curriculum-step-dot">1</div>
-              <span class="curriculum-step-label">Chunking</span>
-            </div>
-            
-            <div class="curriculum-step-node" data-step="2">
-              <div class="curriculum-step-dot">2</div>
-              <span class="curriculum-step-label">Visualization</span>
-            </div>
-            
-            <div class="curriculum-step-node" data-step="3">
-              <div class="curriculum-step-dot">3</div>
-              <span class="curriculum-step-label">Revision</span>
+        <div class="services-grid-3x2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px;">
+          <!-- Highlight 1 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Comprehensive Learning</h3>
+            <p>Gain a deep understanding of Hadith literature, its historical significance, and its vital relevance in contemporary times.</p>
+          </div>
+          
+          <!-- Highlight 2 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h3>Expert Guidance</h3>
+            <p>Learn from seasoned instructors who simplify complex concepts, making them accessible to students of all levels.</p>
+          </div>
+          
+          <!-- Highlight 3 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-language"></i></div>
+            <h3>Authentic Translations</h3>
+            <p>Explore accurate translations, ensuring clarity and precision in your comprehension.</p>
+          </div>
+          
+          <!-- Highlight 4 -->
+          <div class="benefit-card-premium">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-comments"></i></div>
+            <h3>Interactive Sessions</h3>
+            <p>Engage in dynamic discussions and collaborative sessions to deepen your understanding.</p>
+          </div>
+          
+          <!-- Highlight 5 -->
+          <div class="benefit-card-premium" style="grid-column: span 1;">
+            <div class="benefit-icon-circle"><i class="fa-solid fa-heart"></i></div>
+            <h3>Practical Application</h3>
+            <p>Discover actionable insights from the Hadith that you can apply to your daily life, fostering spiritual growth and personal development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Who Should Enroll Section -->
+    <section class="section section-tint" id="who-should-enroll">
+      <div class="container">
+        <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+          <div class="about-visual">
+            <div class="about-illustration-container" style="position: relative;">
+              <img src="teachers.png" alt="Students learning prophetic traditions" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
             </div>
           </div>
           
-          <!-- Tab content panels -->
-          <div class="curriculum-tab-panel active" id="panel-step-1">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>1. Chunking Methodology</h3>
-                <p>Break long sections into smaller, manageable parts to make the learning process less overwhelming. This cognitive technique prevents cognitive overload and speeds up initial acquisition.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Memorizing ayah-by-ayah before connecting them</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Splitting longer Surahs into smaller thematic sections</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Establishing daily micro-goals (e.g. 3-5 lines)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Transitioning smoothly from line to page levels</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-puzzle-piece"></i>
-                <h4>Technique 1 Objective</h4>
-                <p>Divide, master, and synthesize verses step-by-step for absolute confidence.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="curriculum-tab-panel" id="panel-step-2">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>2. Spatial Visualization</h3>
-                <p>Visualize the layout of the verses to aid recall and retention. We utilize a consistent text layout (Mushaf) so that the student builds a strong visual memory of page structures.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Associating starting words with their physical position on the page</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Mentally tracing lines while reciting from memory</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Using color-coded Tajweed Mushaf layouts</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Linking ending words of verses to the start of the next</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-eye"></i>
-                <h4>Technique 2 Objective</h4>
-                <p>Build photographic memory triggers for fluent recitation transitions.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="curriculum-tab-panel" id="panel-step-3">
-            <div class="panel-grid">
-              <div class="panel-content">
-                <h3>3. Repetition & Cumulative Revision</h3>
-                <p>Frequent revision of previously memorized sections ensures long-term mastery. Without systematic revision, older memorized portions fade, which is why revision takes precedence over new lessons.</p>
-                <ul class="panel-bullets">
-                  <li><i class="fa-solid fa-circle-check"></i> Daily recitation of the new lesson (Sabaq)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Revision of the last 7 days of memorization (Sabqi)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Systematic rotation of all older chapters (Manzil/Dohr)</li>
-                  <li><i class="fa-solid fa-circle-check"></i> Routine oral assessments and evaluation tests</li>
-                </ul>
-              </div>
-              <div class="panel-visual">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <h4>Technique 3 Objective</h4>
-                <p>Consolidate short-term memorization into permanent, long-term mental storage.</p>
-              </div>
-            </div>
+          <div class="about-content">
+            <span class="section-subtitle">Enrollment Guidance</span>
+            <h2 class="section-title" style="margin-bottom: 24px;">Who Should Enroll?</h2>
+            <p style="margin-bottom: 20px; font-weight: 500;">This course is carefully designed and ideal for individuals who:</p>
+            <ul class="course-details-list" style="display: flex; flex-direction: column; gap: 16px;">
+              <li><i class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> <span>Are passionate about deepening their knowledge of Islamic tradition.</span></li>
+              <li><i class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> <span>Seek a deeper understanding of the teachings of the Prophet Muhammad (peace be upon him).</span></li>
+              <li><i class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> <span>Desire to strengthen their connection to their faith.</span></li>
+              <li><i class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> <span>Are adults looking to gain foundational and advanced insights into Islamic teachings.</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. Section 3 & 4: Tips and Preparation Section (Dual Column Grid) -->
-    <section class="section tips-prep-section" id="tips-prep">
+    <!-- 6. Why Study Hadith Translation Section -->
+    <section class="section why-learn-section" id="why-study">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Practical Mastery</span>
-          <h2 class="section-title">Tips & Delivery Preparation</h2>
-          <p>Maximize your efficiency and achieve beautiful delivery by applying these expert guidelines during study hours and recitation practice.</p>
+          <span class="section-subtitle">Benefits</span>
+          <h2 class="section-title">Why Study Hadith Translation?</h2>
+          <p>Gain direct access to Prophetic guidance and apply ancient wisdom to navigate modern-day challenges.</p>
         </div>
         
-        <div class="tips-prep-grid">
-          <!-- Column 1: Tips for Remembering Ayahs and Verses -->
-          <div class="column-box">
-            <h3><i class="fa-solid fa-lightbulb"></i> Tips for Remembering Ayahs</h3>
-            
-            <div class="info-list-item">
-              <div class="info-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
-              <div class="info-text-wrapper">
-                <h4>Understand the Meaning</h4>
-                <p>Comprehending the translation and context of the verses strengthens your bond with the Quran, making it easier to follow the narrative flow.</p>
-              </div>
-            </div>
-            
-            <div class="info-list-item">
-              <div class="info-icon-wrapper"><i class="fa-solid fa-calendar-days"></i></div>
-              <div class="info-text-wrapper">
-                <h4>Establish a Routine</h4>
-                <p>Consistency is vital; dedicate a specific time every day to your memorization goals, establishing habits that stick over time.</p>
-              </div>
-            </div>
-            
-            <div class="info-list-item">
-              <div class="info-icon-wrapper"><i class="fa-solid fa-mobile-screen-button"></i></div>
-              <div class="info-text-wrapper">
-                <h4>Utilize Memorization Aids</h4>
-                <p>Leverage technology, interactive apps, and audio recitation aids of renowned Qaris to assist in your daily recitation and practice.</p>
-              </div>
-            </div>
+        <div class="why-learn-grid">
+          <!-- Item 1 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h3>Access to Guidance</h3>
+            <p>Connect directly to the Sunnah (prophetic tradition) to model your character and actions after the Prophet's path.</p>
           </div>
           
-          <!-- Column 2: Preparation for Quran Delivery -->
-          <div class="column-box">
-            <h3><i class="fa-solid fa-bullhorn"></i> Preparation for Quran Delivery</h3>
-            
-            <div class="info-list-item">
-              <div class="info-icon-wrapper"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-              <div class="info-text-wrapper">
-                <h4>Perfect Pronunciation</h4>
-                <p>Focus on precision in your delivery for every word and letter. Perfect articulation points (Makharij) prevent alteration in meaning.</p>
-              </div>
-            </div>
-            
-            <div class="info-list-item">
-              <div class="info-icon-wrapper"><i class="fa-solid fa-comments"></i></div>
-              <div class="info-text-wrapper">
-                <h4>Recitation Practice</h4>
-                <p>Consistent practice is the bridge to confident delivery. Reciting in front of family members or audio recorders boosts confidence.</p>
-              </div>
-            </div>
-            
-            <div class="info-list-item">
-              <div class="info-icon-wrapper"><i class="fa-solid fa-chalkboard-user"></i></div>
-              <div class="info-text-wrapper">
-                <h4>Seek Guidance</h4>
-                <p>Learning under the supervision of a qualified teacher is crucial for proper development and correction of subtle recitation errors.</p>
-              </div>
-            </div>
+          <!-- Item 2 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-house-laptop"></i></div>
+            <h3>Application in Daily Life</h3>
+            <p>Bridge ancient wisdom with modern challenges, turning theoretical knowledge into practical solutions.</p>
+          </div>
+          
+          <!-- Item 3 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-circle-info"></i></div>
+            <h3>Clarification of Misconceptions</h3>
+            <p>Gain absolute clarity and context regarding authentic narratives, eliminating common doubts and misunderstandings.</p>
+          </div>
+          
+          <!-- Item 4 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Educational Resource</h3>
+            <p>Build a strong, foundational and scholarly asset base for further studies in Tafseer, Fiqh, and Islamic history.</p>
+          </div>
+          
+          <!-- Item 5 -->
+          <div class="why-learn-card">
+            <div class="why-learn-card-icon"><i class="fa-solid fa-hands-praying"></i></div>
+            <h3>Spiritual Enrichment</h3>
+            <p>Nurture and strengthen your heart and soul through the reminders and words of the Prophet Muhammad (pbuh).</p>
           </div>
         </div>
       </div>
@@ -1159,25 +891,25 @@
 
 
 
-    <!-- 7. Interactive FAQs Section -->
-    <section class="section" id="faq">
+    <!-- 8. Interactive FAQs Section -->
+    <section class="section" id="course-faqs">
       <div class="container">
         <div class="section-header">
-          <span class="section-subtitle">Got Questions?</span>
+          <span class="section-subtitle">FAQs</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
-          <p>Find answers to common questions about our online Hifz ul Quran classes, teachers, and memorization practices.</p>
+          <p>Clear, direct answers to common questions about our Prophetic traditions class structure.</p>
         </div>
-
+        
         <div class="faq-accordion-container">
           <!-- FAQ 1 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> Who is this Hifz course for?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> What is the primary focus of this Hadith course?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                This course is designed for children and adults who have already completed the Noorani Qaida (or equivalent foundation) and are able to read the Arabic text of the Holy Quran correctly with basic Tajweed rules.
+                The primary focus is to help students study, translate, and understand the prophetic traditions (Hadith), learning their historical context, linguistic meanings, and direct application to everyday life.
               </div>
             </div>
           </div>
@@ -1185,12 +917,12 @@
           <!-- FAQ 2 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> How long does it take to memorize the entire Quran?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> Do I need to know advanced Arabic before enrolling?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                Depending on the student's capability, frequency of classes, and home revision hours, it typically takes 2 to 4 years to complete the entire memorization. We also design customized plans for students wishing to memorize only specific Juz or short Surahs.
+                No, you do not need advanced Arabic knowledge. Our course is structured for English speakers and provides translation, vocabulary drills, and conceptual explanations step-by-step.
               </div>
             </div>
           </div>
@@ -1198,12 +930,12 @@
           <!-- FAQ 3 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> What is your revision strategy?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> Are the Hadith collections taught authentic?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                We employ the traditional three-part revision methodology: Sabaq (newly memorized lesson), Sabqi (revision of recent lessons from the same Juz), and Manzil/Dohr (revision of older memorized chapters). This three-tier system guarantees long-term retention.
+                Yes, absolutely. We focus on verified and authentic collections (such as Sahih al-Bukhari, Sahih Muslim, Riyad as-Salihin) with commentary from classical and reliable scholars.
               </div>
             </div>
           </div>
@@ -1211,12 +943,12 @@
           <!-- FAQ 4 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> Do I need to be fluent in Arabic to start Hifz?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> Are female tutors available for female students?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                No, you do not need to speak Arabic fluently. However, you must be able to read Arabic sentences fluently and pronounce words correctly. If you are a beginner, we strongly recommend taking our Noorani Qaida or Quran Nazara courses first.
+                Yes, absolutely. We have dedicated, certified female scholars for female students and kids. You can select your preference in the trial registration form.
               </div>
             </div>
           </div>
@@ -1224,12 +956,12 @@
           <!-- FAQ 5 -->
           <div class="faq-item-card">
             <div class="faq-trigger-header">
-              <h3><i class="fa-solid fa-circle-question"></i> Can I set flexible session times?</h3>
+              <h3><i class="fa-solid fa-circle-question"></i> Can I schedule classes at my convenience?</h3>
               <i class="fa-solid fa-chevron-down faq-arrow-icon"></i>
             </div>
             <div class="faq-body-content">
               <div class="faq-inner-text">
-                Yes! Because Quran memorization requires daily consistency, we offer flexible 1-on-1 scheduling formats. You can coordinate class timings directly with your assigned tutor to fit your routine perfectly.
+                Yes! We offer flexible 1-on-1 scheduling formats. You can coordinate class timings directly with your assigned tutor to fit your routine perfectly.
               </div>
             </div>
           </div>
@@ -1237,7 +969,7 @@
       </div>
     </section>
 
-    <!-- 8. Registration Booking Section -->
+    <!-- 9. Registration Booking Section -->
     <section class="section section-tint" id="free-trial-booking">
       <div class="container">
         <div class="contact-form-container" style="max-width: 950px; margin: 0 auto; box-shadow: var(--shadow-lg); border-radius: var(--radius-md); overflow: hidden;">
@@ -1248,9 +980,9 @@
               <span class="badge" style="align-self: flex-start; margin-bottom: 20px; background-color: rgba(255,255,255,0.15); color: var(--light);">
                 <i class="fa-solid fa-gift" style="color: var(--secondary);"></i> 7 Days Free Trial
               </span>
-              <h3 style="color: var(--light); font-size: 28px; margin-bottom: 20px; line-height: 1.25;">Begin Your Quran Journey</h3>
+              <h3 style="color: var(--light); font-size: 28px; margin-bottom: 20px; line-height: 1.25;">Begin Your Hadith Journey</h3>
               <p style="color: rgba(255,255,255,0.85); font-size: 14.5px; line-height: 1.6; margin-bottom: 30px;">
-                We are currently offering 7 days of free classes to help you experience our teaching excellence firsthand. Begin your journey toward deeper understanding and spiritual growth.
+                Experience the transformative power of our Hadith Translation course with a complimentary 7-day trial. Enroll now to access our immersive learning platform and begin your journey into the world of Hadith.
               </p>
               
               <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -1274,7 +1006,7 @@
               <h3 style="margin-bottom: 8px; font-size: 22px;">Book Your Free Classes</h3>
               <p style="font-size: 13.5px; color: var(--gray-600); margin-bottom: 24px;">Fill out the short form and we'll setup your trial class within 24 hours.</p>
               
-              <form id="nazara-trial-form">
+              <form id="hadith-trial-form">
                 <div class="form-group" style="margin-bottom: 16px;">
                   <label for="trial-name" style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--dark-slate);">Full Name *</label>
                   <input type="text" id="trial-name" class="form-control" style="width: 100%; border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 12px 14px; outline: none; font-family: var(--font-body); font-size: 14px; transition: var(--transition);" placeholder="e.g. Maryam Khan" required>
@@ -1306,7 +1038,7 @@
     </section>
   </main>
 
-  <!-- 9. Footer -->
+  <!-- 10. Footer -->
   <footer style="background-color: var(--footer-bg); color: rgba(255, 255, 255, 0.7); padding: 80px 0 32px 0; border-top: 4px solid var(--secondary);">
     <div class="container">
       <div class="footer-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr; gap: 40px; margin-bottom: 64px;">
@@ -1369,50 +1101,9 @@
   <!-- In-page specific scripts for interactivity -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      
-      // ==========================================
-      // 1. Interactive Curriculum Highlights Timeline Tabs
-      // ==========================================
-      const stepNodes = document.querySelectorAll('.curriculum-step-node');
-      const tabPanels = document.querySelectorAll('.curriculum-tab-panel');
-      const progressLine = document.getElementById('curriculum-progress-line');
-
-      function updateTimelineProgress(stepIndex) {
-        const total = stepNodes.length;
-        const percent = ((stepIndex - 1) / (total - 1)) * 100;
-        if (progressLine) {
-          progressLine.style.width = `${percent}%`;
-        }
-      }
-
-      stepNodes.forEach(node => {
-        node.addEventListener('click', () => {
-          const stepVal = parseInt(node.getAttribute('data-step'));
-          
-          // Set active step node
-          stepNodes.forEach(n => n.classList.remove('active'));
-          node.classList.add('active');
-          
-          // Update timeline progress line
-          updateTimelineProgress(stepVal);
-          
-          // Switch Tab Panels with fade animation
-          tabPanels.forEach(panel => {
-            panel.classList.remove('active');
-          });
-          
-          const targetPanel = document.getElementById(`panel-step-${stepVal}`);
-          if (targetPanel) {
-            targetPanel.classList.add('active');
-          }
-        });
-      });
-
-      // Initial progress calculation
-      updateTimelineProgress(1);
 
       // ==========================================
-      // 2. Pricing Toggle Switcher
+      // 1. Pricing Toggle Switcher
       // ==========================================
       const billingCheckbox = document.getElementById('billing-period-checkbox');
       const monthlyLabel = document.getElementById('monthly-label');
@@ -1478,7 +1169,7 @@
       }
 
       // ==========================================
-      // 3. Interactive FAQs Accordion
+      // 2. Interactive FAQs Accordion
       // ==========================================
       const faqCards = document.querySelectorAll('.faq-item-card');
 
@@ -1510,9 +1201,9 @@
       }
 
       // ==========================================
-      // 4. Booking Form Submission & Feedback
+      // 3. Booking Form Submission & Feedback
       // ==========================================
-      const trialForm = document.getElementById('nazara-trial-form');
+      const trialForm = document.getElementById('hadith-trial-form');
       if (trialForm) {
         trialForm.addEventListener('submit', (e) => {
           e.preventDefault();

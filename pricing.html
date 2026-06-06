@@ -6,7 +6,7 @@
   
   <!-- SEO Meta Tags -->
   <title>Pricing Plans & Packages | Online Quran College</title>
-  <meta name="description" content="View transparent pricing plans for online Quran learning. 2, 3, and 5 classes per week packages. Available in USD, GBP, and CAD. Get 3 days free trial.">
+  <meta name="description" content="View transparent pricing plans for online Quran learning. 2, 3, and 5 classes per week packages. Available in USD, GBP, and CAD. Get 7 days free trial.">
   <meta name="keywords" content="quran tuition fee, online quran rates, quran tutor fees, family discount quran">
   <meta name="author" content="Online Quran College">
   
@@ -19,13 +19,444 @@
   
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Mandala Overlay & Section Title */
+    .pricing-header-container {
+      position: relative;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .mandala-wrapper {
+      margin: 20px auto;
+      width: 130px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .mandala-svg {
+      animation: spin-slow 35s linear infinite;
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Image Showcase Grid & Mandala Overlap */
+    .pricing-showcase-container {
+      position: relative;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    .pricing-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .showcase-img-box {
+      border-radius: var(--radius-md);
+      height: 220px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 3px solid var(--light);
+      outline: 1px solid rgba(212, 175, 55, 0.2);
+      position: relative;
+      transition: var(--transition);
+    }
+    .showcase-img-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 104, 71, 0) 50%, rgba(0, 104, 71, 0.45) 100%);
+      z-index: 2;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+    .showcase-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+      display: block;
+    }
+    .showcase-img-box:hover {
+      outline: 2px solid rgba(212, 175, 55, 0.85);
+      box-shadow: var(--shadow-lg), 0 0 15px rgba(212, 175, 55, 0.35);
+    }
+    .showcase-img-box:hover img {
+      transform: scale(1.06);
+    }
+    .showcase-img-box:hover::before {
+      background: linear-gradient(180deg, rgba(0, 104, 71, 0) 30%, rgba(0, 104, 71, 0.55) 100%);
+    }
+    .showcase-img-box.center-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 104, 71, 0.08);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .showcase-mandala-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: gold-pulse 3s ease-in-out infinite alternate;
+    }
+    .showcase-mandala-overlay .mandala-svg {
+      animation: spin-slow 35s linear infinite;
+      filter: drop-shadow(0 4px 12px rgba(180, 83, 9, 0.25));
+      width: 160px;
+      height: 160px;
+    }
+    @keyframes gold-pulse {
+      0% {
+        filter: drop-shadow(0 4px 10px rgba(212, 175, 55, 0.25));
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        filter: drop-shadow(0 4px 28px rgba(212, 175, 55, 0.65));
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+
+    /* Column Specs & Cards */
+    .custom-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+      align-items: stretch;
+    }
+    .pricing-column-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .column-specs {
+      text-align: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+    }
+    .spec-num {
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: var(--font-title);
+      line-height: 1.1;
+      animation: float-slow 4s ease-in-out infinite alternate;
+      display: inline-block;
+    }
+    
+    /* Staggered bobbing for adjacent columns */
+    .pricing-column-content:nth-child(2) .spec-num {
+      animation-delay: 0.6s;
+      animation-duration: 4.4s;
+    }
+    .pricing-column-content:nth-child(3) .spec-num {
+      animation-delay: 1.2s;
+      animation-duration: 4.8s;
+    }
+    
+    @keyframes float-slow {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-5px); }
+    }
+
+    .spec-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-600);
+      margin-bottom: 12px;
+      font-family: var(--font-body);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .spec-price-row {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-top: 8px;
+      font-family: var(--font-title);
+    }
+    
+    .custom-price-card {
+      background-color: var(--light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(0, 104, 71, 0.08);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: var(--transition);
+      position: relative;
+      width: 100%;
+      flex-grow: 1;
+    }
+    /* Premium sweeps shimmer glare on hover */
+    .custom-price-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 100%);
+      transform: skewX(-25deg);
+      transition: none;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .custom-price-card:hover::before {
+      left: 125%;
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .custom-price-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -10px rgba(0, 104, 71, 0.12), 0 0 25px rgba(212, 175, 55, 0.18);
+      border-color: var(--secondary);
+    }
+    .card-bottom-details {
+      padding: 35px 28px;
+      display: flex;
+      flex-grow: 1;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .card-package-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-family: var(--font-title);
+    }
+    .card-package-desc {
+      font-size: 14.5px;
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .card-action-btn {
+      width: 100%;
+      margin-bottom: 12px;
+      font-size: 15px;
+      padding: 10px 24px;
+      border-radius: 50px;
+      background-color: var(--primary);
+      color: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-family: var(--font-title);
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+    .card-action-btn:hover {
+      background-color: var(--primary-hover);
+      box-shadow: 0 8px 20px rgba(0, 104, 71, 0.25);
+      transform: translateY(-2px);
+    }
+    .card-trial-info {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-trial-info.no-trial {
+      color: var(--gray-600);
+    }
+
+    /* Blog Section styling */
+    .blog-showcase-section {
+      background-color: var(--secondary-tint);
+      padding: 80px 0;
+      border-radius: var(--radius-lg);
+      margin: 80px 0;
+      border: 1px solid rgba(16, 185, 129, 0.08);
+    }
+    
+    @media (max-width: 992px) {
+      .pricing-showcase-grid, .custom-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .pricing-column-content {
+        margin-bottom: 20px;
+      }
+      .showcase-img-box {
+        height: 200px;
+      }
+      .showcase-mandala-overlay {
+        display: none;
+      }
+      body {
+        padding-top: 176px;
+      }
+    }
+
+    /* Free Classes Box & Grid */
+    .free-classes-box {
+      background: linear-gradient(-45deg, #eefaf3, #f5fdf9, #fffdf5, #f4fbf7);
+      background-size: 400% 400%;
+      animation: gradient-move 15s ease infinite;
+      border-radius: var(--radius-md);
+      padding: 50px 40px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      margin: 80px 0;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes gradient-move {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .free-classes-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .free-classes-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: flex-end;
+    }
+    
+    /* Contact Section Layout */
+    .contact-section-wrapper {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      margin-top: 40px;
+      margin-bottom: 80px;
+      align-items: stretch;
+    }
+    .contact-info-card {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 45px 35px;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      box-shadow: var(--shadow-md);
+    }
+    .contact-info-card h3 {
+      color: var(--light);
+      font-size: 24px;
+      font-family: var(--font-title);
+      margin-bottom: 5px;
+    }
+    .contact-info-card p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .contact-info-item i {
+      font-size: 20px;
+      color: var(--secondary);
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-info-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-info-text h4 {
+      color: var(--light);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      font-family: var(--font-title);
+    }
+    .contact-info-text p, .contact-info-text a {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .contact-info-text a:hover {
+      color: var(--light) !important;
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 992px) {
+      .free-classes-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+      }
+      .free-classes-btns {
+        justify-content: center;
+      }
+      .contact-section-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- 1. Header & Navigation Bar -->
   <header id="header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-content">
+          <div class="top-bar-info">
+            <a href="tel:+447864710821"><i class="fa-solid fa-phone"></i> +44 7864 710821</a>
+            <a href="mailto:info@onlinequrancollege.com"><i class="fa-solid fa-envelope"></i> info@onlinequrancollege.com</a>
+          </div>
+          <div>
+            <a href="contact.html" class="top-bar-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
-      <div class="nav-wrapper">
+      <div class="nav-wrapper" style="height: 72px;">
         <a href="index.html" class="logo" id="nav-logo">
           <img src="logo_.png" alt="Online Quran College Logo" class="logo-img">
         </a>
@@ -40,35 +471,21 @@
               <li><a href="hifz-quran.html">Hifz ul Quran Course</a></li>
               <li><a href="arabic-language.html">Arabic Language Course</a></li>
               <li><a href="quran-translation.html">Quran Translation</a></li>
-              <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+              <li><a href="hadith-translation.html">Hadith Translation Course</a></li>
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
           <li><a href="pricing.html" class="active">Pricing</a></li>
-          <li><a href="blogs.html">Our Blogs</a></li>
+          
           <li><a href="contact.html">Contact</a></li>
           <li><a href="careers.html">Career Opportunities</a></li>
-          <li class="dropdown">
-            <a href="lms.html" class="dropdown-trigger">LMS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="lms.html#student-login">Student Portal</a></li>
-              <li><a href="lms.html#teacher-login">Teacher Portal</a></li>
-              <li><a href="lms.html#features">LMS Features</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="quiz.html" class="dropdown-trigger">Quiz <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="quiz.html?type=tajweed">Tajweed Quiz</a></li>
-              <li><a href="quiz.html?type=islamic">Islamic Studies Quiz</a></li>
-              <li><a href="quiz.html?type=arabic">Arabic Vocabulary Quiz</a></li>
-            </ul>
-          </li>
-          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Register Now</a></li>
+          
+          
+          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Book Now</a></li>
         </ul>
         
         <div class="nav-cta">
-          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Book Now</a>
           <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
           </button>
@@ -78,7 +495,7 @@
   </header>
 
   <!-- 2. Page Header / Banner -->
-  <section class="page-header">
+  <section class="page-header" style="padding: 100px 0 50px 0;">
     <div class="container">
       <div class="page-header-content">
         <h1 class="page-title">Tuition Plans & Pricing</h1>
@@ -93,12 +510,54 @@
   </section>
 
   <main>
-    <section class="section">
+    <section class="section" style="padding: 60px 0;">
       <div class="container">
-        <div class="section-header">
-          <span class="section-subtitle">Flexible Packages</span>
-          <h2 class="section-title">Select Your Custom Study Plan</h2>
-          <p>We charge monthly on subscription basis. All courses are available in 1-on-1 private classroom formats.</p>
+        
+        <div class="pricing-header-container">
+          <span class="section-subtitle">Our Packages & Prices</span>
+          <h2 class="section-title" style="margin-top: 10px;">Our Range of Comprehensive Islamic Education Packages</h2>
+          
+          <div class="mandala-wrapper">
+            <!-- A gorgeous golden SVG mandala -->
+            <svg viewBox="0 0 100 100" width="120" height="120" class="mandala-svg">
+              <defs>
+                <radialGradient id="goldGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#fef08a" />
+                  <stop offset="40%" stop-color="#fbbf24" />
+                  <stop offset="100%" stop-color="#b45309" />
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="45" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+              <g fill="url(#goldGrad)">
+                <circle cx="50" cy="50" r="5" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(0 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(30 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(60 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(90 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(120 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(150 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(180 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(210 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(240 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(270 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(300 50 50)" />
+                <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(330 50 50)" />
+                
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(15 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(45 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(75 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(105 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(135 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(165 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(195 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(225 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(255 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(285 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(315 50 50)" />
+                <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(345 50 50)" />
+              </g>
+            </svg>
+          </div>
         </div>
 
         <!-- Currency select filter -->
@@ -108,76 +567,314 @@
           <button class="currency-btn" id="btn-curr-cad" onclick="setCurrency('cad')">CAD ($)</button>
         </div>
 
-        <!-- Pricing Grid -->
-        <div class="pricing-cards-grid">
-          <!-- Card 1: Basic -->
-          <div class="pricing-card">
-            <h3>Basic Plan</h3>
-            <p class="pricing-card-desc">Perfect for busy school routines and steady long-term learning.</p>
-            <div class="pricing-price-wrapper">
-              <span class="pricing-price" id="price-basic">$35</span>
-              <span class="pricing-period">/ month</span>
+        <!-- 1. STANDARD PACKAGES SECTION -->
+        <div class="packages-container">
+          <div class="packages-title-bar">
+            <h3>Standard Packages</h3>
+          </div>
+          
+          <!-- Image showcase with Mandala Overlay centered in the middle of standard packages' image row -->
+          <div class="pricing-showcase-container">
+            <div class="pricing-showcase-grid">
+              <div class="showcase-img-box">
+                <img src="hifz_hero.png" alt="Quran Memorization Studies">
+              </div>
+              <div class="showcase-img-box center-box">
+                <img src="nazara_hero.png" alt="Quran Recitation Studies">
+              </div>
+              <div class="showcase-img-box">
+                <img src="translation_hero.png" alt="Quran Translation Studies">
+              </div>
             </div>
-            <ul class="pricing-features-list">
-              <li><i class="fa-solid fa-circle-check"></i> **2 Classes** per week (8 / month)</li>
-              <li><i class="fa-solid fa-circle-check"></i> 30-minute private lessons</li>
-              <li><i class="fa-solid fa-circle-check"></i> 1-on-1 certified teacher</li>
-              <li><i class="fa-solid fa-circle-check"></i> Flexible scheduling & makeup options</li>
-              <li><i class="fa-solid fa-circle-check"></i> Noorani Qaida & Basic Tajweed</li>
-              <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Advanced Hifz Memorization</li>
-              <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Monthly progress report cards</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline" style="width: 100%;">Get Started</a>
+            
+            <div class="showcase-mandala-overlay">
+              <!-- A gorgeous golden SVG mandala -->
+              <svg viewBox="0 0 100 100" class="mandala-svg">
+                <defs>
+                  <radialGradient id="goldGrad2" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fef08a" />
+                    <stop offset="40%" stop-color="#fbbf24" />
+                    <stop offset="100%" stop-color="#b45309" />
+                  </radialGradient>
+                </defs>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="url(#goldGrad2)" stroke-width="0.5" opacity="0.3"/>
+                <g fill="url(#goldGrad2)">
+                  <circle cx="50" cy="50" r="5" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(0 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(30 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(60 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(90 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(120 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(150 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(180 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(210 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(240 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(270 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(300 50 50)" />
+                  <path d="M50 38 C48 43 48 45 50 45 C52 45 52 43 50 38 Z" transform="rotate(330 50 50)" />
+                  
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(15 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(45 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(75 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(105 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(135 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(165 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(195 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(225 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(255 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(285 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(315 50 50)" />
+                  <path d="M50 30 C47 40 47 43 50 43 C53 43 53 40 50 30 Z" transform="rotate(345 50 50)" />
+                </g>
+              </svg>
+            </div>
           </div>
 
-          <!-- Card 2: Standard (Popular) -->
-          <div class="pricing-card popular">
-            <div class="popular-badge">Recommended</div>
-            <h3>Standard Plan</h3>
-            <p class="pricing-card-desc">Our most popular plan. Ideal for kids' Tajweed improvement.</p>
-            <div class="pricing-price-wrapper">
-              <span class="pricing-price" id="price-standard">$50</span>
-              <span class="pricing-period">/ month</span>
+          <!-- Cards Grid -->
+          <div class="custom-pricing-grid">
+            <!-- Package 1 -->
+            <div class="pricing-column-content">
+              <div class="column-specs">
+                <span class="spec-num">30</span>
+                <span class="spec-label">Min Class</span>
+                <span class="spec-num">2</span>
+                <span class="spec-label">Days a Week</span>
+                <span class="spec-price-row">Price<span id="price-p1">$30</span>/month</span>
+              </div>
+              <div class="custom-price-card">
+                <div class="card-bottom-details">
+                  <h4 class="card-package-title">Package 1</h4>
+                  <p class="card-package-desc">These classes are for the standard course of Quran. Package 1 offers the standard Quran classes. Register today & get 7 days free trial. Start learning Quran today. You can select standard.</p>
+                  <a href="contact.html" class="card-action-btn">Book Now</a>
+                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+                </div>
+              </div>
             </div>
-            <ul class="pricing-features-list">
-              <li><i class="fa-solid fa-circle-check"></i> **3 Classes** per week (12 / month)</li>
-              <li><i class="fa-solid fa-circle-check"></i> 30-minute private lessons</li>
-              <li><i class="fa-solid fa-circle-check"></i> 1-on-1 certified teacher</li>
-              <li><i class="fa-solid fa-circle-check"></i> Flexible scheduling & makeup options</li>
-              <li><i class="fa-solid fa-circle-check"></i> All Quranic & Islamic Study modules</li>
-              <li><i class="fa-solid fa-circle-check"></i> Monthly progress report cards</li>
-              <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Dedicated WhatsApp support group</li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Get Started</a>
+
+            <!-- Package 2 -->
+            <div class="pricing-column-content">
+              <div class="column-specs">
+                <span class="spec-num">30</span>
+                <span class="spec-label">Min Class</span>
+                <span class="spec-num">3</span>
+                <span class="spec-label">Days a Week</span>
+                <span class="spec-price-row">Price : <span id="price-p2">$40</span></span>
+              </div>
+              <div class="custom-price-card">
+                <div class="card-bottom-details">
+                  <h4 class="card-package-title">Package 2</h4>
+                  <p class="card-package-desc">These classes are for the standard course of Quran. Package 2 offers the standard Quran classes. Register today & get 7 days free trial. Start learning Quran today. You can select standard.</p>
+                  <a href="contact.html" class="card-action-btn">Book Now</a>
+                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="pricing-column-content">
+              <div class="column-specs">
+                <span class="spec-num">30</span>
+                <span class="spec-label">Min Class</span>
+                <span class="spec-num">4</span>
+                <span class="spec-label">Days a Week</span>
+                <span class="spec-price-row">Price : <span id="price-p3">$45</span></span>
+              </div>
+              <div class="custom-price-card">
+                <div class="card-bottom-details">
+                  <h4 class="card-package-title">Package 3</h4>
+                  <p class="card-package-desc">This membership offers the standard course of Quran. Package 3 offers the standard Quran classes. Register today & get 7 days free trial. Start learning Quran today. You can select standard course.</p>
+                  <a href="contact.html" class="card-action-btn">Book Now</a>
+                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. SPECIALIZED PACKAGES SECTION -->
+        <div class="packages-container">
+          <div class="packages-title-bar">
+            <h3>Specialized Packages</h3>
+          </div>
+          
+          <!-- Image showcase -->
+          <div class="pricing-showcase-container">
+            <div class="pricing-showcase-grid">
+              <div class="showcase-img-box">
+                <img src="arabic_hero.png" alt="Arabic Language Learning">
+              </div>
+              <div class="showcase-img-box">
+                <img src="hadith_hero.png" alt="Hadith Translation Studies">
+              </div>
+              <div class="showcase-img-box">
+                <img src="hero.png" alt="Online Quran College">
+              </div>
+            </div>
           </div>
 
-          <!-- Card 3: Premium (Hifz) -->
-          <div class="pricing-card">
-            <h3>Intensive Plan</h3>
-            <p class="pricing-card-desc">Tailored for fast-paced Hifz memorization and adults.</p>
-            <div class="pricing-price-wrapper">
-              <span class="pricing-price" id="price-intensive">$80</span>
-              <span class="pricing-period">/ month</span>
+          <!-- Cards Grid -->
+          <div class="custom-pricing-grid">
+            <!-- Package 4 -->
+            <div class="pricing-column-content">
+              <div class="column-specs">
+                <span class="spec-num">4</span>
+                <span class="spec-label">Days a Week</span>
+                <span class="spec-num">30</span>
+                <span class="spec-label">Min Class</span>
+                <span class="spec-price-row">Price : <span id="price-p4">$50</span></span>
+              </div>
+              <div class="custom-price-card">
+                <div class="card-bottom-details">
+                  <h4 class="card-package-title">Package 4</h4>
+                  <p class="card-package-desc">These classes are for the specialized course of Quran. Package 4 offers the specialized Quran classes. Register today & get 7 days free trial. Start learning Quran today.</p>
+                  <a href="contact.html" class="card-action-btn">Book Now</a>
+                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+                </div>
+              </div>
             </div>
-            <ul class="pricing-features-list">
-              <li><i class="fa-solid fa-circle-check"></i> **5 Classes** per week (20 / month)</li>
-              <li><i class="fa-solid fa-circle-check"></i> 45-minute private lessons</li>
-              <li><i class="fa-solid fa-circle-check"></i> 1-on-1 certified expert scholar</li>
-              <li><i class="fa-solid fa-circle-check"></i> High-priority reschedule queue</li>
-              <li><i class="fa-solid fa-circle-check"></i> Intensive Hifz revision & Tafseer</li>
-              <li><i class="fa-solid fa-circle-check"></i> Monthly progress report cards</li>
-              <li><i class="fa-solid fa-circle-check"></i> Dedicated WhatsApp support group</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline" style="width: 100%;">Get Started</a>
+
+            <!-- Leisure Package -->
+            <div class="pricing-column-content">
+              <div class="column-specs">
+                <span class="spec-num">2</span>
+                <span class="spec-label">Days a Week</span>
+                <span class="spec-num">30</span>
+                <span class="spec-label">Min Class</span>
+                <span class="spec-price-row">Price : <span id="price-leisure">$35</span></span>
+              </div>
+              <div class="custom-price-card">
+                <div class="card-bottom-details">
+                  <h4 class="card-package-title">Leisure</h4>
+                  <p class="card-package-desc">These classes are for the leisure course of Quran. Leisure offers the specialized Quran classes. Register today & get 7 days free trial. Start learning Quran today.</p>
+                  <a href="contact.html" class="card-action-btn">Book Now</a>
+                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weekend Package -->
+            <div class="pricing-column-content">
+              <div class="column-specs">
+                <span class="spec-num">4</span>
+                <span class="spec-label">Days a Week</span>
+                <span class="spec-num">30</span>
+                <span class="spec-label">Min Class</span>
+                <span class="spec-price-row">Price : <span id="price-weekend">$40</span></span>
+              </div>
+              <div class="custom-price-card">
+                <div class="card-bottom-details">
+                  <h4 class="card-package-title">Weekend</h4>
+                  <p class="card-package-desc">These classes are for the weekend course of Quran. Weekend offers the specialized Quran classes. Register today & get 7 days free trial. Start learning Quran today.</p>
+                  <a href="contact.html" class="card-action-btn">Book Now</a>
+                  <span class="card-trial-info no-trial"><i class="fa-solid fa-circle-xmark"></i> No free trial available</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div style="text-align: center; margin-bottom: 80px;">
-          <p style="font-size: 15px;"><i class="fa-solid fa-gift" style="color: var(--accent); margin-right: 8px;"></i> **Family Discount**: Enrolling multiple children? Get **15% off** tuition fees for additional siblings!</p>
+          <p style="font-size: 16px; font-weight: 600;"><i class="fa-solid fa-gift" style="color: var(--accent); margin-right: 8px; font-size: 18px;"></i> **Family Discount**: Enrolling multiple children? Get **15% off** tuition fees for additional siblings!</p>
         </div>
 
+        <!-- Free Classes Banner -->
+        <div class="container">
+          <div class="free-classes-box">
+            <div class="free-classes-grid">
+              <div>
+                <span class="section-subtitle" style="color: var(--primary);">Free Classes</span>
+                <h3 style="font-size: 28px; color: var(--primary); font-family: var(--font-title); font-weight: 700; margin-bottom: 8px;">We are offering 7 days free classes</h3>
+                <p style="font-size: 14.5px; color: var(--gray-600); line-height: 1.6;">Take the first step towards enlightenment today. Sign up for your free 7-day trial and experience the power of Quranic education.</p>
+              </div>
+              <div class="free-classes-btns">
+                <a href="#contact" class="btn btn-primary">Book Now</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Contact Section -->
+        <section class="section" id="contact" style="padding: 60px 0 30px 0;">
+          <div class="container">
+            <div class="section-header" style="margin-bottom: 35px;">
+              <span class="section-subtitle">Contact Us</span>
+              <h2 class="section-title">Get In Touch</h2>
+              <p>Feel free to reach out to us at any time through our contact form, email, or phone number, as we're always here to assist you with any inquiries, provide additional information about our programs, and guide you through the enrollment process to ensure that you embark on your Quranic education journey with confidence and ease.</p>
+            </div>
+            
+            <div class="contact-section-wrapper">
+              <!-- Left Column: Contact info card -->
+              <div class="contact-info-card">
+                <div>
+                  <h3>Contact Information</h3>
+                  <p>Our dedicated support coordinators are available to answer your questions and guide you.</p>
+                </div>
+                
+                <div class="contact-info-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div class="contact-info-text">
+                    <h4>Our Location</h4>
+                    <p>United Kingdom</p>
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <div class="contact-info-text">
+                    <h4>Phone Number</h4>
+                    <p><a href="tel:+447864710821">+44 7864 710821</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div class="contact-info-text">
+                    <h4>Email Address</h4>
+                    <p><a href="mailto:info@onlinequrancollege.com">info@onlinequrancollege.com</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-info-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <div class="contact-info-text">
+                    <h4>Work Hours</h4>
+                    <p>Mon - Tue: 09:00 - 18:00<br>Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Contact form -->
+              <div class="custom-price-card" style="box-shadow: var(--shadow-sm); padding: 40px; border-radius: var(--radius-md); background-color: var(--light);">
+                <form id="pricing-contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                      <label style="font-weight: 600; font-size: 13.5px; color: var(--gray-700); margin-bottom: 6px; display: block;">Your Name *</label>
+                      <input type="text" class="form-control" placeholder="Name" required style="width: 100%; height: 48px; padding: 10px 16px; border: 1px solid var(--gray-200); border-radius: 8px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                      <label style="font-weight: 600; font-size: 13.5px; color: var(--gray-700); margin-bottom: 6px; display: block;">Email Address *</label>
+                      <input type="email" class="form-control" placeholder="Email" required style="width: 100%; height: 48px; padding: 10px 16px; border: 1px solid var(--gray-200); border-radius: 8px;">
+                    </div>
+                  </div>
+                  <div class="form-group" style="margin-bottom: 0;">
+                    <label style="font-weight: 600; font-size: 13.5px; color: var(--gray-700); margin-bottom: 6px; display: block;">Subject *</label>
+                    <input type="text" class="form-control" placeholder="Subject" required style="width: 100%; height: 48px; padding: 10px 16px; border: 1px solid var(--gray-200); border-radius: 8px;">
+                  </div>
+                  <div class="form-group" style="margin-bottom: 0;">
+                    <label style="font-weight: 600; font-size: 13.5px; color: var(--gray-700); margin-bottom: 6px; display: block;">Message *</label>
+                    <textarea class="form-control" placeholder="Your message..." required style="width: 100%; height: 120px; padding: 12px 16px; border: 1px solid var(--gray-200); border-radius: 8px; resize: vertical;"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-secondary" style="width: 100%; height: 48px;">Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- FAQs Accordion -->
-        <div class="faq-section">
+        <div class="faq-section" id="faq">
           <h2 class="faq-title">Frequently Asked Questions</h2>
           
           <div class="faq-item">
@@ -186,7 +883,7 @@
               <i class="fa-solid fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-              Yes, we offer a 3-day free trial period (no credit card required) for every new student. This helps you evaluate the tutor, the virtual classroom tools, and select the best scheduling timings before subscription activation.
+              Yes, we offer a 7-day free trial period (no credit card required) for Standard and select Specialized plans. This helps you evaluate the tutor, the virtual classroom tools, and select the best scheduling timings before subscription activation.
             </div>
           </div>
 
@@ -235,57 +932,57 @@
     </section>
   </main>
 
-  <!-- 13. Footer -->
-  <footer>
+  <!-- 13. Footer -->  <footer style="background-color: var(--footer-bg); color: rgba(255, 255, 255, 0.7); padding: 80px 0 32px 0; border-top: 4px solid var(--secondary);">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr; gap: 40px; margin-bottom: 64px;">
         <!-- Column 1 -->
         <div class="footer-column footer-about">
           <a href="index.html" class="logo">
             <img src="logo_.png" alt="Online Quran College Logo" class="logo-img footer-logo-img">
           </a>
-          <p>Providing highly professional, customized online 1-on-1 Quran and Islamic lessons under the guidance of certified scholars worldwide.</p>
-          <div class="footer-social-panel">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+          <p style="margin-top: 16px; font-size: 14px;">Unlock the wisdom of the Quran with our online Quran college. Explore, learn, and grow with us</p>
         </div>
         
         <!-- Column 2 -->
         <div class="footer-column">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Courses</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="blogs.html">Our Blogs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Quick Links</h4>
+          <ul class="footer-links" style="list-style: none;">
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="about.html" style="color: inherit; transition: var(--transition);">About Us</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="services.html" style="color: inherit; transition: var(--transition);">Services</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="pricing.html" style="color: inherit; transition: var(--transition);">Pricing</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="contact.html" style="color: inherit; transition: var(--transition);">Contact</a></li>
           </ul>
         </div>
         
         <!-- Column 3 -->
         <div class="footer-column">
-          <h4>Our Services</h4>
-          <ul class="footer-links">
-            <li><a href="noorani-qaida.html">Noorani Qaida Course</a></li>
-            <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
-            <li><a href="hifz-quran.html">Hifz ul Quran Course</a></li>
-            <li><a href="arabic-language.html">Arabic Language Course</a></li>
-            <li><a href="quran-translation.html">Quran Translation</a></li>
-            <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Useful Links</h4>
+          <ul class="footer-links" style="list-style: none;">
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#" style="color: inherit; transition: var(--transition);">Privacy Policy</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#" style="color: inherit; transition: var(--transition);">Terms and Conditions</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#faq" style="color: inherit; transition: var(--transition);">FAQ</a></li>
+          </ul>
+        </div>
+ 
+        <!-- Column 4 -->
+        <div class="footer-column">
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Stay Connected</h4>
+          <ul class="footer-links contact-info-list" style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-location-dot" style="color: var(--secondary); font-size: 16px;"></i> United Kingdom</li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-envelope" style="color: var(--secondary); font-size: 16px;"></i> <a href="mailto:info@onlinequrancollege.com" style="color: inherit; transition: var(--transition);">info@onlinequrancollege.com</a></li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-phone" style="color: var(--secondary); font-size: 16px;"></i> <a href="tel:+447864710821" style="color: inherit; transition: var(--transition);">+44 7864 710821</a></li>
           </ul>
         </div>
       </div>
       
       <!-- Footer Bottom -->
-      <div class="footer-bottom">
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 32px; flex-wrap: wrap; gap: 20px;">
         <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
-        <div class="footer-legal-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
+        <div class="footer-social-panel" style="display: flex; gap: 12px;">
+          <a href="#" class="social-btn" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
     </div>
@@ -298,9 +995,9 @@
   <script>
     // Currency Switcher
     const prices = {
-      usd: { basic: "$35", standard: "$50", intensive: "$80" },
-      gbp: { basic: "£28", standard: "£40", intensive: "£64" },
-      cad: { basic: "$48", standard: "$68", intensive: "$110" }
+      usd: { p1: "$30", p2: "$40", p3: "$45", p4: "$50", leisure: "$35", weekend: "$40" },
+      gbp: { p1: "£24", p2: "£32", p3: "£36", p4: "£40", leisure: "£28", weekend: "£32" },
+      cad: { p1: "$40", p2: "$54", p3: "$60", p4: "$68", leisure: "$48", weekend: "$54" }
     };
     
     function setCurrency(currency) {
@@ -313,10 +1010,13 @@
         }
       });
       
-      // Update price text values
-      document.getElementById('price-basic').textContent = prices[currency].basic;
-      document.getElementById('price-standard').textContent = prices[currency].standard;
-      document.getElementById('price-intensive').textContent = prices[currency].intensive;
+      // Update price text values inside the spans
+      document.getElementById('price-p1').textContent = prices[currency].p1;
+      document.getElementById('price-p2').textContent = prices[currency].p2;
+      document.getElementById('price-p3').textContent = prices[currency].p3;
+      document.getElementById('price-p4').textContent = prices[currency].p4;
+      document.getElementById('price-leisure').textContent = prices[currency].leisure;
+      document.getElementById('price-weekend').textContent = prices[currency].weekend;
     }
     
     // FAQ Accordion Toggle

@@ -239,13 +239,13 @@ header.scrolled .nav-wrapper {
 }
 
 .logo-img {
-  max-height: 56px;
+  max-height: 72px;
   width: auto;
   transition: var(--transition);
 }
 
 header.scrolled .logo-img {
-  max-height: 44px;
+  max-height: 52px;
 }
 
 .footer-logo-img {
@@ -1090,6 +1090,7 @@ header.scrolled .logo-img {
   box-shadow: var(--shadow-md);
   border: 6px solid var(--secondary-light);
   background-color: var(--gray-100);
+  transition: var(--transition);
 }
 
 .tutor-arch-frame img {
@@ -1103,13 +1104,24 @@ header.scrolled .logo-img {
   object-position: 65% center;
 }
 
+.tutor-arch-card:hover .tutor-arch-frame {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 104, 71, 0.15), 0 0 20px rgba(16, 185, 129, 0.25);
+  border-color: var(--secondary);
+}
+
 .tutor-arch-card:hover .tutor-arch-frame img {
-  transform: scale(1.06);
+  transform: scale(1.08) rotate(1deg);
 }
 
 .tutor-arch-card h3 {
   font-size: 18px;
   margin-bottom: 4px;
+  transition: var(--transition);
+}
+
+.tutor-arch-card:hover h3 {
+  color: var(--secondary);
 }
 
 .tutor-arch-card span {
@@ -1118,12 +1130,38 @@ header.scrolled .logo-img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.tutor-arch-card:hover span {
+  color: var(--accent);
+  letter-spacing: 1.5px;
 }
 
 .tutor-arch-card p {
   font-size: 13px;
   margin-top: 6px;
 }
+
+/* Scroll reveal animation base rules */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for tutor cards */
+.tutors-grid-3x2 .tutor-arch-card:nth-child(1) { transition-delay: 0.1s; }
+.tutors-grid-3x2 .tutor-arch-card:nth-child(2) { transition-delay: 0.2s; }
+.tutors-grid-3x2 .tutor-arch-card:nth-child(3) { transition-delay: 0.3s; }
+.tutors-grid-3x2 .tutor-arch-card:nth-child(4) { transition-delay: 0.1s; }
+.tutors-grid-3x2 .tutor-arch-card:nth-child(5) { transition-delay: 0.2s; }
+.tutors-grid-3x2 .tutor-arch-card:nth-child(6) { transition-delay: 0.3s; }
 
 /* Trust Banner */
 .trust-banner-green {
@@ -2529,4 +2567,95 @@ input:checked + .slider-round:before {
 }
 .syllabus-accordion[open] .accordion-arrow {
   transform: rotate(180deg);
+}
+
+/* Global Header Top Bar and Layout Adjustments */
+.top-bar {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.top-bar-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.top-bar-info a {
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  font-family: var(--font-title);
+}
+.top-bar-info a:hover {
+  color: var(--light);
+  text-decoration: none;
+}
+.top-bar-btn {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 12px;
+  transition: var(--transition);
+  display: inline-block;
+  font-family: var(--font-title);
+}
+.top-bar-btn:hover {
+  background-color: #0d9488;
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+body {
+  padding-top: 136px !important;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 992px) {
+  body {
+    padding-top: 176px !important;
+  }
+}
+
+.hero {
+  padding: 80px 0 100px 0 !important;
+}
+
+.page-header {
+  padding: 80px 0 50px 0 !important;
+}
+
+/* Button Color Harmonization */
+.nav-cta #btn-header-cta,
+.mobile-cta-only .btn-primary {
+  background-color: var(--secondary) !important;
+}
+
+.nav-cta #btn-header-cta:hover,
+.mobile-cta-only .btn-primary:hover {
+  background-color: #0d9488 !important;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25) !important;
 }
