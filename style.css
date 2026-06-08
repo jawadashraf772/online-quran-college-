@@ -1126,6 +1126,10 @@ header.scrolled .logo-img {
   object-position: center center;
 }
 
+#tutor-5 .tutor-arch-frame img {
+  object-position: 54% top;
+}
+
 .tutor-arch-card:hover .tutor-arch-frame {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 104, 71, 0.15), 0 0 20px rgba(16, 185, 129, 0.25);
