@@ -143,63 +143,6 @@
       margin-bottom: 60px;
       align-items: stretch;
     }
-    .pricing-column-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    .column-specs {
-      text-align: center;
-      margin-top: 25px;
-      margin-bottom: 25px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      width: 100%;
-    }
-    .spec-num {
-      font-size: 44px;
-      font-weight: 800;
-      color: var(--primary);
-      font-family: var(--font-title);
-      line-height: 1.1;
-      animation: float-slow 4s ease-in-out infinite alternate;
-      display: inline-block;
-    }
-    
-    /* Staggered bobbing for adjacent columns */
-    .pricing-column-content:nth-child(2) .spec-num {
-      animation-delay: 0.6s;
-      animation-duration: 4.4s;
-    }
-    .pricing-column-content:nth-child(3) .spec-num {
-      animation-delay: 1.2s;
-      animation-duration: 4.8s;
-    }
-    
-    @keyframes float-slow {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-5px); }
-    }
-
-    .spec-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--gray-600);
-      margin-bottom: 12px;
-      font-family: var(--font-body);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .spec-price-row {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--primary);
-      margin-top: 8px;
-      font-family: var(--font-title);
-    }
     
     .custom-price-card {
       background-color: var(--light);
@@ -214,6 +157,7 @@
       width: 100%;
       flex-grow: 1;
     }
+    
     /* Premium sweeps shimmer glare on hover */
     .custom-price-card::before {
       content: '';
@@ -237,35 +181,107 @@
       box-shadow: 0 20px 40px -10px rgba(0, 104, 71, 0.12), 0 0 25px rgba(212, 175, 55, 0.18);
       border-color: var(--secondary);
     }
-    .card-bottom-details {
-      padding: 35px 28px;
-      display: flex;
-      flex-grow: 1;
-      text-align: center;
-      align-items: center;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
+    .custom-price-card:hover .card-top-header {
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
     }
+    .custom-price-card:hover .card-price {
+      transform: scale(1.05);
+    }
+    .custom-price-card:hover .card-features-list li i {
+      transform: scale(1.2);
+      color: var(--primary);
+    }
+    .custom-price-card:hover .card-action-btn {
+      background-color: var(--secondary);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    .card-top-header {
+      padding: 35px 28px 25px 28px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--secondary-light) 0%, rgba(255, 255, 255, 0) 100%);
+      border-bottom: 1px solid rgba(0, 104, 71, 0.05);
+      transition: var(--transition);
+    }
+    
     .card-package-title {
       font-size: 22px;
       font-weight: 700;
       color: var(--primary);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       font-family: var(--font-title);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .card-package-desc {
+    
+    .card-price-wrapper {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 10px;
+    }
+    
+    .card-price {
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: var(--font-title);
+      line-height: 1;
+      transition: var(--transition);
+      display: inline-block;
+    }
+    
+    .card-period {
+      font-size: 14px;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+    
+    .card-bottom-details {
+      padding: 30px 28px;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .card-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    
+    .card-features-list li {
       font-size: 14.5px;
       color: var(--gray-600);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      line-height: 1.4;
     }
+    
+    .card-features-list li i {
+      color: var(--secondary);
+      font-size: 16px;
+      flex-shrink: 0;
+      transition: var(--transition);
+      display: inline-block;
+    }
+    
     .card-action-btn {
       width: 100%;
       margin-bottom: 12px;
       font-size: 15px;
-      padding: 10px 24px;
+      padding: 12px 24px;
       border-radius: 50px;
       background-color: var(--primary);
       color: var(--light);
@@ -282,6 +298,7 @@
       box-shadow: 0 8px 20px rgba(0, 104, 71, 0.25);
       transform: translateY(-2px);
     }
+    
     .card-trial-info {
       font-size: 13px;
       font-weight: 600;
@@ -448,9 +465,6 @@
             <a href="tel:+447864710821"><i class="fa-solid fa-phone"></i> +44 7864 710821</a>
             <a href="mailto:info@onlinequrancollege.com"><i class="fa-solid fa-envelope"></i> info@onlinequrancollege.com</a>
           </div>
-          <div>
-            <a href="contact.html" class="top-bar-btn">Book Now</a>
-          </div>
         </div>
       </div>
     </div>
@@ -464,7 +478,7 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href="services.html" class="dropdown-trigger">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <a href="#" class="dropdown-trigger">Courses <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
             <ul class="dropdown-menu">
               <li><a href="noorani-qaida.html">Noorani Qaida Course</a></li>
               <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
@@ -472,6 +486,7 @@
               <li><a href="arabic-language.html">Arabic Language Course</a></li>
               <li><a href="quran-translation.html">Quran Translation</a></li>
               <li><a href="hadith-translation.html">Hadith Translation Course</a></li>
+              <li><a href="online-quran-classes-uk.html">Online Quran Classes in UK</a></li>
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
@@ -495,7 +510,7 @@
   </header>
 
   <!-- 2. Page Header / Banner -->
-  <section class="page-header" style="padding: 100px 0 50px 0;">
+  <section class="page-header">
     <div class="container">
       <div class="page-header-content">
         <h1 class="page-title">Tuition Plans & Pricing</h1>
@@ -633,59 +648,65 @@
           <!-- Cards Grid -->
           <div class="custom-pricing-grid">
             <!-- Package 1 -->
-            <div class="pricing-column-content">
-              <div class="column-specs">
-                <span class="spec-num">30</span>
-                <span class="spec-label">Min Class</span>
-                <span class="spec-num">2</span>
-                <span class="spec-label">Days a Week</span>
-                <span class="spec-price-row">Price<span id="price-p1">$30</span>/month</span>
-              </div>
-              <div class="custom-price-card">
-                <div class="card-bottom-details">
-                  <h4 class="card-package-title">Package 1</h4>
-                  <p class="card-package-desc">These classes are for the standard course of Quran. Package 1 offers the standard Quran classes. Register today & get 7 days free trial. Start learning Quran today. You can select standard.</p>
-                  <a href="contact.html" class="card-action-btn">Book Now</a>
-                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+            <div class="custom-price-card">
+              <div class="card-top-header">
+                <h4 class="card-package-title">Package 1</h4>
+                <div class="card-price-wrapper">
+                  <span class="card-price" id="price-p1">$30</span>
+                  <span class="card-period">/month</span>
                 </div>
+              </div>
+              <div class="card-bottom-details">
+                <ul class="card-features-list">
+                  <li><i class="fa-solid fa-calendar-days"></i> <strong>2 Days</strong> a Week</li>
+                  <li><i class="fa-solid fa-clock"></i> <strong>30 Mins</strong> Class Duration</li>
+                  <li><i class="fa-solid fa-book-open"></i> Standard Quran Course</li>
+                  <li><i class="fa-solid fa-user-tie"></i> 1-on-1 Certified Tutor</li>
+                </ul>
+                <a href="contact.html" class="card-action-btn">Book Now</a>
+                <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
               </div>
             </div>
 
             <!-- Package 2 -->
-            <div class="pricing-column-content">
-              <div class="column-specs">
-                <span class="spec-num">30</span>
-                <span class="spec-label">Min Class</span>
-                <span class="spec-num">3</span>
-                <span class="spec-label">Days a Week</span>
-                <span class="spec-price-row">Price : <span id="price-p2">$40</span></span>
-              </div>
-              <div class="custom-price-card">
-                <div class="card-bottom-details">
-                  <h4 class="card-package-title">Package 2</h4>
-                  <p class="card-package-desc">These classes are for the standard course of Quran. Package 2 offers the standard Quran classes. Register today & get 7 days free trial. Start learning Quran today. You can select standard.</p>
-                  <a href="contact.html" class="card-action-btn">Book Now</a>
-                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+            <div class="custom-price-card">
+              <div class="card-top-header">
+                <h4 class="card-package-title">Package 2</h4>
+                <div class="card-price-wrapper">
+                  <span class="card-price" id="price-p2">$40</span>
+                  <span class="card-period">/month</span>
                 </div>
+              </div>
+              <div class="card-bottom-details">
+                <ul class="card-features-list">
+                  <li><i class="fa-solid fa-calendar-days"></i> <strong>3 Days</strong> a Week</li>
+                  <li><i class="fa-solid fa-clock"></i> <strong>30 Mins</strong> Class Duration</li>
+                  <li><i class="fa-solid fa-book-open"></i> Standard Quran Course</li>
+                  <li><i class="fa-solid fa-user-tie"></i> 1-on-1 Certified Tutor</li>
+                </ul>
+                <a href="contact.html" class="card-action-btn">Book Now</a>
+                <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
               </div>
             </div>
 
             <!-- Package 3 -->
-            <div class="pricing-column-content">
-              <div class="column-specs">
-                <span class="spec-num">30</span>
-                <span class="spec-label">Min Class</span>
-                <span class="spec-num">4</span>
-                <span class="spec-label">Days a Week</span>
-                <span class="spec-price-row">Price : <span id="price-p3">$45</span></span>
-              </div>
-              <div class="custom-price-card">
-                <div class="card-bottom-details">
-                  <h4 class="card-package-title">Package 3</h4>
-                  <p class="card-package-desc">This membership offers the standard course of Quran. Package 3 offers the standard Quran classes. Register today & get 7 days free trial. Start learning Quran today. You can select standard course.</p>
-                  <a href="contact.html" class="card-action-btn">Book Now</a>
-                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+            <div class="custom-price-card">
+              <div class="card-top-header">
+                <h4 class="card-package-title">Package 3</h4>
+                <div class="card-price-wrapper">
+                  <span class="card-price" id="price-p3">$45</span>
+                  <span class="card-period">/month</span>
                 </div>
+              </div>
+              <div class="card-bottom-details">
+                <ul class="card-features-list">
+                  <li><i class="fa-solid fa-calendar-days"></i> <strong>4 Days</strong> a Week</li>
+                  <li><i class="fa-solid fa-clock"></i> <strong>30 Mins</strong> Class Duration</li>
+                  <li><i class="fa-solid fa-book-open"></i> Standard Quran Course</li>
+                  <li><i class="fa-solid fa-user-tie"></i> 1-on-1 Certified Tutor</li>
+                </ul>
+                <a href="contact.html" class="card-action-btn">Book Now</a>
+                <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
               </div>
             </div>
           </div>
@@ -715,59 +736,65 @@
           <!-- Cards Grid -->
           <div class="custom-pricing-grid">
             <!-- Package 4 -->
-            <div class="pricing-column-content">
-              <div class="column-specs">
-                <span class="spec-num">4</span>
-                <span class="spec-label">Days a Week</span>
-                <span class="spec-num">30</span>
-                <span class="spec-label">Min Class</span>
-                <span class="spec-price-row">Price : <span id="price-p4">$50</span></span>
-              </div>
-              <div class="custom-price-card">
-                <div class="card-bottom-details">
-                  <h4 class="card-package-title">Package 4</h4>
-                  <p class="card-package-desc">These classes are for the specialized course of Quran. Package 4 offers the specialized Quran classes. Register today & get 7 days free trial. Start learning Quran today.</p>
-                  <a href="contact.html" class="card-action-btn">Book Now</a>
-                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+            <div class="custom-price-card">
+              <div class="card-top-header">
+                <h4 class="card-package-title">Package 4</h4>
+                <div class="card-price-wrapper">
+                  <span class="card-price" id="price-p4">$50</span>
+                  <span class="card-period">/month</span>
                 </div>
+              </div>
+              <div class="card-bottom-details">
+                <ul class="card-features-list">
+                  <li><i class="fa-solid fa-calendar-days"></i> <strong>4 Days</strong> a Week</li>
+                  <li><i class="fa-solid fa-clock"></i> <strong>30 Mins</strong> Class Duration</li>
+                  <li><i class="fa-solid fa-book-open"></i> Specialized Quran Course</li>
+                  <li><i class="fa-solid fa-user-tie"></i> 1-on-1 Certified Tutor</li>
+                </ul>
+                <a href="contact.html" class="card-action-btn">Book Now</a>
+                <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
               </div>
             </div>
 
             <!-- Leisure Package -->
-            <div class="pricing-column-content">
-              <div class="column-specs">
-                <span class="spec-num">2</span>
-                <span class="spec-label">Days a Week</span>
-                <span class="spec-num">30</span>
-                <span class="spec-label">Min Class</span>
-                <span class="spec-price-row">Price : <span id="price-leisure">$35</span></span>
-              </div>
-              <div class="custom-price-card">
-                <div class="card-bottom-details">
-                  <h4 class="card-package-title">Leisure</h4>
-                  <p class="card-package-desc">These classes are for the leisure course of Quran. Leisure offers the specialized Quran classes. Register today & get 7 days free trial. Start learning Quran today.</p>
-                  <a href="contact.html" class="card-action-btn">Book Now</a>
-                  <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
+            <div class="custom-price-card">
+              <div class="card-top-header">
+                <h4 class="card-package-title">Leisure</h4>
+                <div class="card-price-wrapper">
+                  <span class="card-price" id="price-leisure">$35</span>
+                  <span class="card-period">/month</span>
                 </div>
+              </div>
+              <div class="card-bottom-details">
+                <ul class="card-features-list">
+                  <li><i class="fa-solid fa-calendar-days"></i> <strong>2 Days</strong> a Week</li>
+                  <li><i class="fa-solid fa-clock"></i> <strong>30 Mins</strong> Class Duration</li>
+                  <li><i class="fa-solid fa-book-open"></i> Leisure Quran Lessons</li>
+                  <li><i class="fa-solid fa-user-tie"></i> 1-on-1 Certified Tutor</li>
+                </ul>
+                <a href="contact.html" class="card-action-btn">Book Now</a>
+                <span class="card-trial-info"><i class="fa-solid fa-circle-check"></i> 7 Days Free Trial available</span>
               </div>
             </div>
 
             <!-- Weekend Package -->
-            <div class="pricing-column-content">
-              <div class="column-specs">
-                <span class="spec-num">4</span>
-                <span class="spec-label">Days a Week</span>
-                <span class="spec-num">30</span>
-                <span class="spec-label">Min Class</span>
-                <span class="spec-price-row">Price : <span id="price-weekend">$40</span></span>
-              </div>
-              <div class="custom-price-card">
-                <div class="card-bottom-details">
-                  <h4 class="card-package-title">Weekend</h4>
-                  <p class="card-package-desc">These classes are for the weekend course of Quran. Weekend offers the specialized Quran classes. Register today & get 7 days free trial. Start learning Quran today.</p>
-                  <a href="contact.html" class="card-action-btn">Book Now</a>
-                  <span class="card-trial-info no-trial"><i class="fa-solid fa-circle-xmark"></i> No free trial available</span>
+            <div class="custom-price-card">
+              <div class="card-top-header">
+                <h4 class="card-package-title">Weekend</h4>
+                <div class="card-price-wrapper">
+                  <span class="card-price" id="price-weekend">$40</span>
+                  <span class="card-period">/month</span>
                 </div>
+              </div>
+              <div class="card-bottom-details">
+                <ul class="card-features-list">
+                  <li><i class="fa-solid fa-calendar-days"></i> <strong>4 Days</strong> a Week</li>
+                  <li><i class="fa-solid fa-clock"></i> <strong>30 Mins</strong> Class Duration</li>
+                  <li><i class="fa-solid fa-book-open"></i> Weekend Quran Studies</li>
+                  <li><i class="fa-solid fa-user-tie"></i> 1-on-1 Certified Tutor</li>
+                </ul>
+                <a href="contact.html" class="card-action-btn">Book Now</a>
+                <span class="card-trial-info no-trial"><i class="fa-solid fa-circle-xmark"></i> No free trial available</span>
               </div>
             </div>
           </div>
@@ -948,7 +975,7 @@
           <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Quick Links</h4>
           <ul class="footer-links" style="list-style: none;">
             <li style="margin-bottom: 10px; font-size: 14px;"><a href="about.html" style="color: inherit; transition: var(--transition);">About Us</a></li>
-            <li style="margin-bottom: 10px; font-size: 14px;"><a href="services.html" style="color: inherit; transition: var(--transition);">Services</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#" style="color: inherit; transition: var(--transition);">Courses</a></li>
             <li style="margin-bottom: 10px; font-size: 14px;"><a href="pricing.html" style="color: inherit; transition: var(--transition);">Pricing</a></li>
             <li style="margin-bottom: 10px; font-size: 14px;"><a href="contact.html" style="color: inherit; transition: var(--transition);">Contact</a></li>
           </ul>

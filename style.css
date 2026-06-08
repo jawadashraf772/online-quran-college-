@@ -563,6 +563,7 @@ header.scrolled .logo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top !important;
 }
 
 /* Floating animation overlay */
@@ -653,6 +654,11 @@ header.scrolled .logo-img {
   width: 100%;
   height: 380px;
   object-fit: cover;
+  object-position: center top !important;
+}
+
+.showcase-img-box img {
+  object-position: center top !important;
 }
 
 .mosque-overlay-badge {
@@ -677,6 +683,15 @@ header.scrolled .logo-img {
 .mosque-overlay-badge h5 {
   color: var(--light);
   font-size: 14px;
+  margin: 0 0 2px 0;
+  font-weight: 700;
+}
+
+.mosque-overlay-badge p {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .about-content h2 {
@@ -710,15 +725,22 @@ header.scrolled .logo-img {
   background-color: var(--primary);
   color: var(--light);
   border-radius: var(--radius-md);
-  padding: 48px 40px;
+  padding: 32px 28px;
   text-align: center;
   box-shadow: var(--shadow-md);
   position: relative;
+  transition: var(--transition);
+}
+
+.stats-counter-panel:hover {
+  transform: translateY(-5px);
+  background-color: var(--primary-hover);
+  box-shadow: var(--shadow-lg);
 }
 
 .stats-counter-panel .counter-value {
   font-family: var(--font-title);
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 800;
   color: var(--light);
   line-height: 1;
@@ -727,13 +749,13 @@ header.scrolled .logo-img {
 
 .stats-counter-panel h4 {
   color: var(--light);
-  font-size: 20px;
-  margin-bottom: 16px;
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 
 .stats-counter-panel p {
   color: #f3f4f6;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 .features-grid-boxes {
@@ -1101,7 +1123,7 @@ header.scrolled .logo-img {
 }
 
 #tutor-2 .tutor-arch-frame img {
-  object-position: 65% center;
+  object-position: center center;
 }
 
 .tutor-arch-card:hover .tutor-arch-frame {
@@ -1554,8 +1576,8 @@ textarea.form-control {
 
 /* 1. Page Header (Hero Banner) */
 .page-header {
-  padding: 160px 0 80px 0;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 50%, var(--footer-bg) 100%);
+  padding: 110px 0 35px 0;
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 60%, var(--secondary) 100%);
   color: var(--light);
   text-align: center;
   position: relative;
@@ -1566,10 +1588,10 @@ textarea.form-control {
   content: "اقْرَأْ";
   position: absolute;
   font-family: var(--font-arabic);
-  font-size: 180px;
-  color: rgba(255, 255, 255, 0.03);
+  font-size: 130px;
+  color: rgba(255, 255, 255, 0.045);
   right: 5%;
-  bottom: -20px;
+  bottom: -10px;
   pointer-events: none;
   line-height: 1;
 }
@@ -1577,11 +1599,11 @@ textarea.form-control {
 .page-header::after {
   content: "";
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 240px;
+  height: 240px;
   background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
-  top: -50px;
-  left: -50px;
+  top: -40px;
+  left: -40px;
   pointer-events: none;
 }
 
@@ -1593,18 +1615,18 @@ textarea.form-control {
 }
 
 .page-title {
-  font-size: 42px;
+  font-size: 34px;
   color: var(--light);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-weight: 800;
   text-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .page-subtitle {
-  color: var(--secondary);
-  font-size: 16px;
+  color: var(--secondary-light);
+  font-size: 15px;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -1642,10 +1664,10 @@ textarea.form-control {
 
 @media (max-width: 768px) {
   .page-header {
-    padding: 130px 0 60px 0;
+    padding: 95px 0 25px 0;
   }
   .page-title {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
@@ -2645,7 +2667,12 @@ header {
 }
 
 .page-header {
-  padding: 80px 0 50px 0 !important;
+  padding: 40px 0 !important;
+  min-height: 180px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #004f36 0%, #006847 60%, #10b981 100%) !important;
 }
 
 /* Button Color Harmonization */

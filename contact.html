@@ -33,42 +33,28 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href="services.html" class="dropdown-trigger">Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <a href="#" class="dropdown-trigger">Courses <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
             <ul class="dropdown-menu">
               <li><a href="noorani-qaida.html">Noorani Qaida Course</a></li>
               <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
               <li><a href="hifz-quran.html">Hifz ul Quran Course</a></li>
               <li><a href="arabic-language.html">Arabic Language Course</a></li>
               <li><a href="quran-translation.html">Quran Translation</a></li>
-              <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+              <li><a href="hadith-translation.html">Hadith Translation Course</a></li>
+              <li><a href="online-quran-classes-uk.html">Online Quran Classes in UK</a></li>
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blogs.html">Our Blogs</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
           <li><a href="careers.html">Career Opportunities</a></li>
-          <li class="dropdown">
-            <a href="lms.html" class="dropdown-trigger">LMS <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="lms.html#student-login">Student Portal</a></li>
-              <li><a href="lms.html#teacher-login">Teacher Portal</a></li>
-              <li><a href="lms.html#features">LMS Features</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="quiz.html" class="dropdown-trigger">Quiz <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="quiz.html?type=tajweed">Tajweed Quiz</a></li>
-              <li><a href="quiz.html?type=islamic">Islamic Studies Quiz</a></li>
-              <li><a href="quiz.html?type=arabic">Arabic Vocabulary Quiz</a></li>
-            </ul>
-          </li>
-          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Register Now</a></li>
+          
+          
+          <li class="mobile-cta-only"><a href="contact.html" class="btn btn-primary">Book Now</a></li>
         </ul>
         
         <div class="nav-cta">
-          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <a href="contact.html" class="btn btn-primary" id="btn-header-cta">Book Now</a>
           <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
           </button>
@@ -99,8 +85,8 @@
         <div class="careers-grid">
           <!-- Left Info Column -->
           <div class="benefits-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-            <div style="width: 100%; height: 200px; overflow: hidden; background-color: var(--secondary-light); display: flex; align-items: center; justify-content: center; border-bottom: 4px solid var(--secondary);">
-              <img src="contact_illustration.png" alt="Contact Support Illustration" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="width: 100%; height: 260px; overflow: hidden; background-color: var(--secondary-light); display: flex; align-items: center; justify-content: center; border-bottom: 4px solid var(--secondary);">
+              <img src="contact_illustration.png" alt="Contact Support Illustration" style="width: 100%; height: 100%; object-fit: cover; object-position: center 12%;">
             </div>
             <div style="padding: 30px 40px 40px 40px;">
               <h3 style="margin-bottom: 16px;">Support & Enquiries</h3>
@@ -196,57 +182,101 @@
     </section>
   </main>
 
-  <!-- 13. Footer -->
-  <footer>
+  <!-- Meet Our Expert Tutors Section -->
+  <section class="section section-tint" id="tutors">
     <div class="container">
-      <div class="footer-grid">
+      <div class="section-header">
+        <span class="section-subtitle">Our Faculty</span>
+        <h2 class="section-title">Meet Our Expert Tutors</h2>
+        <p>Highly qualified and certified female scholars ready to guide you or your children.</p>
+      </div>
+      
+      <div class="tutors-grid-3x2">
+        <!-- Tutor 1 -->
+        <div class="tutor-arch-card reveal-on-scroll" id="tutor-1">
+          <div class="tutor-arch-frame">
+            <img src="image 1.png" alt="Maryam - Tajweed Expert">
+          </div>
+          <h3>Maryam</h3>
+          <span>Tajweed Expert</span>
+          <p>Holds Ijazah in Hafs 'an 'Asim with 6+ years experience teaching kids.</p>
+        </div>
+        
+        <!-- Tutor 2 -->
+        <div class="tutor-arch-card reveal-on-scroll" id="tutor-2">
+          <div class="tutor-arch-frame">
+            <img src="image 2.png" alt="Aisha - Hifz Specialist">
+          </div>
+          <h3>Aisha</h3>
+          <span>Hifz Specialist</span>
+          <p>Hafiza of Holy Quran, specializes in kids' memorization methodologies.</p>
+        </div>
+        
+        <!-- Tutor 3 -->
+        <div class="tutor-arch-card reveal-on-scroll" id="tutor-3">
+          <div class="tutor-arch-frame">
+            <img src="image 3.png" alt="Fatima - Noorani Qaida Tutor">
+          </div>
+          <h3>Fatima</h3>
+          <span>Noorani Qaida Specialist</span>
+          <p>Graduated from Al-Azhar, specialist in foundational Arabic alphabet rules.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Footer -->
+  <footer style="background-color: var(--footer-bg); color: rgba(255, 255, 255, 0.7); padding: 80px 0 32px 0; border-top: 4px solid var(--secondary);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr; gap: 40px; margin-bottom: 64px;">
         <!-- Column 1 -->
         <div class="footer-column footer-about">
           <a href="index.html" class="logo">
             <img src="logo_.png" alt="Online Quran College Logo" class="logo-img footer-logo-img">
           </a>
-          <p>Providing highly professional, customized online 1-on-1 Quran and Islamic lessons under the guidance of certified scholars worldwide.</p>
-          <div class="footer-social-panel">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+          <p style="margin-top: 16px; font-size: 14px;">Unlock the wisdom of the Quran with our online Quran college. Explore, learn, and grow with us</p>
         </div>
         
         <!-- Column 2 -->
         <div class="footer-column">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Courses</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="blogs.html">Our Blogs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Quick Links</h4>
+          <ul class="footer-links" style="list-style: none;">
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="about.html" style="color: inherit; transition: var(--transition);">About Us</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#" style="color: inherit; transition: var(--transition);">Courses</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="pricing.html" style="color: inherit; transition: var(--transition);">Pricing</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="contact.html" style="color: inherit; transition: var(--transition);">Contact</a></li>
           </ul>
         </div>
         
         <!-- Column 3 -->
         <div class="footer-column">
-          <h4>Our Services</h4>
-          <ul class="footer-links">
-            <li><a href="noorani-qaida.html">Noorani Qaida Course</a></li>
-            <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
-            <li><a href="hifz-quran.html">Hifz ul Quran Course</a></li>
-            <li><a href="arabic-language.html">Arabic Language Course</a></li>
-            <li><a href="quran-translation.html">Quran Translation</a></li>
-            <li><a href="services.html#course-studies">Hadith Translation Course</a></li>
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Useful Links</h4>
+          <ul class="footer-links" style="list-style: none;">
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#" style="color: inherit; transition: var(--transition);">Privacy Policy</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#" style="color: inherit; transition: var(--transition);">Terms and Conditions</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#faq" style="color: inherit; transition: var(--transition);">FAQ</a></li>
+          </ul>
+        </div>
+ 
+        <!-- Column 4 -->
+        <div class="footer-column">
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Stay Connected</h4>
+          <ul class="footer-links contact-info-list" style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-location-dot" style="color: var(--secondary); font-size: 16px;"></i> United Kingdom</li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-envelope" style="color: var(--secondary); font-size: 16px;"></i> <a href="mailto:info@onlinequrancollege.com" style="color: inherit; transition: var(--transition);">info@onlinequrancollege.com</a></li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-phone" style="color: var(--secondary); font-size: 16px;"></i> <a href="tel:+447864710821" style="color: inherit; transition: var(--transition);">+44 7864 710821</a></li>
           </ul>
         </div>
       </div>
       
       <!-- Footer Bottom -->
-      <div class="footer-bottom">
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 32px; flex-wrap: wrap; gap: 20px;">
         <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
-        <div class="footer-legal-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
+        <div class="footer-social-panel" style="display: flex; gap: 12px;">
+          <a href="#" class="social-btn" aria-label="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255,255,255,0.05); color: var(--light); display: flex; align-items: center; justify-content: center; transition: var(--transition);"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
     </div>
