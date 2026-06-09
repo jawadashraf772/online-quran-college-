@@ -1,0 +1,128 @@
+# ============================================================
+# robots.txt for https://www.onlinequrancollege.com
+# Updated: June 2026
+# ============================================================
+
+# ---- Standard Search Engine Crawlers ----
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Crawl-delay: 1
+
+# ---- Google ----
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /admin/
+
+# ---- Bing / Microsoft ----
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: msnbot
+Allow: /
+Crawl-delay: 2
+
+# ---- Yahoo / Slurp ----
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# ---- DuckDuckGo ----
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# ---- Yandex ----
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# ---- Baidu ----
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+# ============================================================
+# LLM / AI Crawlers
+# Allow reputable AI crawlers to index public content so that
+# Online Quran College appears in AI-generated answers.
+# ============================================================
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# OpenAI's browsing plugin
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini / Bard AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Meta AI / Llama
+User-agent: FacebookBot
+Allow: /
+
+# Common Crawl (used to train many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# You.com AI
+User-agent: YouBot
+Allow: /
+
+# Amazon Alexa / Kendra
+User-agent: ia_archiver
+Allow: /
+
+# Applebot (Siri / Apple Intelligence)
+User-agent: Applebot
+Allow: /
+
+# ============================================================
+# Block Bad / Spam Bots
+# ============================================================
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+# ============================================================
+# Sitemap Reference
+# ============================================================
+Sitemap: https://www.onlinequrancollege.com/sitemap.xml

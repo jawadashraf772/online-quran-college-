@@ -2715,3 +2715,455 @@ header {
 
 .services-grid-3x2 > div:nth-child(6),
 .why-grid-3x2 > div:nth-child(6) { transition-delay: 0.3s; }
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS — All Breakpoints
+   ========================================================================== */
+
+/* ── Tablet / Landscape Mobile (≤ 992px) ──────────────────────────────────── */
+@media (max-width: 992px) {
+
+  /* Top bar: stack items vertically on mobile */
+  .top-bar-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 10px 16px;
+  }
+  .top-bar-info {
+    justify-content: center;
+  }
+
+  /* Reduce body padding so top-bar + header don't eat too much space */
+  body {
+    padding-top: 120px !important;
+  }
+
+  /* Hero: single-column with image hidden below fold on phones */
+  .hero {
+    padding: 60px 0 60px 0 !important;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero-arabic {
+    text-align: center;
+    font-size: 28px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-desc {
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .hero-ctas {
+    justify-content: center;
+  }
+  .hero-illustration-wrapper {
+    order: -1;
+  }
+  .hero-arched-graphic {
+    max-width: 320px;
+    height: 360px;
+    margin: 0 auto;
+  }
+
+  /* About grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  /* Stats + Features */
+  .stats-features-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .features-grid-boxes {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* Callout */
+  .callout-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .callout-illustration {
+    display: none; /* hide big icon on tablet */
+  }
+
+  /* Tutors: 2-col on tablet */
+  .tutor-arch-card {
+    flex: 0 1 calc(50% - 20px);
+  }
+
+  /* Trust banner: vertical stack */
+  .trust-banner-green {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 24px;
+    gap: 20px;
+  }
+
+  /* Footer grid: 2-col */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+    margin-bottom: 40px !important;
+  }
+
+  /* Careers grid */
+  .careers-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ── Small Mobile (≤ 768px) ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Section spacing */
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 50px 0 50px 0 !important;
+  }
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-arched-graphic {
+    max-width: 280px;
+    height: 310px;
+  }
+
+  /* About section */
+  .about-illustration-container img {
+    height: 260px;
+  }
+  .mosque-overlay-badge {
+    bottom: 12px;
+    right: 12px;
+    padding: 10px 16px;
+  }
+
+  /* Stats counter */
+  .stats-counter-panel .counter-value {
+    font-size: 38px;
+  }
+  .features-grid-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  /* Callout perks */
+  .callout-perks {
+    padding: 28px 24px;
+  }
+
+  /* Why choose us: single column */
+  .why-grid-3x2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Steps */
+  .steps-layout-cols {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Tutors: full width */
+  .tutor-arch-card {
+    flex: 0 1 100%;
+  }
+  .tutor-arch-frame {
+    max-width: 200px;
+    height: 250px;
+  }
+
+  /* Testimonials: single column */
+  .testimonials-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pricing */
+  .pricing-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card.popular {
+    transform: none;
+  }
+  .pricing-card {
+    padding: 36px 24px;
+  }
+
+  /* Contact form */
+  .contact-card-white {
+    padding: 36px 24px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  /* Page header */
+  .page-header {
+    padding: 30px 0 !important;
+    min-height: 140px !important;
+  }
+  .page-title {
+    font-size: 22px;
+  }
+  .page-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ── Extra Small Mobile (≤ 576px) ────────────────────────────────────────── */
+@media (max-width: 576px) {
+
+  /* Container padding */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 40px 0 40px 0 !important;
+  }
+  .hero-arabic {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .hero-title {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-arched-graphic {
+    max-width: 240px;
+    height: 270px;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 22px;
+  }
+
+  /* Service cards: reduce padding */
+  .service-card {
+    padding: 28px 20px;
+  }
+
+  /* Feature boxes */
+  .feature-box-green {
+    padding: 24px 20px;
+  }
+
+  /* Why blocks */
+  .why-block-green {
+    padding: 28px 20px;
+  }
+
+  /* Steps */
+  .step-col-num {
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+  }
+
+  /* Contact card */
+  .contact-card-white {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  /* Testimonials */
+  .testimonial-block-green {
+    padding: 28px 20px;
+  }
+
+  /* Pricing */
+  .pricing-card {
+    padding: 30px 18px;
+  }
+  .pricing-price {
+    font-size: 38px;
+  }
+  .pricing-toggle-container {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  /* Career apply card */
+  .career-apply-card {
+    padding: 32px 20px;
+  }
+
+  /* Benefits box */
+  .benefits-box {
+    padding: 28px 20px;
+  }
+
+  /* Page header */
+  .page-header {
+    min-height: 120px !important;
+  }
+  .page-title {
+    font-size: 19px;
+  }
+  .breadcrumbs {
+    font-size: 11px;
+  }
+
+  /* Buttons — full width on tiny screens */
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* Trust banner items */
+  .trust-banner-green {
+    padding: 24px 18px;
+  }
+  .trust-item {
+    gap: 10px;
+  }
+  .trust-item i {
+    font-size: 24px;
+  }
+  .trust-text h4 {
+    font-size: 15px;
+  }
+
+  /* Arabic text */
+  .arabic-text {
+    font-size: 24px;
+  }
+
+  /* Footer logo */
+  .footer-logo-img {
+    max-height: 50px;
+  }
+
+  /* Footer bottom: stack social icons */
+  .footer-social-panel {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ── Very Small Phones (≤ 380px) ─────────────────────────────────────────── */
+@media (max-width: 380px) {
+
+  .hero-title {
+    font-size: 20px;
+  }
+  .section-title {
+    font-size: 19px;
+  }
+  .hero-arched-graphic {
+    max-width: 200px;
+    height: 230px;
+  }
+  .tutor-arch-frame {
+    max-width: 170px;
+    height: 215px;
+  }
+  .contact-card-white,
+  .career-apply-card {
+    padding: 22px 14px;
+  }
+  .pricing-price {
+    font-size: 32px;
+  }
+  .top-bar {
+    font-size: 11px;
+  }
+  .top-bar-info {
+    gap: 10px;
+  }
+}
+
+/* ── Ensure nav-toggle always visible on mobile ──────────────────────────── */
+@media (max-width: 992px) {
+  .nav-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--secondary-light);
+    color: var(--primary);
+    font-size: 18px;
+  }
+  .nav-toggle:hover {
+    background-color: var(--primary);
+    color: var(--light);
+  }
+  /* Hide desktop CTA button in nav on mobile */
+  .nav-cta .btn-primary {
+    display: none;
+  }
+  /* Mobile menu overlay */
+  .nav-links {
+    top: 0;
+    padding-top: 90px;
+    z-index: 999;
+    overflow-y: auto;
+  }
+}
+
+/* ── Image responsiveness site-wide ─────────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Prevent horizontal overflow ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
