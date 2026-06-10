@@ -13,9 +13,11 @@
   <!-- Preconnect Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap">
   
   <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -86,7 +88,7 @@
           <!-- Left Info Column -->
           <div class="benefits-box" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
             <div style="width: 100%; height: 260px; overflow: hidden; background-color: var(--secondary-light); display: flex; align-items: center; justify-content: center; border-bottom: 4px solid var(--secondary);">
-              <img src="contact_illustration.webp" alt="Contact Support Illustration" style="width: 100%; height: 100%; object-fit: cover; object-position: center 12%;">
+              <img loading="lazy" src="contact_illustration.webp" alt="Contact Support Illustration" style="width: 100%; height: 100%; object-fit: cover; object-position: center 12%;">
             </div>
             <div style="padding: 30px 40px 40px 40px;">
               <h3 style="margin-bottom: 16px;">Support & Enquiries</h3>
@@ -195,7 +197,7 @@
         <!-- Tutor 1 -->
         <div class="tutor-arch-card reveal-on-scroll" id="tutor-1">
           <div class="tutor-arch-frame">
-            <img src="image 1.webp" alt="Maryam - Tajweed Expert">
+            <img loading="lazy" src="image 1.webp" alt="Maryam - Tajweed Expert">
           </div>
           <h3>Maryam</h3>
           <span>Tajweed Expert</span>
@@ -205,7 +207,7 @@
         <!-- Tutor 2 -->
         <div class="tutor-arch-card reveal-on-scroll" id="tutor-2">
           <div class="tutor-arch-frame">
-            <img src="image 2.webp" alt="Aisha - Hifz Specialist">
+            <img loading="lazy" src="image 2.webp" alt="Aisha - Hifz Specialist">
           </div>
           <h3>Aisha</h3>
           <span>Hifz Specialist</span>
@@ -215,7 +217,7 @@
         <!-- Tutor 3 -->
         <div class="tutor-arch-card reveal-on-scroll" id="tutor-3">
           <div class="tutor-arch-frame">
-            <img src="image 3.webp" alt="Fatima - Noorani Qaida Tutor">
+            <img loading="lazy" src="image 3.webp" alt="Fatima - Noorani Qaida Tutor">
           </div>
           <h3>Fatima</h3>
           <span>Noorani Qaida Specialist</span>

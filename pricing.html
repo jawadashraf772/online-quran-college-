@@ -13,9 +13,11 @@
   <!-- Preconnect Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap">
   
   <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -592,13 +594,13 @@
           <div class="pricing-showcase-container">
             <div class="pricing-showcase-grid">
               <div class="showcase-img-box">
-                <img src="hifz_hero.webp" alt="Quran Memorization Studies">
+                <img fetchpriority="high" src="hifz_hero.webp" alt="Quran Memorization Studies">
               </div>
               <div class="showcase-img-box center-box">
-                <img src="nazara_hero.webp" alt="Quran Recitation Studies">
+                <img fetchpriority="high" src="nazara_hero.webp" alt="Quran Recitation Studies">
               </div>
               <div class="showcase-img-box">
-                <img src="translation_hero.webp" alt="Quran Translation Studies">
+                <img fetchpriority="high" src="translation_hero.webp" alt="Quran Translation Studies">
               </div>
             </div>
             
@@ -722,13 +724,13 @@
           <div class="pricing-showcase-container">
             <div class="pricing-showcase-grid">
               <div class="showcase-img-box">
-                <img src="arabic_hero.webp" alt="Arabic Language Learning">
+                <img fetchpriority="high" src="arabic_hero.webp" alt="Arabic Language Learning">
               </div>
               <div class="showcase-img-box">
-                <img src="hadith_hero.webp" alt="Hadith Translation Studies">
+                <img fetchpriority="high" src="hadith_hero.webp" alt="Hadith Translation Studies">
               </div>
               <div class="showcase-img-box">
-                <img src="hero.webp" alt="Online Quran College">
+                <img fetchpriority="high" src="hero.webp" alt="Online Quran College">
               </div>
             </div>
           </div>
