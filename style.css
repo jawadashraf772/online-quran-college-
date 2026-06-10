@@ -3167,3 +3167,9 @@ html, body {
   overflow-x: hidden;
   max-width: 100vw;
 }
+
+/* Footer paragraph text color contrast fix */
+footer p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
