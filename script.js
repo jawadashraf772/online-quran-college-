@@ -83,19 +83,57 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Message...';
       
+      const nameVal = document.getElementById('user-name').value;
+      const emailVal = document.getElementById('user-email').value;
+      const phoneVal = document.getElementById('user-phone') ? document.getElementById('user-phone').value : '';
+      
       setTimeout(() => {
-        submitBtn.className = 'btn btn-secondary';
-        submitBtn.style.backgroundColor = '#10b981';
-        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent Successfully!';
-        contactForm.reset();
-        
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalContent;
-          submitBtn.style.backgroundColor = '';
-        }, 4000);
-        
-      }, 1500);
+        window.location.href = `thank-you.html?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+      }, 1000);
+    });
+  }
+
+  // Handle pricing contact form
+  const pricingForm = document.getElementById('pricing-contact-form');
+  if (pricingForm) {
+    pricingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = pricingForm.querySelector('button[type="submit"]');
+      const originalContent = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      
+      const nameVal = pricingForm.querySelector('input[placeholder="Name"]').value;
+      const emailVal = pricingForm.querySelector('input[placeholder="Email"]').value;
+      const phoneVal = pricingForm.querySelector('input[placeholder="Phone / WhatsApp"]') ? pricingForm.querySelector('input[placeholder="Phone / WhatsApp"]').value : '';
+      
+      setTimeout(() => {
+        window.location.href = `thank-you.html?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+      }, 1000);
+    });
+  }
+
+  // Handle trial booking forms on course pages
+  const trialForm = document.getElementById('nazara-trial-form') || document.getElementById('hadith-trial-form');
+  if (trialForm) {
+    trialForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('btn-submit-trial');
+      const originalContent = submitBtn.innerHTML;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+      
+      const nameVal = document.getElementById('trial-name').value;
+      const emailVal = document.getElementById('trial-email').value;
+      const phoneVal = document.getElementById('trial-phone') ? document.getElementById('trial-phone').value : '';
+      
+      setTimeout(() => {
+        window.location.href = `thank-you.html?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+      }, 1000);
     });
   }
 

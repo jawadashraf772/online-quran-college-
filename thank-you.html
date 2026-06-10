@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Thank You | Online Quran College</title>
+  <meta name="description" content="Thank you for registering with Online Quran College. We will contact you soon.">
+  <meta name="robots" content="noindex, follow">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"></noscript>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+  
+  <style>
+    :root {
+      --primary: #006847;
+      --primary-hover: #004f36;
+      --secondary: #10b981;
+      --secondary-light: #eefaf3;
+      --secondary-tint: #f4fbf7;
+      --accent: #f59e0b;
+      --dark: #0f172a;
+      --dark-slate: #1f2937;
+      --footer-bg: #111827;
+      --light: #ffffff;
+      
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-arabic: 'Amiri', serif;
+      
+      --shadow-sm: 0 4px 6px -1px rgba(0, 104, 71, 0.04), 0 2px 4px -1px rgba(0, 104, 71, 0.02);
+      --shadow-md: 0 10px 25px -5px rgba(0, 104, 71, 0.06), 0 8px 10px -6px rgba(0, 104, 71, 0.04);
+      --shadow-lg: 0 20px 40px -10px rgba(0, 104, 71, 0.1), 0 12px 16px -8px rgba(0, 104, 71, 0.06);
+      --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.2);
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 32px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-width: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--dark-slate);
+      background-color: var(--gray-50);
+      line-height: 1.65;
+      overflow-x: hidden;
+      padding-top: 136px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo-img {
+      max-height: 72px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-title);
+      font-weight: 500;
+      color: var(--gray-700);
+      font-size: 14px;
+      padding: 8px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(15px);
+      background-color: var(--light);
+      width: 230px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      list-style: none;
+      padding: 24px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1100;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(5px);
+    }
+
+    .dropdown-menu a {
+      display: block !important;
+      padding: 12px 24px !important;
+      font-size: 17px !important;
+      color: var(--primary) !important;
+      font-family: Georgia, serif !important;
+      font-weight: 500 !important;
+      line-height: 1.3 !important;
+      text-align: left;
+    }
+
+    .dropdown-menu a:hover {
+      color: var(--secondary) !important;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      font-family: var(--font-title);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--light);
+    }
+
+    .btn-secondary {
+      background-color: var(--secondary);
+      color: var(--light);
+    }
+
+    .btn-secondary:hover {
+      background-color: #0d9488;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary);
+      background-color: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: var(--light);
+      transform: translateY(-2px);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Thank You Page Core Styles */
+    .thankyou-wrapper {
+      max-width: 680px;
+      margin: 60px auto 100px auto;
+      background-color: var(--light);
+      border-radius: var(--radius-lg);
+      padding: 60px 48px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(0, 104, 71, 0.05);
+      text-align: center;
+    }
+
+    .success-icon-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      color: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+      margin: 0 auto 32px auto;
+      box-shadow: var(--shadow-glow);
+      animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes pop-in {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .thankyou-title {
+      font-family: var(--font-title);
+      font-size: 32px;
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
+    .thankyou-title span {
+      color: var(--secondary);
+    }
+
+    .thankyou-desc {
+      font-size: 15.5px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .details-box {
+      background-color: var(--gray-50);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      border: 1px solid var(--gray-200);
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .details-title {
+      font-family: var(--font-title);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      border-bottom: 1.5px solid var(--gray-200);
+      padding-bottom: 8px;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .detail-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--secondary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .detail-text h5 {
+      font-family: var(--font-title);
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .detail-text p {
+      font-size: 14.5px;
+      color: var(--dark-slate);
+      font-weight: 600;
+    }
+
+    .action-btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: var(--light);
+      font-weight: 700;
+      font-size: 16px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #20ba5a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .home-btn {
+      width: 100%;
+    }
+
+    /* Top Bar Styling */
+    .top-bar {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 8px 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar-info a {
+      color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 992px) {
+      body { padding-top: 120px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+    }
+
+    @media (max-width: 576px) {
+      .thankyou-wrapper { padding: 40px 24px; margin: 30px auto 60px auto; }
+      .thankyou-title { font-size: 26px; }
+      .thankyou-desc { font-size: 14px; }
+      .details-box { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <div class="top-bar-info">
+          <a href="tel:+447864710821"><i class="fa-solid fa-phone"></i> +44 7864 710821</a>
+          <a href="mailto:info@onlinequrancollege.com"><i class="fa-solid fa-envelope"></i> info@onlinequrancollege.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="logo" id="nav-logo">
+          <img src="logo_.webp" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">Courses <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="noorani-qaida.html">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara.html">Quran Nazara Course</a></li>
+              <li><a href="hifz-quran.html">Hifz ul Quran Course</a></li>
+              <li><a href="arabic-language.html">Arabic Language Course</a></li>
+              <li><a href="quran-translation.html">Quran Translation</a></li>
+              <li><a href="hadith-translation.html">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li><a href="online-quran-classes-uk.html">Quran Classes UK</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Career Opportunities</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="contact.html" class="btn btn-secondary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="thankyou-wrapper">
+      <div class="success-icon-circle">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      
+      <h1 class="thankyou-title">Thank You, <span id="client-name">Student</span>!</h1>
+      <p class="thankyou-desc">
+        Your request has been successfully received. One of our coordinators will reach out to you within 24 hours to schedule your free trial class and match you with the perfect tutor.
+      </p>
+      
+      <div class="details-box">
+        <div class="details-title">Submission Details</div>
+        
+        <div class="detail-item">
+          <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="detail-text">
+            <h5>Email Address</h5>
+            <p id="client-email">Not Provided</p>
+          </div>
+        </div>
+        
+        <div class="detail-item">
+          <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="detail-text">
+            <h5>WhatsApp / Phone</h5>
+            <p id="client-phone">Not Provided</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="action-btn-group">
+        <a id="whatsapp-link" href="https://wa.me/447864710821" target="_blank" class="btn whatsapp-btn">
+          <i class="fa-brands fa-whatsapp"></i> Start WhatsApp Chat
+        </a>
+        <a href="index.html" class="btn btn-outline home-btn">
+          <i class="fa-solid fa-house"></i> Back to Homepage
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer style="background-color: var(--footer-bg); color: rgba(255, 255, 255, 0.7); padding: 40px 0; border-top: 4px solid var(--secondary); text-align: center; font-size: 14px;">
+    <div class="container">
+      <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Extract parameters from URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name') || 'Student';
+    const email = urlParams.get('email') || 'Not Provided';
+    const phone = urlParams.get('phone') || urlParams.get('whatsapp') || 'Not Provided';
+
+    // Populate the elements
+    document.getElementById('client-name').textContent = name;
+    document.getElementById('client-email').textContent = email;
+    document.getElementById('client-phone').textContent = phone;
+
+    // Update WhatsApp link with dynamic text
+    const waBaseUrl = "https://wa.me/447864710821";
+    const dynamicMsg = `Assalam-o-Alaikum, my name is ${encodeURIComponent(name)}. I just registered for a free trial class on your website. My email is ${encodeURIComponent(email)}.`;
+    document.getElementById('whatsapp-link').href = `${waBaseUrl}?text=${dynamicMsg}`;
+  </script>
+</body>
+</html>
