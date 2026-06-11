@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phoneVal = document.getElementById('user-phone') ? document.getElementById('user-phone').value : '';
       
       setTimeout(() => {
-        window.location.href = `thank-you.html?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+        window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
       }, 1000);
     });
   }
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phoneVal = pricingForm.querySelector('input[placeholder="Phone / WhatsApp"]') ? pricingForm.querySelector('input[placeholder="Phone / WhatsApp"]').value : '';
       
       setTimeout(() => {
-        window.location.href = `thank-you.html?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+        window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
       }, 1000);
     });
   }
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phoneVal = document.getElementById('trial-phone') ? document.getElementById('trial-phone').value : '';
       
       setTimeout(() => {
-        window.location.href = `thank-you.html?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+        window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
       }, 1000);
     });
   }
