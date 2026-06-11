@@ -344,4 +344,24 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => observer.observe(el));
   }
 
+  // 4. Local File Protocol Link Resolver
+  if (window.location.protocol === 'file:') {
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('#') && href !== '/') {
+        const parts = href.split('/');
+        const lastPart = parts[parts.length - 1];
+        if (lastPart && !lastPart.includes('.') && !lastPart.includes('#')) {
+          link.setAttribute('href', href + '.html');
+        } else if (lastPart && !lastPart.includes('.') && lastPart.includes('#')) {
+          const subparts = lastPart.split('#');
+          link.setAttribute('href', href.replace('#' + subparts[1], '.html#' + subparts[1]));
+        }
+      } else if (href === '/') {
+        link.setAttribute('href', 'index.html');
+      }
+    });
+  }
+
 });
+
