@@ -363,5 +363,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 5. Dynamic Active Page Underline Highlight
+  const activeStyle = document.createElement('style');
+  activeStyle.innerHTML = `
+    .nav-links > li > a.active {
+      color: var(--primary) !important;
+    }
+    .nav-links > li > a.active::after {
+      width: 100% !important;
+    }
+  `;
+  document.head.appendChild(activeStyle);
+
+  const currentPath = window.location.pathname;
+  const cleanPath = currentPath.replace(/^\/|\.html$/g, '').split('/').pop() || 'index';
+
+  document.querySelectorAll('.nav-links > li').forEach(li => {
+    const trigger = li.querySelector('.dropdown-trigger');
+    const links = li.querySelectorAll('a');
+    let isChildActive = false;
+    
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href) {
+        const cleanHref = href.replace(/^\/|\.html$/g, '').split('/').pop();
+        if (cleanHref && (cleanHref === cleanPath || (cleanPath === 'index' && cleanHref === '/'))) {
+          if (!link.classList.contains('dropdown-trigger')) {
+            link.classList.add('active');
+            isChildActive = true;
+          }
+        }
+      }
+    });
+    
+    if (isChildActive && trigger) {
+      trigger.classList.add('active');
+    }
+  });
+
 });
+
 
