@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Form Submission Handling with Success Feedback (Contact & Careers forms)
   const webhookUrl = 'https://services.leadconnectorhq.com/hooks/uuikz5o30GCTN8DGz5yy/webhook-trigger/914e2601-b5fe-4975-98ac-4096b76f3d1e';
+  const getThankYouUrl = () => window.location.protocol === 'file:' ? 'thank-you.html' : 'thank-you';
 
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -111,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(err => console.error('Webhook error:', err))
       .finally(() => {
-        window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+        window.location.href = `${getThankYouUrl()}?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
       });
     });
   }
@@ -148,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(err => console.error('Webhook error:', err))
       .finally(() => {
-        window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+        window.location.href = `${getThankYouUrl()}?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
       });
     });
   }
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(err => console.error('Webhook error:', err))
       .finally(() => {
-        window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
+        window.location.href = `${getThankYouUrl()}?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
       });
     });
   }
