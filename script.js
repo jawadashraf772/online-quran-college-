@@ -72,13 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Form Submission Handling with Success Feedback (Contact & Careers forms)
+  const webhookUrl = 'https://services.leadconnectorhq.com/hooks/uuikz5o30GCTN8DGz5yy/webhook-trigger/914e2601-b5fe-4975-98ac-4096b76f3d1e';
+
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
       const submitBtn = document.getElementById('btn-submit-form');
-      const originalContent = submitBtn.innerHTML;
       
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Message...';
@@ -86,10 +87,32 @@ document.addEventListener('DOMContentLoaded', () => {
       const nameVal = document.getElementById('user-name').value;
       const emailVal = document.getElementById('user-email').value;
       const phoneVal = document.getElementById('user-phone') ? document.getElementById('user-phone').value : '';
-      
-      setTimeout(() => {
+      const subjectVal = document.getElementById('user-subject') ? document.getElementById('user-subject').value : '';
+      const courseVal = document.getElementById('user-course') ? document.getElementById('user-course').value : '';
+      const messageVal = document.getElementById('user-message') ? document.getElementById('user-message').value : '';
+
+      const payload = {
+        formType: 'Contact Form',
+        name: nameVal,
+        email: emailVal,
+        phone: phoneVal,
+        subject: subjectVal,
+        course: courseVal,
+        message: messageVal,
+        pageUrl: window.location.href
+      };
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .catch(err => console.error('Webhook error:', err))
+      .finally(() => {
         window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
-      }, 1000);
+      });
     });
   }
 
@@ -100,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       
       const submitBtn = pricingForm.querySelector('button[type="submit"]');
-      const originalContent = submitBtn.innerHTML;
       
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
@@ -109,9 +131,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailVal = pricingForm.querySelector('input[placeholder="Email"]').value;
       const phoneVal = pricingForm.querySelector('input[placeholder="Phone / WhatsApp"]') ? pricingForm.querySelector('input[placeholder="Phone / WhatsApp"]').value : '';
       
-      setTimeout(() => {
+      const payload = {
+        formType: 'Pricing Contact Form',
+        name: nameVal,
+        email: emailVal,
+        phone: phoneVal,
+        pageUrl: window.location.href
+      };
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .catch(err => console.error('Webhook error:', err))
+      .finally(() => {
         window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
-      }, 1000);
+      });
     });
   }
 
@@ -122,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       
       const submitBtn = document.getElementById('btn-submit-trial');
-      const originalContent = submitBtn.innerHTML;
       
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
@@ -131,9 +168,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailVal = document.getElementById('trial-email').value;
       const phoneVal = document.getElementById('trial-phone') ? document.getElementById('trial-phone').value : '';
       
-      setTimeout(() => {
+      const payload = {
+        formType: 'Trial Booking Form',
+        name: nameVal,
+        email: emailVal,
+        phone: phoneVal,
+        pageUrl: window.location.href
+      };
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .catch(err => console.error('Webhook error:', err))
+      .finally(() => {
         window.location.href = `thank-you?name=${encodeURIComponent(nameVal)}&email=${encodeURIComponent(emailVal)}&whatsapp=${encodeURIComponent(phoneVal)}`;
-      }, 1000);
+      });
     });
   }
 
@@ -278,7 +331,35 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting Application...';
       
-      setTimeout(() => {
+      const applicantFname = document.getElementById('applicant-fname') ? document.getElementById('applicant-fname').value : '';
+      const applicantLname = document.getElementById('applicant-lname') ? document.getElementById('applicant-lname').value : '';
+      const applicantPhone = document.getElementById('applicant-phone') ? document.getElementById('applicant-phone').value : '';
+      const applicantEmail = document.getElementById('applicant-email') ? document.getElementById('applicant-email').value : '';
+      const applicantQual = document.getElementById('applicant-qualification') ? document.getElementById('applicant-qualification').value : '';
+      const applicantExp = document.getElementById('applicant-experience') ? document.getElementById('applicant-experience').value : '';
+
+      const payload = {
+        formType: 'Career Application Form',
+        firstName: applicantFname,
+        lastName: applicantLname,
+        email: applicantEmail,
+        phone: applicantPhone,
+        qualification: applicantQual,
+        experience: applicantExp,
+        cvName: selectedCVFile ? selectedCVFile.name : '',
+        cvSize: selectedCVFile ? selectedCVFile.size : 0,
+        pageUrl: window.location.href
+      };
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .catch(err => console.error('Webhook error:', err))
+      .finally(() => {
         submitBtn.className = 'btn btn-secondary';
         submitBtn.style.backgroundColor = '#10b981';
         submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Application Submitted!';
@@ -293,8 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.innerHTML = originalContent;
           submitBtn.style.backgroundColor = '';
         }, 4000);
-        
-      }, 1800);
+      });
     });
   }
 
