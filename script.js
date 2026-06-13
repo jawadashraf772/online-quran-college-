@@ -454,6 +454,24 @@ document.addEventListener('DOMContentLoaded', () => {
       width: 100% !important;
     }
 
+    /* Fix mobile dropdown shift/cutoff */
+    @media (max-width: 992px) {
+      .dropdown:hover .dropdown-menu,
+      .dropdown.open-mobile .dropdown-menu {
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .dropdown-menu {
+        transform: none !important;
+      }
+      .nav-links .btn {
+        justify-content: center !important;
+        padding: 12px 28px !important;
+      }
+    }
+
+
     /* WhatsApp CTA Styles */
     .btn-whatsapp {
       background-color: #25d366 !important;
