@@ -381,7 +381,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Dynamically add reveal-on-scroll class to key layout sections across all pages
   const elementsToAnimate = [
-    'section.section',
     '.hero-content',
     '.hero-illustration-wrapper',
     '.services-grid-3x2',
@@ -395,34 +394,48 @@ document.addEventListener('DOMContentLoaded', () => {
     '.benefits-box',
     '.career-apply-card'
   ];
-  
+
   elementsToAnimate.forEach(selector => {
     document.querySelectorAll(selector).forEach(el => {
+      // Don't add if it already has it to prevent duplicate observers
       if (!el.classList.contains('reveal-on-scroll')) {
         el.classList.add('reveal-on-scroll');
+        
+        // Immediately reveal if already in viewport (prevents flashing on load)
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('revealed');
+          el.style.transition = 'none'; // Instant reveal
+          setTimeout(() => { el.style.transition = ''; }, 50); // Restore transition for future
+        }
       }
     });
   });
 
-  // Scroll Reveal Animation
-  const revealElements = document.querySelectorAll('.reveal-on-scroll');
-  if (revealElements.length > 0) {
-    const observerOptions = {
-      root: null,
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+  const hiddenElements = document.querySelectorAll('.reveal-on-scroll:not(.revealed)');
+  if (hiddenElements.length > 0) {
+    if (typeof IntersectionObserver !== 'undefined') {
+      const observerOptions = {
+        root: null,
+        // Use a very small threshold so tall elements (like pricing packages on mobile) trigger immediately
+        threshold: 0.01, 
+        rootMargin: '0px 0px 50px 0px' // Pre-trigger slightly before it enters the viewport
+      };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
 
-    revealElements.forEach(el => observer.observe(el));
+      hiddenElements.forEach(el => observer.observe(el));
+    } else {
+      // Fallback: make all visible if IntersectionObserver is not supported
+      hiddenElements.forEach(el => el.classList.add('revealed'));
+    }
   }
 
   // 4. Local File Protocol Link Resolver
