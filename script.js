@@ -483,7 +483,14 @@ document.addEventListener('DOMContentLoaded', () => {
       .contact-form-container .form-grid > div {
         padding: 30px 20px !important;
       }
+      /* Fix inline style grids in sections on mobile */
+      .section .container > div[style*="display: grid"],
+      .section .container > div[style*="display:grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
     }
+
 
 
     /* WhatsApp CTA Styles */
