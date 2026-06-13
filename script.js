@@ -484,12 +484,15 @@ document.addEventListener('DOMContentLoaded', () => {
         padding: 30px 20px !important;
       }
       /* Fix inline style grids in sections on mobile */
+      .section .container > div[style*="grid-template-columns"],
       .section .container > div[style*="display: grid"],
       .section .container > div[style*="display:grid"] {
-        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 30px !important;
       }
     }
+
 
 
 
