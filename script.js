@@ -470,10 +470,10 @@ document.addEventListener('DOMContentLoaded', () => {
         padding: 12px 28px !important;
       }
       /* Fix mobile grid-column span overflow issues */
-      .why-grid-3x2, .why-learn-grid {
+      .why-grid-3x2, .why-learn-grid, .why-grid-3, .services-grid-3x2 {
         grid-template-columns: 1fr !important;
       }
-      .why-grid-3x2 > *, .why-learn-grid > * {
+      .why-grid-3x2 > *, .why-learn-grid > *, .why-grid-3 > *, .services-grid-3x2 > * {
         grid-column: span 1 !important;
       }
       /* Fix mobile trial form 2-column squeeze */
