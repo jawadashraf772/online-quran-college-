@@ -476,6 +476,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .why-grid-3x2 > *, .why-learn-grid > * {
         grid-column: span 1 !important;
       }
+      /* Fix mobile trial form 2-column squeeze */
+      .form-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .contact-form-container .form-grid > div {
+        padding: 30px 20px !important;
+      }
     }
 
 
