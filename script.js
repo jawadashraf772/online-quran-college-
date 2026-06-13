@@ -469,6 +469,13 @@ document.addEventListener('DOMContentLoaded', () => {
         justify-content: center !important;
         padding: 12px 28px !important;
       }
+      /* Fix mobile grid-column span overflow issues */
+      .why-grid-3x2, .why-learn-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .why-grid-3x2 > *, .why-learn-grid > * {
+        grid-column: span 1 !important;
+      }
     }
 
 
