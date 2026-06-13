@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
         grid-column: span 1 !important;
       }
       /* Fix mobile trial form 2-column squeeze */
-      .form-grid {
+      .form-grid, .about-grid {
         grid-template-columns: 1fr !important;
       }
       .contact-form-container .form-grid > div {
