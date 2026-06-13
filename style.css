@@ -3054,6 +3054,12 @@ header {
     font-size: 11px;
   }
 
+  /* Prevent text from getting cut off due to large padding or long words */
+  p, h1, h2, h3, h4, h5, h6, span, a, li {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
   /* Buttons — full width on tiny screens */
   .btn {
     padding: 12px 20px;

@@ -171,7 +171,18 @@
       }
     }
   </style>
+
+  <style>
+    /* Prevent text from getting cut off due to large padding or long words on small mobile screens */
+    @media (max-width: 576px) {
+      p, h1, h2, h3, h4, h5, h6, span, a, li, .btn {
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- 1. Header & Navigation Bar -->
@@ -711,3 +722,4 @@
   </script>
 </body>
 </html>
+
