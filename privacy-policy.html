@@ -25,6 +25,174 @@
   <!-- Custom Stylesheet (Copied inline for complete layout styling) -->
   <style>
     :root{--primary:#006847;--primary-hover:#004f36;--secondary:#10b981;--secondary-light:#eefaf3;--secondary-tint:#f4fbf7;--accent:#f59e0b;--dark:#0f172a;--dark-slate:#1f2937;--footer-bg:#111827;--light:#ffffff;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-600:#4b5563;--gray-700:#374151;--font-title:'Outfit', sans-serif;--font-body:'Inter', sans-serif;--font-arabic:'Amiri', serif;--shadow-sm:0 4px 6px -1px rgba(0, 104, 71, 0.04), 0 2px 4px -1px rgba(0, 104, 71, 0.02);--shadow-md:0 10px 25px -5px rgba(0, 104, 71, 0.06), 0 8px 10px -6px rgba(0, 104, 71, 0.04);--shadow-lg:0 20px 40px -10px rgba(0, 104, 71, 0.1), 0 12px 16px -8px rgba(0, 104, 71, 0.06);--shadow-glow:0 0 20px rgba(16, 185, 129, 0.2);--radius-sm:8px;--radius-md:16px;--radius-lg:32px;--transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);--max-width:1200px}*, *::before, *::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{font-family:var(--font-body);color:var(--dark-slate);background-color:var(--light);line-height:1.65;overflow-x:hidden}h1, h2, h3, h4, h5, h6{font-family:var(--font-title);color:var(--primary);font-weight:700;line-height:1.25}p{color:var(--gray-600)}a{text-decoration:none;color:inherit;transition:var(--transition)}.container{max-width:var(--max-width);margin:0 auto;padding:0 24px}.section{padding:80px 0;position:relative}body{padding-top:136px !important}header{position:fixed;top:0;left:0;width:100%;z-index:1000;background-color:rgba(255, 255, 255, 0.95);box-shadow:var(--shadow-sm)}.nav-wrapper{display:flex;align-items:center;justify-content:space-between;height:72px;transition:var(--transition)}.logo{display:flex;align-items:center}.logo-img{max-height:52px;width:auto;transition:var(--transition)}.footer-logo-img{background-color:var(--light);padding:6px;border-radius:var(--radius-sm);max-height:64px}.nav-links{display:flex;align-items:center;gap:24px;list-style:none}.nav-links a{font-family:var(--font-title);font-weight:500;color:var(--gray-700);font-size:14px;position:relative;padding:8px 0;display:inline-flex;align-items:center;gap:4px}.nav-links > li > a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background-color:var(--secondary);transition:var(--transition)}.nav-links > li > a:hover{color:var(--primary)}.nav-links > li > a:hover::after{width:100%}.dropdown{position:relative}.nav-arrow{font-size:10px;color:var(--secondary);transition:transform 0.3s ease}.dropdown:hover .nav-arrow{transform:rotate(180deg)}.dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(15px);background-color:var(--light);width:230px;border-radius:12px;box-shadow:0 10px 30px rgba(0, 0, 0, 0.08);border:none;list-style:none;padding:24px 0;opacity:0;visibility:hidden;transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);z-index:1100}.dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(5px)}.dropdown-menu li{width:100%}.dropdown-menu a{display:block !important;padding:12px 24px !important;font-size:17px !important;color:var(--primary) !important;font-family:Georgia, serif !important;font-weight:500 !important;line-height:1.3 !important;transition:var(--transition) !important;width:100%;box-sizing:border-box;text-align:left}.dropdown-menu a::after{display:none !important}.dropdown-menu a:hover{background-color:transparent !important;color:var(--secondary) !important}.nav-cta{display:flex;align-items:center;gap:16px}.nav-cta #btn-header-cta{box-shadow:0 4px 12px rgba(0, 104, 71, 0.2);background-color:var(--secondary) !important;color:var(--light);padding:12px 28px;border-radius:50px;font-family:var(--font-title);font-size:15px;font-weight:600;transition:var(--transition)}.nav-cta #btn-header-cta:hover{background-color:#0d9488 !important;transform:translateY(-2px);box-shadow:0 8px 20px rgba(16, 185, 129, 0.25) !important}.top-bar{background-color:var(--primary);color:var(--light);padding:8px 0;font-size:13px;font-weight:500;border-bottom:1px solid rgba(255, 255, 255, 0.1)}.top-bar-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}.top-bar-info{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.top-bar-info a{color:rgba(255, 255, 255, 0.9);display:flex;align-items:center;gap:8px;transition:var(--transition);font-family:var(--font-title)}.top-bar-info a:hover{color:var(--light);text-decoration:none}.page-header{padding:40px 0 !important;min-height:180px !important;display:flex !important;align-items:center !important;justify-content:center !important;background:linear-gradient(135deg, #004f36 0%, #006847 60%, #10b981 100%) !important;color:var(--light);text-align:center;position:relative;overflow:hidden}.page-header-content{position:relative;z-index:5;max-width:800px;margin:0 auto}.page-title{font-size:34px;color:var(--light);margin-bottom:8px;font-weight:800;text-shadow:0 2px 10px rgba(0,0,0,0.15)}.breadcrumbs{display:inline-flex;align-items:center;gap:8px;font-size:13px;background-color:rgba(255, 255, 255, 0.08);padding:8px 16px;border-radius:30px;backdrop-filter:blur(4px);border:1px solid rgba(255, 255, 255, 0.05)}.breadcrumbs a{color:rgba(255, 255, 255, 0.8);transition:var(--transition)}.breadcrumbs span{color:rgba(255, 255, 255, 0.4)}.breadcrumbs .current{color:var(--light);font-weight:600}footer{background-color:var(--footer-bg);color:rgba(255, 255, 255, 0.7);padding:80px 0 32px 0;border-top:4px solid var(--secondary)}.footer-grid{display:grid;grid-template-columns:1.2fr 0.8fr 1fr 1.2fr;gap:40px;margin-bottom:64px}.footer-column h4{color:var(--light);font-size:15px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:24px;position:relative}.footer-column h4::after{content:'';position:absolute;bottom:-8px;left:0;width:32px;height:2px;background-color:var(--secondary)}.footer-links{list-style:none}.footer-links li{margin-bottom:12px}.footer-links a{font-size:14px;display:flex;align-items:center;gap:8px;color:rgba(255, 255, 255, 0.65)}.footer-links a:hover{color:var(--secondary);padding-left:4px}.footer-bottom{border-top:1px solid rgba(255, 255, 255, 0.06);padding-top:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:13px}.legal-content{background-color:var(--light);padding:48px;border-radius:var(--radius-md);box-shadow:var(--shadow-md);border:1px solid var(--gray-200);margin-bottom:60px}.legal-content h2{font-size:22px;color:var(--primary);margin-top:28px;margin-bottom:14px;font-family:var(--font-title)}.legal-content p{margin-bottom:16px;color:var(--gray-700);line-height:1.7}.legal-content ul{margin-bottom:20px;padding-left:24px;color:var(--gray-700)}.legal-content li{margin-bottom:8px;line-height:1.7}@media (max-width:992px){body{padding-top:176px !important}}@media (max-width:768px){.legal-content{padding:24px}.page-title{font-size:26px}}
+
+    /* Premium UI Layout for Privacy Policy and Legal Pages */
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+    .legal-sidebar {
+      position: sticky;
+      top: 150px;
+      background-color: var(--gray-50);
+      padding: 28px 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-sidebar h3 {
+      font-size: 15px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--secondary-light);
+      padding-bottom: 10px;
+    }
+    .sidebar-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+    }
+    .sidebar-links li {
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar-links a {
+      font-size: 14px;
+      color: var(--gray-600);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      padding: 10px 12px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .sidebar-links a:hover {
+      color: var(--primary);
+      background-color: var(--secondary-light);
+    }
+    .sidebar-links a.active {
+      color: var(--light);
+      background-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0, 104, 71, 0.15);
+    }
+    .sidebar-links i {
+      font-size: 14px;
+      width: 18px;
+      text-align: center;
+    }
+    .legal-main {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .legal-meta-card {
+      background: linear-gradient(135deg, var(--secondary-light) 0%, rgba(255, 255, 255, 1) 100%);
+      padding: 24px 32px;
+      border-radius: var(--radius-md);
+      border-left: 5px solid var(--primary);
+      border-top: 1px solid var(--gray-200);
+      border-right: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    .legal-meta-card p {
+      margin-bottom: 8px;
+      color: var(--gray-700);
+    }
+    .legal-meta-card p:last-child {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+    .legal-card {
+      background-color: var(--light);
+      padding: 40px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      scroll-margin-top: 150px;
+    }
+    .legal-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+    .card-header-flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--secondary-light);
+      padding-bottom: 16px;
+    }
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background-color: var(--secondary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .legal-card h2 {
+      font-size: 20px;
+      color: var(--primary);
+      margin: 0;
+      font-family: var(--font-title);
+    }
+    .legal-card p {
+      color: var(--gray-700);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .legal-card p:last-child {
+      margin-bottom: 0;
+    }
+    .legal-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .legal-card li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+    .legal-card li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+    @media (max-width: 992px) {
+      .legal-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .legal-sidebar {
+        position: relative;
+        top: 0;
+      }
+    }
   </style>
 
   <style>
@@ -114,51 +282,99 @@
   </section>
 
   <main class="container section">
-    <div class="legal-content">
-      <p><em>Last Updated: June 12, 2026</em></p>
-      
-      <p>At Online Quran College, accessible from https://www.onlinequrancollege.com, one of our main priorities is the privacy of our visitors and students. This Privacy Policy document contains types of information that is collected and recorded by Online Quran College and how we use it.</p>
-      
-      <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at info@onlinequrancollege.com.</p>
-      
-      <h2>Consent</h2>
-      <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
-      
-      <h2>Information We Collect</h2>
-      <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
-      <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
-      <p>When you register for a Free Trial or Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</p>
-      
-      <h2>How We Use Your Information</h2>
-      <p>We use the information we collect in various ways, including to:</p>
-      <ul>
-        <li>Provide, operate, and maintain our website and virtual learning environment.</li>
-        <li>Improve, personalize, and expand our services and course structures.</li>
-        <li>Understand and analyze how you use our website.</li>
-        <li>Develop new educational products, services, features, and functionality.</li>
-        <li>Communicate with you, either directly or through one of our coordinators, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes.</li>
-        <li>Send you emails and WhatsApp messages regarding scheduling, trial classes, and billing.</li>
-        <li>Find and prevent fraud.</li>
-      </ul>
-      
-      <h2>Log Files</h2>
-      <p>Online Quran College follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
-      
-      <h2>GDPR Data Protection Rights</h2>
-      <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
-      <ul>
-        <li><strong>The right to access</strong> – You have the right to request copies of your personal data.</li>
-        <li><strong>The right to rectification</strong> – You have the right to request that we correct any information you believe is inaccurate.</li>
-        <li><strong>The right to erasure</strong> – You have the right to request that we erase your personal data, under certain conditions.</li>
-        <li><strong>The right to restrict processing</strong> – You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
-      </ul>
+    <div class="legal-layout">
+      <!-- Sidebar / Table of Contents -->
+      <aside class="legal-sidebar">
+        <h3>Sections</h3>
+        <ul class="sidebar-links">
+          <li><a href="#intro" class="active"><i class="fa-solid fa-circle-info"></i> 1. Introduction</a></li>
+          <li><a href="#collect"><i class="fa-solid fa-database"></i> 2. Info We Collect</a></li>
+          <li><a href="#use"><i class="fa-solid fa-gears"></i> 3. How We Use It</a></li>
+          <li><a href="#sharing"><i class="fa-solid fa-shield-halved"></i> 4. Sharing & Security</a></li>
+          <li><a href="#rights"><i class="fa-solid fa-user-shield"></i> 5. Your Rights</a></li>
+          <li><a href="#changes"><i class="fa-solid fa-pen-to-square"></i> 6. Changes to Policy</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="legal-main">
+        <div class="legal-meta-card">
+          <p><strong>Last Updated:</strong> June 16, 2026</p>
+          <p>Online Quran College is committed to protecting your privacy. This policy outlines how we handle your personal data across our services.</p>
+        </div>
+
+        <!-- Section 1 -->
+        <section id="intro" class="legal-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-circle-info"></i></div>
+            <h2>1. Introduction</h2>
+          </div>
+          <p>At Online Quran College, we are committed to protecting your privacy and ensuring your personal information is handled in a safe and responsible manner. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website or enroll in our courses.</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="collect" class="legal-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+            <h2>2. Information We Collect</h2>
+          </div>
+          <p>We may collect the following types of information when you interact with us:</p>
+          <ul>
+            <li><strong>Personal Information:</strong> Name, email address, phone number, and location provided during registration or contact form submissions.</li>
+            <li><strong>Usage Data:</strong> Information about how you interact with our website, including IP address, browser type, and pages visited.</li>
+            <li><strong>Course-related Data:</strong> Information relevant to your learning journey, such as progress reports, attendance, and feedback.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="use" class="legal-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+            <h2>3. How We Use Your Information</h2>
+          </div>
+          <p>We use the collected information for the following purposes:</p>
+          <ul>
+            <li>To facilitate your enrollment and schedule classes.</li>
+            <li>To communicate with you regarding your lessons, trial sessions, and administrative updates.</li>
+            <li>To provide customer support and address your queries.</li>
+            <li>To improve our website, services, and educational experience.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="sharing" class="legal-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h2>4. Data Sharing and Security</h2>
+          </div>
+          <p>We do not sell, trade, or rent your personal information to third parties. We implement robust security measures to protect your data from unauthorized access, alteration, or disclosure. Please note, however, that no method of transmission over the internet is 100% secure.</p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="rights" class="legal-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <h2>5. Your Rights</h2>
+          </div>
+          <p>You have the right to request access to the personal information we hold about you and to request corrections or deletion of your data. If you have any concerns regarding your privacy, please contact us directly at <a href="mailto:info@onlinequrancollege.com" style="color: var(--secondary); font-weight: 600; text-decoration: underline;">info@onlinequrancollege.com</a>.</p>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="changes" class="legal-card">
+          <div class="card-header-flex">
+            <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+            <h2>6. Changes to This Policy</h2>
+          </div>
+          <p>We may update this Privacy Policy from time to time. We encourage you to review this page periodically for any changes. Your continued use of our services constitutes acceptance of the updated policy.</p>
+        </section>
+      </div>
     </div>
   </main>
 
   <!-- 13. Footer -->
   <footer style="background-color: var(--footer-bg); color: rgba(255, 255, 255, 0.7); padding: 80px 0 32px 0; border-top: 4px solid var(--secondary);">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr; gap: 40px; margin-bottom: 64px;">
         <!-- Column 1 -->
         <div class="footer-column footer-about">
           <a href="/" class="logo">
@@ -217,6 +433,36 @@
 
   <!-- Custom JavaScript File -->
   <script src="script.js"></script>
+
+  <!-- Active state javascript for sidebar links -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.legal-card');
+      const navLinks = document.querySelectorAll('.sidebar-links a');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
 </body>
 </html>
-
