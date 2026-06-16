@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/webp" href="logo_.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Articles | Online Quran College</title>
+  <meta name="description" content="Read educational articles, Tajweed guidelines, memory techniques, and Islamic studies resources from certified scholars at Online Quran College.">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blog-style.css">
+</head>
+<body style="padding-top: 136px !important;">
+
+  <!-- 1. Header & Navigation Bar -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="/" class="logo" id="nav-logo">
+          <img src="logo_.webp" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">Courses <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="noorani-qaida">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara">Quran Nazara Course</a></li>
+              <li><a href="hifz-quran">Hifz ul Quran Course</a></li>
+              <li><a href="arabic-language">Arabic Language Course</a></li>
+              <li><a href="quran-translation">Quran Translation</a></li>
+              <li><a href="hadith-translation">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">Area <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="online-quran-classes-uk">United Kingdom</a></li>
+              <li><a href="online-quran-classes-manchester"><i class="fa-solid fa-angle-right"></i> Manchester</a></li>
+              <li><a href="online-quran-classes-leicester"><i class="fa-solid fa-angle-right"></i> Leicester</a></li>
+              <li><a href="online-quran-classes-leeds"><i class="fa-solid fa-angle-right"></i> Leeds</a></li>
+              <li><a href="online-quran-classes-bradford"><i class="fa-solid fa-angle-right"></i> Bradford</a></li>
+              <li><a href="online-quran-classes-london"><i class="fa-solid fa-angle-right"></i> London</a></li>
+              <li><a href="online-quran-classes-birmingham"><i class="fa-solid fa-angle-right"></i> Birmingham</a></li>
+            </ul>
+          </li>
+          <li><a href="about">About</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="careers">Career Opportunities</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-user-shield" style="margin-right: 4px; color: var(--secondary);"></i> Portal</a></li>
+          <li class="mobile-cta-only"><a href="contact" class="btn btn-primary">Register Now</a></li>
+        </ul>
+        
+        <div class="nav-cta">
+          <a href="contact" class="btn btn-primary" id="btn-header-cta">Register Now</a>
+          <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 40px; margin-bottom: 80px;">
+    
+    <!-- Breadcrumbs -->
+    <div class="blog-breadcrumbs">
+      <a href="/">Home</a>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+      <span style="color: var(--primary); font-weight: 600;">Blog</span>
+    </div>
+
+    <div class="blog-feed-container">
+      
+      <!-- Left side: Articles Feed -->
+      <div>
+        
+        <!-- Featured Article -->
+        <div id="featuredPostArea"></div>
+
+        <!-- Latest Articles Header -->
+        <h2 style="font-size: 26px; color: var(--primary); margin-bottom: 24px; border-bottom: 2px solid var(--secondary-light); padding-bottom: 12px; font-weight: 800;">
+          <i class="fa-solid fa-newspaper" style="color: var(--secondary); margin-right: 8px;"></i> Latest Articles
+        </h2>
+
+        <!-- Articles Grid -->
+        <div class="blogs-grid-3" id="latestPostsContainer" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 40px;">
+          <!-- Loaded via JavaScript -->
+        </div>
+
+        <!-- Empty Search/Filter State -->
+        <div id="emptyState" style="display:none; text-align:center; padding: 60px 20px; background: var(--gray-50); border-radius: var(--radius-md); border: 1px dashed var(--gray-200);">
+          <i class="fa-solid fa-magnifying-glass" style="font-size: 48px; color: var(--gray-300); margin-bottom: 16px;"></i>
+          <h3>No articles found</h3>
+          <p style="color: var(--gray-600); margin-top: 8px;">Try adjusting your keywords or category filters.</p>
+        </div>
+
+      </div>
+
+      <!-- Right side: Sidebar -->
+      <aside class="blog-sidebar">
+        
+        <!-- Widget: Search -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><i class="fa-solid fa-magnifying-glass"></i> Search Articles</h3>
+          <div class="search-input-wrapper">
+            <input type="text" id="blogSearch" class="search-control" placeholder="Search by keyword...">
+            <i class="fa-solid fa-search"></i>
+          </div>
+        </div>
+
+        <!-- Widget: Categories -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><i class="fa-solid fa-tags"></i> Categories</h3>
+          <ul class="category-list" id="categoryList">
+            <!-- Loaded via JavaScript -->
+          </ul>
+        </div>
+
+        <!-- Widget: Popular Posts -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><i class="fa-solid fa-fire"></i> Popular Posts</h3>
+          <div id="popularPostsList">
+            <!-- Loaded via JavaScript -->
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background-color: var(--footer-bg); color: rgba(255, 255, 255, 0.7); padding: 80px 0 32px 0; border-top: 4px solid var(--secondary);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr; gap: 40px; margin-bottom: 64px;">
+        <div class="footer-column footer-about">
+          <a href="/" class="logo">
+            <img src="logo_.webp" alt="Online Quran College Logo" class="logo-img footer-logo-img">
+          </a>
+          <p style="margin-top: 16px; font-size: 14px;">Unlock the wisdom of the Quran with our online Quran college. Explore, learn, and grow with us</p>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Quick Links</h4>
+          <ul class="footer-links" style="list-style: none;">
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="about">About Us</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#">Courses</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="pricing">Pricing</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Useful Links</h4>
+          <ul class="footer-links" style="list-style: none;">
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="privacy-policy">Privacy Policy</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="terms-conditions">Terms and Conditions</a></li>
+            <li style="margin-bottom: 10px; font-size: 14px;"><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: var(--light); font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; position: relative;">Stay Connected</h4>
+          <ul class="footer-links contact-info-list" style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px;"><i class="fa-solid fa-location-dot" style="color: var(--secondary); font-size: 16px;"></i> United Kingdom</li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px;"><i class="fa-solid fa-envelope" style="color: var(--secondary); font-size: 16px;"></i> <a href="mailto:info@onlinequrancollege.com">info@onlinequrancollege.com</a></li>
+            <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px;"><i class="fa-solid fa-phone" style="color: var(--secondary); font-size: 16px;"></i> <a href="tel:+447864710821">+44 7864 710821</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 32px; flex-wrap: wrap; gap: 20px;">
+        <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DB scripts and client rendering logic -->
+  <script src="blog-db.js"></script>
+  <script src="script.js?v=2.1"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let currentCategory = "";
+      let searchQuery = "";
+
+      const featuredArea = document.getElementById("featuredPostArea");
+      const latestContainer = document.getElementById("latestPostsContainer");
+      const emptyState = document.getElementById("emptyState");
+      const categoryList = document.getElementById("categoryList");
+      const popularList = document.getElementById("popularPostsList");
+
+      function getBlogImage(blog) {
+        if (blog.image.startsWith("data:image")) {
+          return blog.image;
+        }
+        return blog.image; // fallback preset webp
+      }
+
+      function render() {
+        const allBlogs = OQC_DB.getBlogs().filter(b => b.status === "Published");
+        const authors = OQC_DB.getAuthors();
+
+        // 1. Filter articles based on Category & Search Query
+        let filteredBlogs = allBlogs;
+        if (currentCategory) {
+          filteredBlogs = filteredBlogs.filter(b => b.category.toLowerCase() === currentCategory.toLowerCase());
+        }
+        if (searchQuery) {
+          filteredBlogs = filteredBlogs.filter(b => 
+            b.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+            b.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) || 
+            b.content.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+        }
+
+        // 2. Render Featured Article (Only if no search/category filter active)
+        if (!currentCategory && !searchQuery && allBlogs.length > 0) {
+          const featured = allBlogs.find(b => b.isFeatured) || allBlogs[0];
+          const author = authors.find(a => a.id === featured.authorId) || { name: "OQC Faculty" };
+          
+          featuredArea.innerHTML = `
+            <div class="featured-blog-card">
+              <div class="featured-img-holder" style="background-image: url('${getBlogImage(featured)}')"></div>
+              <div class="featured-body">
+                <span class="post-category-badge">${featured.category}</span>
+                <h3 class="featured-title"><a href="blog-post.html?slug=${featured.slug}">${featured.title}</a></h3>
+                <p class="featured-desc">${featured.subtitle}</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                  <span style="font-size:13.5px; color:var(--gray-600);"><i class="fa-solid fa-user" style="color:var(--secondary);"></i> By ${author.name}</span>
+                  <a href="blog-post.html?slug=${featured.slug}" class="btn btn-secondary" style="padding: 8px 20px; font-size:13.5px;">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          `;
+          featuredArea.style.display = "block";
+          
+          // Exclude featured from the latest grid listing
+          filteredBlogs = filteredBlogs.filter(b => b.id !== featured.id);
+        } else {
+          featuredArea.style.display = "none";
+        }
+
+        // 3. Render Grid Listing
+        latestContainer.innerHTML = "";
+        if (filteredBlogs.length === 0) {
+          emptyState.style.display = "block";
+        } else {
+          emptyState.style.display = "none";
+          filteredBlogs.forEach(blog => {
+            const author = authors.find(a => a.id === blog.authorId) || { name: "OQC Faculty" };
+            
+            const card = document.createElement("div");
+            card.className = "blog-card";
+            card.innerHTML = `
+              <div class="blog-img-holder" style="background-image: url('${getBlogImage(blog)}'); background-size: cover; background-position: center; height: 200px;">
+                <span class="blog-meta-date">${new Date(blog.publishDate).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</span>
+              </div>
+              <div class="blog-body">
+                <span style="font-size: 11px; font-weight: 700; color: var(--secondary); text-transform: uppercase; margin-bottom: 8px; display: inline-block;">${blog.category}</span>
+                <h3 style="font-size:18px; margin-bottom:10px;"><a href="blog-post.html?slug=${blog.slug}">${blog.title}</a></h3>
+                <p style="font-size:13.5px; margin-bottom:16px;">${blog.subtitle}</p>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-size:12px; color:var(--gray-600);">By ${author.name}</span>
+                  <a href="blog-post.html?slug=${blog.slug}" class="blog-read-link" style="font-size:13.5px;">Read <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            `;
+            latestContainer.appendChild(card);
+          });
+        }
+
+        // 4. Render Popular widgets (Top 3 by views)
+        const popular = [...allBlogs].sort((a,b) => b.views - a.views).slice(0, 3);
+        popularList.innerHTML = "";
+        popular.forEach(pop => {
+          const popItem = document.createElement("a");
+          popItem.href = `blog-post.html?slug=${pop.slug}`;
+          popItem.className = "popular-post-item";
+          popItem.innerHTML = `
+            <div class="popular-post-img" style="background-image: url('${getBlogImage(pop)}')"></div>
+            <div class="popular-post-info">
+              <span class="popular-post-title">${pop.title}</span>
+              <span style="font-size:11px; color:var(--gray-600);"><i class="fa-solid fa-eye"></i> ${pop.views} views</span>
+            </div>
+          `;
+          popularList.appendChild(popItem);
+        });
+      }
+
+      // Render Categories list widget with count
+      function renderCategoriesWidget() {
+        const allBlogs = OQC_DB.getBlogs().filter(b => b.status === "Published");
+        const counts = {};
+        
+        // Count posts per category
+        allBlogs.forEach(b => {
+          counts[b.category] = (counts[b.category] || 0) + 1;
+        });
+
+        categoryList.innerHTML = `
+          <li><a href="#" class="cat-filter-btn" data-cat="">All Categories <span class="category-count">${allBlogs.length}</span></a></li>
+        `;
+        Object.keys(counts).forEach(cat => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <a href="#" class="cat-filter-btn" data-cat="${cat}">${cat} <span class="category-count">${counts[cat]}</span></a>
+          `;
+          categoryList.appendChild(li);
+        });
+
+        // Set up filters click handlers
+        document.querySelectorAll(".cat-filter-btn").forEach(btn => {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            currentCategory = btn.getAttribute("data-cat");
+            
+            document.querySelectorAll(".cat-filter-btn").forEach(el => el.style.fontWeight = "normal");
+            btn.style.fontWeight = "700";
+            btn.style.color = "var(--secondary)";
+            
+            render();
+          });
+        });
+      }
+
+      // Live search input handler
+      document.getElementById("blogSearch").addEventListener("input", (e) => {
+        searchQuery = e.target.value.trim();
+        render();
+      });
+
+      // Init Page
+      render();
+      renderCategoriesWidget();
+    });
+  </script>
+</body>
+</html>

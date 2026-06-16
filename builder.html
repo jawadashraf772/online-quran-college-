@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/webp" href="logo_.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OQC Visual Blog Builder</title>
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="blog-style.css">
+
+  <style>
+    :root {
+      --primary: #006847;
+      --primary-hover: #004f36;
+      --secondary: #10b981;
+      --secondary-light: #eefaf3;
+      --dark: #0f172a;
+      --dark-slate: #1f2937;
+      --light: #ffffff;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --radius-md: 16px;
+      --radius-sm: 8px;
+    }
+    body {
+      background-color: #f1f5f9;
+      height: 100vh !important;
+      padding-top: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+      display: grid !important;
+      grid-template-rows: 64px 1fr !important;
+      font-family: var(--font-body);
+    }
+    
+    /* Top Header Bar */
+    .builder-header {
+      background: var(--light);
+      border-bottom: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      z-index: 1000;
+    }
+
+    /* Main Workspace Grid */
+    .builder-workspace {
+      display: grid;
+      grid-template-columns: 280px 1fr 340px;
+      height: 100%;
+      overflow: hidden;
+    }
+    @media (max-width: 1024px) {
+      .builder-workspace {
+        grid-template-columns: 240px 1fr;
+      }
+      .settings-sidebar {
+        display: none; /* hidden on small tablet screens */
+      }
+    }
+
+    /* Left Sidebar: Toolbox */
+    .toolbox-sidebar {
+      background: var(--light);
+      border-right: 1px solid var(--gray-200);
+      padding: 24px 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .toolbox-group-title {
+      font-family: var(--font-title);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--gray-100);
+      padding-bottom: 4px;
+    }
+    .tool-block {
+      background: var(--gray-50);
+      border: 1px dashed var(--gray-300);
+      border-radius: 8px;
+      padding: 12px;
+      cursor: grab;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition);
+      user-select: none;
+      margin-bottom: 8px;
+    }
+    .tool-block:hover {
+      border-color: var(--secondary);
+      background-color: var(--secondary-light);
+      color: var(--primary);
+    }
+    .tool-block i {
+      font-size: 18px;
+      color: var(--secondary);
+    }
+    .tool-block span {
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+
+    /* Center Panel: Canvas Workspace */
+    .canvas-panel {
+      padding: 40px;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      background: #f8fafc;
+    }
+    .canvas-sheet {
+      background: var(--light);
+      width: 100%;
+      max-width: 800px;
+      min-height: 800px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+      padding: 48px;
+      position: relative;
+    }
+    .canvas-placeholder {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--gray-300);
+      pointer-events: none;
+    }
+    .canvas-placeholder i {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+
+    /* Dropped Blocks & Controls */
+    .canvas-block {
+      position: relative;
+      margin-bottom: 12px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+    .canvas-block:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 1px var(--secondary);
+    }
+    .block-control-overlay {
+      position: absolute;
+      top: -12px;
+      right: 12px;
+      background: var(--primary);
+      border-radius: 4px;
+      padding: 2px 6px;
+      display: none;
+      gap: 6px;
+      z-index: 100;
+    }
+    .canvas-block:hover .block-control-overlay {
+      display: flex;
+    }
+    .block-control-btn {
+      background: transparent;
+      border: none;
+      color: var(--light);
+      cursor: pointer;
+      font-size: 11px;
+      padding: 2px;
+      transition: var(--transition);
+    }
+    .block-control-btn:hover {
+      color: var(--accent);
+    }
+
+    /* Settings Right Sidebar */
+    .settings-sidebar {
+      background: var(--light);
+      border-left: 1px solid var(--gray-200);
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-group label {
+      font-family: var(--font-title);
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .form-control {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid var(--gray-300);
+      border-radius: 6px;
+      font-size: 13.5px;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--secondary);
+    }
+
+    /* Inline editable styles overrides */
+    [contenteditable="true"] {
+      outline: none;
+      padding: 8px;
+    }
+    .canvas-block h2 {
+      font-size: 24px;
+      margin: 12px 0;
+    }
+    .canvas-block h3 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    .canvas-block p {
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+    .canvas-block blockquote {
+      border-left: 4px solid var(--secondary);
+      background: var(--secondary-light);
+      padding: 12px 16px;
+      font-style: italic;
+      color: var(--primary);
+    }
+    .canvas-block ul {
+      margin-left: 24px;
+    }
+    .canvas-block table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .canvas-block th, .canvas-block td {
+      border: 1px solid var(--gray-300);
+      padding: 8px;
+      text-align: left;
+    }
+    .canvas-block th {
+      background-color: var(--secondary-light);
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DB Scripts -->
+  <script src="blog-db.js"></script>
+
+  <!-- Security redirection check -->
+  <script>
+    if (localStorage.getItem('admin_logged_in') !== 'true') {
+      window.location.href = 'login.html';
+    }
+    const currentUser = OQC_DB.getCurrentUser();
+  </script>
+
+  <!-- Header bar -->
+  <header class="builder-header">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a href="dashboard.html" class="btn" style="padding:6px 14px; font-size:13px; border-color:var(--gray-300); background:transparent;"><i class="fa-solid fa-arrow-left"></i> Exit Builder</a>
+      <h1 style="font-family:var(--font-title); font-size:18px; font-weight:700; color:var(--primary);">OQC Drag & Drop Visual Editor</h1>
+    </div>
+    <div style="display:flex; gap:12px;">
+      <button onclick="saveDraft()" class="btn" style="padding:8px 20px; font-size:13.5px; background:#64748b; color:#fff;">Save Draft</button>
+      <button onclick="publishPost()" class="btn btn-secondary" style="padding:8px 24px; font-size:13.5px;">Publish Live</button>
+    </div>
+  </header>
+
+  <!-- Main Grid Workspace -->
+  <div class="builder-workspace">
+    
+    <!-- LEFT SIDEBAR: Draggable Toolbox -->
+    <aside class="toolbox-sidebar">
+      <div>
+        <h3 class="toolbox-group-title">Text Blocks</h3>
+        <div class="tool-block" draggable="true" data-type="h2">
+          <i class="fa-solid fa-heading"></i>
+          <span>Heading 2 (H2)</span>
+        </div>
+        <div class="tool-block" draggable="true" data-type="h3">
+          <i class="fa-solid fa-heading" style="font-size:14px;"></i>
+          <span>Heading 3 (H3)</span>
+        </div>
+        <div class="tool-block" draggable="true" data-type="p">
+          <i class="fa-solid fa-paragraph"></i>
+          <span>Paragraph Block</span>
+        </div>
+        <div class="tool-block" draggable="true" data-type="quote">
+          <i class="fa-solid fa-quote-left"></i>
+          <span>Blockquote</span>
+        </div>
+        <div class="tool-block" draggable="true" data-type="list">
+          <i class="fa-solid fa-list-ul"></i>
+          <span>Bullet List</span>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="toolbox-group-title">Layout Blocks</h3>
+        <div class="tool-block" draggable="true" data-type="image">
+          <i class="fa-solid fa-image"></i>
+          <span>Custom Cover Image</span>
+        </div>
+        <div class="tool-block" draggable="true" data-type="table">
+          <i class="fa-solid fa-table"></i>
+          <span>Data Table</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER CANVAS: Drag & Drop Dropzone -->
+    <main class="canvas-panel">
+      <div class="canvas-sheet" id="builderCanvas">
+        <div class="canvas-placeholder" id="canvasPlaceholder">
+          <i class="fa-solid fa-cube"></i>
+          <h2 style="font-size:20px; color:var(--gray-300);">Drag and Drop Blocks Here</h2>
+          <p style="color:var(--gray-300); font-size:13.5px; margin-top:8px;">Compose your blog layout visually, then click elements to write inline</p>
+        </div>
+        <!-- Dropped blocks render here -->
+      </div>
+    </main>
+
+    <!-- RIGHT SIDEBAR: Page Settings -->
+    <aside class="settings-sidebar">
+      <h3 style="font-family:var(--font-title); font-size:16px; font-weight:700; color:var(--primary); border-bottom:2px solid var(--secondary-light); padding-bottom:8px; margin-bottom:12px;"><i class="fa-solid fa-cog"></i> Post Settings</h3>
+      
+      <input type="hidden" id="editPostId">
+      
+      <div class="form-group">
+        <label for="postTitle">Blog Post Title *</label>
+        <input type="text" id="postTitle" class="form-control" required placeholder="e.g. Benefits of Hifz">
+      </div>
+      <div class="form-group">
+        <label for="postSlug">URL Slug *</label>
+        <input type="text" id="postSlug" class="form-control" required placeholder="auto-generated">
+      </div>
+      <div class="form-group">
+        <label for="postSubtitle">Subtitle / Short Tagline *</label>
+        <input type="text" id="postSubtitle" class="form-control" required placeholder="Enter description...">
+      </div>
+      <div class="form-group">
+        <label for="postCategory">Category *</label>
+        <input type="text" id="postCategory" class="form-control" required placeholder="e.g. Quran Education">
+      </div>
+      <div class="form-group">
+        <label for="postTags">Tags (comma-separated)</label>
+        <input type="text" id="postTags" class="form-control" placeholder="Hifz, Memorization">
+      </div>
+      <div class="form-group">
+        <label for="postAuthor">Author *</label>
+        <select id="postAuthor" class="form-control" required></select>
+      </div>
+      <div class="form-group">
+        <label for="postPublishDate">Publish Date</label>
+        <input type="date" id="postPublishDate" class="form-control">
+      </div>
+
+      <!-- Feature Selection Dropdown (Used for template matching) -->
+      <div class="form-group">
+        <label for="presetImageSelect">Base Theme Background</label>
+        <select id="presetImageSelect" class="form-control">
+          <option value="translation_hero.webp">Quran Translation Theme</option>
+          <option value="hadith_hero.webp">Hadith Theme</option>
+          <option value="hifz_hero.webp">Hifz Academy Theme</option>
+          <option value="arabic_hero.webp">Arabic Language Theme</option>
+          <option value="nazara_hero.webp">Nazara Theme</option>
+        </select>
+      </div>
+
+      <!-- Custom Image file selector -->
+      <div class="form-group">
+        <label for="customImageFile">Upload Custom Cover Image</label>
+        <input type="file" id="customImageFile" class="form-control" accept="image/*">
+        <input type="hidden" id="customImageBase64">
+      </div>
+
+      <!-- SEO tags configuration -->
+      <div style="border-top: 1px solid var(--gray-200); padding-top:16px;">
+        <h4 style="font-family:var(--font-title); font-size:13.5px; font-weight:700; color:var(--primary); margin-bottom:8px;"><i class="fa-solid fa-search"></i> SEO Configuration</h4>
+        <div class="form-group">
+          <label for="seoTitle">SEO Title Tag</label>
+          <input type="text" id="seoTitle" class="form-control" placeholder="Target key phrase title...">
+        </div>
+        <div class="form-group">
+          <label for="seoDesc">Meta Description Tag</label>
+          <textarea id="seoDesc" class="form-control" rows="2" placeholder="Summary for Google Search..."></textarea>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    const canvas = document.getElementById("builderCanvas");
+    const placeholder = document.getElementById("canvasPlaceholder");
+    let dragSrcType = "";
+
+    // 1. Initialize Author list options
+    function populateAuthorOptions() {
+      const authors = OQC_DB.getAuthors();
+      const select = document.getElementById("postAuthor");
+      select.innerHTML = "";
+      authors.forEach(auth => {
+        const opt = document.createElement("option");
+        opt.value = auth.id;
+        opt.innerText = auth.name;
+        select.appendChild(opt);
+      });
+    }
+
+    // 2. Setup Drag and Drop events
+    document.querySelectorAll(".tool-block").forEach(block => {
+      block.addEventListener("dragstart", (e) => {
+        dragSrcType = block.getAttribute("data-type");
+      });
+    });
+
+    canvas.addEventListener("dragover", (e) => {
+      e.preventDefault();
+    });
+
+    canvas.addEventListener("drop", (e) => {
+      e.preventDefault();
+      placeholder.style.display = "none";
+      createBlock(dragSrcType);
+    });
+
+    // 3. Block creation templates
+    function createBlock(type, htmlContent = "") {
+      const block = document.createElement("div");
+      block.className = "canvas-block";
+      
+      let childHtml = "";
+      if (type === "h2") {
+        childHtml = `<h2 contenteditable="true">${htmlContent || "Heading Section Level 2"}</h2>`;
+      } else if (type === "h3") {
+        childHtml = `<h3 contenteditable="true">${htmlContent || "Sub-heading Level 3"}</h3>`;
+      } else if (type === "p") {
+        childHtml = `<p contenteditable="true">${htmlContent || "Write your paragraph details here. Click inside to rewrite and visually build the article."}</p>`;
+      } else if (type === "quote") {
+        childHtml = `<blockquote contenteditable="true">${htmlContent || "Insert inspirational quotes or verse translations here..."}</blockquote>`;
+      } else if (type === "list") {
+        childHtml = `<ul contenteditable="true">${htmlContent || "<li>Bullet point index item 1</li><li>Bullet point index item 2</li>"}</ul>`;
+      } else if (type === "image") {
+        childHtml = `
+          <div style="text-align:center; padding:12px; background:var(--gray-50); border:1px dashed var(--gray-300); border-radius:6px; margin: 12px 0;">
+            <input type="file" accept="image/*" class="block-img-file" onchange="previewBlockImage(this)" style="margin-bottom:8px;">
+            <img class="block-img-preview" src="${htmlContent || ''}" style="${htmlContent ? 'max-width:100%; max-height:220px; display:inline-block;' : 'max-width:100%; max-height:220px; display:none;'}">
+          </div>
+        `;
+      } else if (type === "table") {
+        childHtml = htmlContent || `
+          <table contenteditable="true">
+            <thead>
+              <tr><th>Header 1</th><th>Header 2</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Data 1</td><td>Data 2</td></tr>
+              <tr><td>Data 3</td><td>Data 4</td></tr>
+            </tbody>
+          </table>
+        `;
+      }
+
+      block.innerHTML = `
+        <div class="block-control-overlay">
+          <button class="block-control-btn" onclick="moveBlockUp(this)" title="Move Up"><i class="fa-solid fa-arrow-up"></i></button>
+          <button class="block-control-btn" onclick="moveBlockDown(this)" title="Move Down"><i class="fa-solid fa-arrow-down"></i></button>
+          <button class="block-control-btn" onclick="deleteCanvasBlock(this)" title="Delete Block"><i class="fa-solid fa-trash"></i></button>
+        </div>
+        <div class="block-editor-wrapper" data-type="${type}">
+          ${childHtml}
+        </div>
+      `;
+
+      canvas.appendChild(block);
+    }
+
+    // Block image upload handler
+    window.previewBlockImage = function(input) {
+      const file = input.files[0];
+      const img = input.nextElementSibling;
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          img.src = e.target.result;
+          img.style.display = "inline-block";
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+
+    // Block reordering and delete helpers
+    window.moveBlockUp = function(btn) {
+      const block = btn.closest(".canvas-block");
+      const prev = block.previousElementSibling;
+      if (prev && !prev.classList.contains("canvas-placeholder")) {
+        canvas.insertBefore(block, prev);
+      }
+    };
+
+    window.moveBlockDown = function(btn) {
+      const block = btn.closest(".canvas-block");
+      const next = block.nextElementSibling;
+      if (next) {
+        canvas.insertBefore(next, block);
+      }
+    };
+
+    window.deleteCanvasBlock = function(btn) {
+      if (confirm("Delete this block?")) {
+        btn.closest(".canvas-block").remove();
+        if (canvas.querySelectorAll(".canvas-block").length === 0) {
+          placeholder.style.display = "block";
+        }
+      }
+    };
+
+    // Custom cover image base64 handler
+    document.getElementById("customImageFile").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          document.getElementById("customImageBase64").value = evt.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Auto generate URL slug from Title
+    document.getElementById("postTitle").addEventListener("input", (e) => {
+      const idInput = document.getElementById("editPostId");
+      if (!idInput.value) {
+        const slug = e.target.value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+        document.getElementById("postSlug").value = slug;
+      }
+    });
+
+    // 4. Save and Publish functions
+    function compileContent() {
+      let finalHtml = "";
+      canvas.querySelectorAll(".canvas-block").forEach(block => {
+        const wrapper = block.querySelector(".block-editor-wrapper");
+        const type = wrapper.getAttribute("data-type");
+
+        if (type === "h2") {
+          const text = wrapper.querySelector("h2").innerHTML;
+          finalHtml += `<h2>${text}</h2>\n`;
+        } else if (type === "h3") {
+          const text = wrapper.querySelector("h3").innerHTML;
+          finalHtml += `<h3>${text}</h3>\n`;
+        } else if (type === "p") {
+          const text = wrapper.querySelector("p").innerHTML;
+          finalHtml += `<p>${text}</p>\n`;
+        } else if (type === "quote") {
+          const text = wrapper.querySelector("blockquote").innerHTML;
+          finalHtml += `<blockquote>${text}</blockquote>\n`;
+        } else if (type === "list") {
+          const text = wrapper.querySelector("ul").innerHTML;
+          finalHtml += `<ul>${text}</ul>\n`;
+        } else if (type === "image") {
+          const imgSrc = wrapper.querySelector(".block-img-preview").src;
+          if (imgSrc) {
+            finalHtml += `<img src="${imgSrc}">\n`;
+          }
+        } else if (type === "table") {
+          const text = wrapper.querySelector("table").innerHTML;
+          finalHtml += `<table>${text}</table>\n`;
+        }
+      });
+      return finalHtml;
+    }
+
+    function savePostData(status) {
+      const id = document.getElementById("editPostId").value;
+      const title = document.getElementById("postTitle").value.trim();
+      const slug = document.getElementById("postSlug").value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+      const subtitle = document.getElementById("postSubtitle").value.trim();
+      const category = document.getElementById("postCategory").value.trim();
+      const tags = document.getElementById("postTags").value.split(",").map(t => t.trim()).filter(t => t !== "");
+      const authorId = document.getElementById("postAuthor").value;
+      const publishDate = document.getElementById("postPublishDate").value;
+      const seoTitle = document.getElementById("seoTitle").value.trim();
+      const seoDesc = document.getElementById("seoDesc").value.trim();
+      
+      const content = compileContent();
+      if (!content) {
+        alert("Your canvas sheet is empty! Drag and drop blocks first.");
+        return;
+      }
+
+      // Determine cover image
+      let image = document.getElementById("presetImageSelect").value;
+      const customBase64 = document.getElementById("customImageBase64").value;
+      if (customBase64) {
+        image = customBase64;
+      }
+
+      const blogs = OQC_DB.getBlogs();
+      const postObj = {
+        id: id || "post-" + Date.now(),
+        title,
+        subtitle,
+        slug,
+        category,
+        tags,
+        authorId,
+        image,
+        content,
+        seoTitle,
+        seoDesc,
+        status,
+        publishDate,
+        views: id ? (blogs.find(b => b.id === id)?.views || 0) : 0,
+        isFeatured: id ? (blogs.find(b => b.id === id)?.isFeatured || false) : false
+      };
+
+      if (id) {
+        const idx = blogs.findIndex(b => b.id === id);
+        if (idx !== -1) blogs[idx] = postObj;
+      } else {
+        blogs.unshift(postObj);
+      }
+
+      OQC_DB.saveBlogs(blogs);
+      alert(`Article saved as ${status}!`);
+      window.location.href = "dashboard.html";
+    }
+
+    window.saveDraft = function() {
+      savePostData("Draft");
+    }
+
+    window.publishPost = function() {
+      const pubDateVal = document.getElementById("postPublishDate").value;
+      const today = new Date().toISOString().split("T")[0];
+      const status = pubDateVal > today ? "Scheduled" : "Published";
+      savePostData(status);
+    }
+
+    // 5. Load Existing Post if Edit mode
+    function loadExistingPost() {
+      populateAuthorOptions();
+      
+      // Default date to today
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("postPublishDate").value = today;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const editId = urlParams.get("editId");
+
+      if (editId) {
+        const blogs = OQC_DB.getBlogs();
+        const blog = blogs.find(b => b.id === editId);
+        if (blog) {
+          document.getElementById("editPostId").value = blog.id;
+          document.getElementById("postTitle").value = blog.title;
+          document.getElementById("postSlug").value = blog.slug;
+          document.getElementById("postSubtitle").value = blog.subtitle;
+          document.getElementById("postCategory").value = blog.category;
+          document.getElementById("postTags").value = blog.tags.join(", ");
+          document.getElementById("postAuthor").value = blog.authorId;
+          document.getElementById("postPublishDate").value = blog.publishDate;
+          document.getElementById("seoTitle").value = blog.seoTitle || "";
+          document.getElementById("seoDesc").value = blog.seoDesc || "";
+
+          if (blog.image.startsWith("data:image")) {
+            document.getElementById("customImageBase64").value = blog.image;
+          } else {
+            document.getElementById("presetImageSelect").value = blog.image;
+          }
+
+          // Parse and rebuild elements inside the canvas sheet
+          placeholder.style.display = "none";
+          
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = blog.content;
+          
+          Array.from(tempDiv.children).forEach(el => {
+            const tagName = el.tagName.toLowerCase();
+            if (tagName === "h2") {
+              createBlock("h2", el.innerHTML);
+            } else if (tagName === "h3") {
+              createBlock("h3", el.innerHTML);
+            } else if (tagName === "p") {
+              createBlock("p", el.innerHTML);
+            } else if (tagName === "blockquote") {
+              createBlock("quote", el.innerHTML);
+            } else if (tagName === "ul") {
+              createBlock("list", el.innerHTML);
+            } else if (tagName === "img") {
+              createBlock("image", el.src);
+            } else if (tagName === "table") {
+              createBlock("table", el.innerHTML);
+            }
+          });
+        }
+      }
+    }
+
+    loadExistingPost();
+  </script>
+</body>
+</html>

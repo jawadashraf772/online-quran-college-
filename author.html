@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/webp" href="logo_.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author Profile | Online Quran College</title>
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blog-style.css">
+</head>
+<body style="padding-top: 136px !important;">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="/" class="logo" id="nav-logo">
+          <img src="logo_.webp" alt="Online Quran College Logo" class="logo-img">
+        </a>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-trigger">Courses <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="noorani-qaida">Noorani Qaida Course</a></li>
+              <li><a href="quran-nazara">Quran Nazara Course</a></li>
+              <li><a href="hifz-quran">Hifz ul Quran Course</a></li>
+              <li><a href="arabic-language">Arabic Language Course</a></li>
+              <li><a href="quran-translation">Quran Translation</a></li>
+              <li><a href="hadith-translation">Hadith Translation Course</a></li>
+            </ul>
+          </li>
+          <li><a href="about">About</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="careers">Career Opportunities</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="login.html"><i class="fa-solid fa-user-shield" style="margin-right: 4px; color: var(--secondary);"></i> Portal</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 40px; margin-bottom: 80px;">
+    
+    <!-- Breadcrumbs -->
+    <div class="blog-breadcrumbs">
+      <a href="/">Home</a>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+      <a href="blog.html">Blog</a>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+      <span style="color: var(--primary); font-weight: 600;">Author Profile</span>
+    </div>
+
+    <!-- Author Profile details -->
+    <section id="authorProfileArea" style="display:none; margin-bottom: 60px;">
+      <div class="author-profile-box" style="background-color: var(--secondary-tint); border-color: rgba(16, 185, 129, 0.2); margin-top:0;">
+        <div class="author-avatar" id="authorImage" style="width: 120px; height: 120px;"></div>
+        <div class="author-info-details">
+          <h1 id="authorName" style="font-size: 28px; color: var(--primary); font-weight: 800; margin-bottom: 6px;">Author Name</h1>
+          <span id="authorEmail" style="display:block; font-size:13.5px; color:var(--gray-600); margin-bottom:12px;"><i class="fa-solid fa-envelope" style="color:var(--secondary);"></i> author@onlinequrancollege.com</span>
+          <p class="author-bio" id="authorBio" style="font-size: 15px; line-height: 1.7;">Author biography content goes here...</p>
+          <div class="author-socials" id="authorSocials"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Author Articles -->
+    <section id="authorArticlesArea" style="display:none;">
+      <h2 style="font-size: 24px; color: var(--primary); margin-bottom: 30px; font-weight: 700; border-bottom: 2px solid var(--secondary-light); padding-bottom: 10px;">
+        <i class="fa-solid fa-book-open" style="color: var(--secondary); margin-right: 8px;"></i> Articles Authored
+      </h2>
+      <div class="blogs-grid-3" id="authorArticlesList" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <!-- Dynamically loaded -->
+      </div>
+    </section>
+
+    <div id="errorArea" style="display:none; text-align:center; padding: 100px 20px;">
+      <i class="fa-solid fa-user-slash" style="font-size: 64px; color: #ef4444; margin-bottom: 24px;"></i>
+      <h2 style="color: var(--primary);">Author Profile Not Found</h2>
+      <a href="blog.html" class="btn btn-primary" style="margin-top: 24px;">Back to Blog Feed</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer style="background-color: var(--footer-bg); color: rgba(255, 255, 255, 0.7); padding: 80px 0 32px 0; border-top: 4px solid var(--secondary);">
+    <div class="container">
+      <p>&copy; 2026 Online Quran College. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- DB scripts -->
+  <script src="blog-db.js"></script>
+  <script src="script.js?v=2.1"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const authorId = urlParams.get("id");
+
+      if (!authorId) {
+        document.getElementById("errorArea").style.display = "block";
+        return;
+      }
+
+      const authors = OQC_DB.getAuthors();
+      const author = authors.find(a => a.id === authorId);
+
+      if (!author) {
+        document.getElementById("errorArea").style.display = "block";
+        return;
+      }
+
+      // Populate Author fields
+      document.getElementById("authorName").innerText = author.name;
+      document.getElementById("authorEmail").innerHTML = `<i class="fa-solid fa-envelope" style="color:var(--secondary);"></i> <a href="mailto:${author.email}">${author.email}</a>`;
+      document.getElementById("authorBio").innerText = author.bio;
+      document.getElementById("authorImage").style.backgroundImage = `url('${author.image}')`;
+
+      // Render socials
+      const socialsList = document.getElementById("authorSocials");
+      socialsList.innerHTML = "";
+      if (author.socials) {
+        Object.keys(author.socials).forEach(platform => {
+          const link = document.createElement("a");
+          link.href = author.socials[platform];
+          link.className = "author-social-link";
+          link.target = "_blank";
+          
+          let icon = "fa-solid fa-globe";
+          if (platform === "twitter") icon = "fa-brands fa-twitter";
+          if (platform === "facebook") icon = "fa-brands fa-facebook-f";
+          if (platform === "instagram") icon = "fa-brands fa-instagram";
+          if (platform === "linkedin") icon = "fa-brands fa-linkedin-in";
+          
+          link.innerHTML = `<i class="${icon}"></i>`;
+          socialsList.appendChild(link);
+        });
+      }
+
+      // Render Author's articles
+      const blogs = OQC_DB.getBlogs().filter(b => b.status === "Published" && b.authorId === author.id);
+      const listContainer = document.getElementById("authorArticlesList");
+
+      if (blogs.length === 0) {
+        listContainer.innerHTML = `<p style="grid-column: span 3; text-align: center; color: var(--gray-600);">No articles published by this author yet.</p>`;
+      } else {
+        blogs.forEach(blog => {
+          const card = document.createElement("div");
+          card.className = "blog-card";
+          card.innerHTML = `
+            <div class="blog-img-holder" style="background-image: url('${blog.image}'); background-size: cover; background-position: center; height: 180px;"></div>
+            <div class="blog-body">
+              <span style="font-size: 11px; font-weight: 700; color: var(--secondary); text-transform: uppercase; margin-bottom: 8px; display: inline-block;">${blog.category}</span>
+              <h3 style="font-size:16px; margin-bottom:8px;"><a href="blog-post.html?slug=${blog.slug}">${blog.title}</a></h3>
+              <p style="font-size:13px; margin-bottom:12px;">${blog.subtitle}</p>
+              <a href="blog-post.html?slug=${blog.slug}" class="blog-read-link" style="font-size:13px;">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          `;
+          listContainer.appendChild(card);
+        });
+      }
+
+      // Show areas
+      document.getElementById("authorProfileArea").style.display = "block";
+      document.getElementById("authorArticlesArea").style.display = "block";
+    });
+  </script>
+</body>
+</html>

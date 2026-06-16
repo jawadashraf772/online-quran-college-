@@ -701,7 +701,49 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileCtaLink.innerText = 'Register Now';
   }
 
+  // 8. Dynamic Custom Blogs Loader
+  const blogGridContainer = document.getElementById('blogGridContainer');
+  if (blogGridContainer) {
+    const customBlogs = localStorage.getItem('custom_blogs');
+    if (customBlogs) {
+      const blogs = JSON.parse(customBlogs);
+      const staticCardsHtml = blogGridContainer.innerHTML;
+      let dynamicCardsHtml = '';
+      
+      blogs.forEach((blog, index) => {
+        let imgUrl = blog.image;
+        if (!imgUrl.startsWith('data:image') && !imgUrl.endsWith('.webp')) {
+          imgUrl = 'translation_hero.webp'; // fallback
+        }
+        
+        dynamicCardsHtml += `
+          <div class="blog-card">
+            <div class="blog-img-holder" style="background-image: url('${imgUrl}'); background-size: cover; background-position: center; height: 200px;">
+              <span class="blog-meta-date">${blog.date}</span>
+            </div>
+            <div class="blog-body">
+              <span style="font-size: 11px; font-weight: 700; color: var(--secondary); text-transform: uppercase; margin-bottom: 8px; display: inline-block;">${blog.category}</span>
+              <h3>${blog.title}</h3>
+              <p>${blog.snippet || blog.content.substring(0, 100) + '...'}</p>
+              <a href="#" class="blog-read-link" onclick="showBlogDetail(${index}); return false;">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        `;
+      });
+      blogGridContainer.innerHTML = dynamicCardsHtml + staticCardsHtml;
+    }
+  }
+
 });
+
+// Global helper for showing blog details
+window.showBlogDetail = function(index) {
+  const blogs = JSON.parse(localStorage.getItem('custom_blogs') || '[]');
+  const blog = blogs[index];
+  if (blog) {
+    alert(`Title: ${blog.title}\nCategory: ${blog.category}\nDate: ${blog.date}\n\nContent:\n${blog.content}`);
+  }
+};
 
 
 
